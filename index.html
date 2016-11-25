@@ -17,7 +17,7 @@
         <ul class="menu__list visually-hidden">
           <li class="menu__item"><a href="#">Каталог товаров</a></li>
           <li class="menu__item"><a href="#">Вязание на заказ</a></li>
-          <li class="menu__item menu__item--lens"><a href="#">Поиск по сайту</a></li>
+          <li class="menu__item menu__item--search"><a href="#">Поиск по сайту</a></li>
           <li class="menu__item menu__item--cart"><a href="#">Корзина: пока пуста</a></li>
         </ul>
       </nav>
@@ -31,17 +31,13 @@
       <section class="catalog">
         <h2 class="visually-hidden">Перейти в разделы каталога</h2>
 
-        <a class="catalog__link" href="#">
-          <div class="catalog__block catalog__block--interior">
-            Предметы интерьера
-          </div>
-        </a>
+        <div class="catalog__block catalog__block--interior">
+          <a class="catalog__link" href="#">Предметы интерьера</a>
+        </div>
 
-        <a class="catalog__link" href="#">
-          <div class="catalog__block catalog__block--kids">
-            Детские игрушки
-          </div>
-        </a>
+        <div class="catalog__block catalog__block--kids">
+          <a class="catalog__link" href="#">Детские игрушки</a>
+        </div>
       </section>
 
       <section class="preview">
@@ -55,15 +51,15 @@
         <table class="preview__product">
           <tr class="preview__row">
             <td class="preview__cell preview__cell--left">Цвет</td>
-            <td class="preview__cell preview__cell--right">«Тиффани»/серый</td>
+            <td class="preview__cell">«Тиффани»/серый</td>
           </tr>
           <tr class="preview__product-row">
             <td class="preview__cell preview__cell--left">Диаметр:</td>
-            <td class="preview__cell preview__cell--right">25 см</td>
+            <td class="preview__cell">25 см</td>
           </tr>
           <tr class="preview__product-row">
             <td class="preview__cell preview__cell--left">Высота:</td>
-            <td class="preview__cell preview__cell--right">15 см</td>
+            <td class="preview__cell">15 см</td>
           </tr>
         </table>
 
@@ -108,7 +104,9 @@
 
         <blockquote>
           <p class="review__block">
-            Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+            Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков,
+            как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,
+            и мои фотографии сразу стали более стильными, а также набирают больше лайков!
           </p>
 
           <footer>
@@ -118,11 +116,11 @@
         </blockquote>
 
         <div class="review__arrows">
-          <button class="review__arrow review__arrow--prev">
+          <button class="review__arrow review__arrow--prev" type="button">
             Предыдущий отзыв
           </button>
 
-          <button class="review__arrow review__arrow--next">
+          <button class="review__arrow review__arrow--next" type="button">
             Следующий отзыв
           </button>
         </div>
@@ -140,7 +138,7 @@
             <td class="contacts__cell contacts__cell--left">
               E-mail:
             </td>
-            <td class="contacts__cell contacts__cell--right">
+            <td class="contacts__cell">
               info@mimimishkashop.ru
             </td>
           </tr>
@@ -148,7 +146,7 @@
             <td class="contacts__cell contacts__cell--left">
               Адрес:
             </td>
-            <td class="contacts__cell contacts__cell--right">
+            <td class="contacts__cell">
               г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101
             </td>
           </tr>
@@ -183,20 +181,17 @@
         <fieldset class="modal-cart__size">
           <legend>Выберите размер:</legend>
 
-          <label class="visually-hidden" for="modal-cart-small">S</label>
-          <input class="modal-cart__radio modal-cart__radio--small" id="modal-cart-small" name="modal-cart__radio" value="s" type="radio" checked>
+          <label class="modal-cart__label" for="modal-cart-s">S</label>
+          <input class="visually-hidden" id="modal-cart-s" name="modal-cart-size" value="s" type="radio" checked>
 
-          <label class="visually-hidden" for="modal-cart-medium">M</label>
-          <input class="modal-cart__radio modal-cart__radio--medium" id="modal-cart-medium" name="modal-cart__radio" value="m" type="radio">
+          <label class="modal-cart__label" for="modal-cart-m">M</label>
+          <input class="visually-hidden" id="modal-cart-m" name="modal-cart-size" value="m" type="radio">
 
-          <label class="visually-hidden" for="modal-cart-large">L</label>
-          <input class="modal-cart__radio modal-cart__radio--large" id="modal-cart-large" name="modal-cart__radio" value="l" type="radio">
-        </fieldset>
+          <label class="modal-cart__label" for="modal-cart-l">L</label>
+          <input class="visually-hidden" id="modal-cart-l" name="modal-cart-size" value="l" type="radio">
 
         <button class="btn btn--fill modal-cart__btn" type="submit">Добавить</button>
       </form>
     </section>
-
-    <div class="modal-overlay visually-hidden"></div>
   </body>
 </html>

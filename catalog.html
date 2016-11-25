@@ -17,7 +17,7 @@
         <ul class="menu__list visually-hidden">
           <li class="menu__item menu__item--active"><a href="#">Каталог товаров</a></li>
           <li class="menu__item"><a href="#">Вязание на заказ</a></li>
-          <li class="menu__item menu__item--lens"><a href="#">Поиск по сайту</a></li>
+          <li class="menu__item menu__item--search"><a href="#">Поиск по сайту</a></li>
           <li class="menu__item menu__item--cart"><a href="#">Корзина: пока пуста</a></li>
         </ul>
       </nav>
@@ -29,30 +29,39 @@
       </div>
 
       <article class="catalog-item">
-        <img class="catalog-item__image" src="http://placehold.it/260x195" width="260" height="195" alt="Зайчик-попрыгайчик">
+        <a href="#"><img class="catalog-item__image" src="http://placehold.it/260x195" width="260" height="195" alt="Зайчик-попрыгайчик"></a>
 
-        <h3 class="catalog-item__title">Зайчик-попрыгайчик</h3>
+        <h3 class="catalog-item__title"><a href="#">Зайчик-попрыгайчик</a></h3>
         <p class="catalog-item__desc">Рост 30 см, вес 200 г</p>
 
-        <div class="catalog-item__price">1 200 руб.</div>
+        <div class="catalog-item__price">
+          <b>1 200 руб.</b>
+          <a class="catalog-item__link" href="#">Корзина</a>
+        </div>
       </article>
 
       <article class="catalog-item">
-        <img class="catalog-item__image" src="http://placehold.it/260x195" width="260" height="195" alt="Корзинка для белья">
+        <a href="#"><img class="catalog-item__image" src="http://placehold.it/260x195" width="260" height="195" alt="Корзинка для белья"></a>
 
-        <h3 class="catalog-item__title">Корзинка для белья</h3>
+        <h3 class="catalog-item__title"><a href="#">Корзинка для белья</a></h3>
         <p class="catalog-item__desc">Диаметр 15 см, высота 10 см</p>
 
-        <div class="catalog-item__price">690 руб.</div>
+        <div class="catalog-item__price">
+          <b>690 руб.</b>
+          <a class="catalog-item__link" href="#">Корзина</a>
+        </div>
       </article>
 
       <article class="catalog-item">
-        <img class="catalog-item__image" src="http://placehold.it/260x195" width="260" height="195" alt="Большая корзинка для игрушек">
+        <a href="#"><img class="catalog-item__image" src="http://placehold.it/260x195" width="260" height="195" alt="Большая корзинка для игрушек"></a>
 
-        <h3 class="catalog-item__title">Большая корзинка для игрушек</h3>
+        <h3 class="catalog-item__title"><a href="#">Большая корзинка для игрушек</a></h3>
         <p class="catalog-item__desc">Диаметр 30 см, высота 30 см</p>
 
-        <div class="catalog-item__price">1 500 руб.</div>
+        <div class="catalog-item__price">
+          <b>1 500 руб.</b>
+          <a class="catalog-item__link" href="#">Корзина</a>
+        </div>
       </article>
 
       <section class="process">
@@ -91,20 +100,17 @@
         <fieldset class="modal-cart__size">
           <legend>Выберите размер:</legend>
 
-          <label class="visually-hidden" for="modal-cart-small">S</label>
-          <input class="modal-cart__radio modal-cart__radio--small" id="modal-cart-small" name="modal-cart__radio" value="s" type="radio" checked>
+          <label class="modal-cart__label" for="modal-cart-s">S</label>
+          <input class="visually-hidden" id="modal-cart-s" name="modal-cart-size" value="s" type="radio" checked>
 
-          <label class="visually-hidden" for="modal-cart-medium">M</label>
-          <input class="modal-cart__radio modal-cart__radio--medium" id="modal-cart-medium" name="modal-cart__radio" value="m" type="radio">
+          <label class="modal-cart__label" for="modal-cart-m">M</label>
+          <input class="visually-hidden" id="modal-cart-m" name="modal-cart-size" value="m" type="radio">
 
-          <label class="visually-hidden" for="modal-cart-large">L</label>
-          <input class="modal-cart__radio modal-cart__radio--large" id="modal-cart-large" name="modal-cart__radio" value="l" type="radio">
-        </fieldset>
+          <label class="modal-cart__label" for="modal-cart-l">L</label>
+          <input class="visually-hidden" id="modal-cart-l" name="modal-cart-size" value="l" type="radio">
 
         <button class="btn btn--fill modal-cart__btn" type="submit">Добавить</button>
       </form>
     </section>
-
-    <div class="modal-overlay visually-hidden"></div>
   </body>
 </html>
