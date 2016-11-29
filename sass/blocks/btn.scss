@@ -1,0 +1,42 @@
+.btn {
+  box-sizing: border-box;
+  display: block;
+
+  width: 100%;
+  padding: 16px 0;
+
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: $tundora;
+  border: 2px solid $tundora;
+  background-color: transparent;
+
+  @include font(18px, 16px, bold);
+
+  &:hover {
+    color: $white;
+    background-color: $tundora;
+  }
+
+  &:active {
+    color: $gray;
+  }
+
+  &--fill {
+    color: $white;
+    border-color: $downy;
+    background-color: $downy;
+  }
+
+  &--fill:hover {
+    border-color: $fountain-blue;
+    background-color: $fountain-blue;
+  }
+
+  &--fill:active {
+    color: $monte-carlo;
+  }
+}

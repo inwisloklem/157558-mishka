@@ -1,0 +1,90 @@
+.catalog__block {
+  position: relative;
+  min-height: 103px;
+
+  &--interior {
+    background-color: $downy;
+  }
+
+  &--interior:hover {
+    transform: translateY(-5px);
+
+    background-color: $fountain-blue;
+  }
+
+  &--kids {
+    background-color: $fountain-blue;
+  }
+
+  &--kids:hover {
+    transform: translateY(-5px);
+
+    background-color: $puerto-rico;
+  }
+
+  &--interior::before {
+    position: absolute;
+    top: 50%;
+    right: 37px;
+
+    width: 40px;
+    height: 62px;
+
+    content: "";
+    transform: translateY(-50%);
+
+    background-color: $keppel;
+    mask-image: url("../img/icon-interior.svg");
+  }
+
+  &--kids::before {
+    position: absolute;
+    top: 50%;
+    right: 26px;
+
+    width: 61px;
+    height: 61px;
+
+    content: "";
+    transform: translateY(-50%);
+
+    background-color: $keppel;
+    mask-image: url("../img/icon-toy.svg");
+  }
+
+  @mixin catalog__rectangle($modifier-name, $color) {
+    &--#{$modifier-name}::after {
+      position: absolute;
+      z-index: -10;
+
+      display: block;
+
+      width: 320px;
+      height: 5px;
+
+      content: "";
+
+      background-color: $color;
+    }
+  }
+
+  @include catalog__rectangle("interior", $fountain-blue);
+  @include catalog__rectangle("kids", $puerto-rico);
+}
+
+.catalog__link {
+  display: block;
+
+  width: 150px;
+  padding: 31px 140px 24px 30px;
+
+  text-decoration: none;
+
+  color: $white;
+
+  @include font(19px, 24px, bold);
+
+  &:active {
+    color: $morning-glory;
+  }
+}

@@ -1,0 +1,17 @@
+// [class*="__"] {
+//   background-color: rgba(lightskyblue, 0.25);
+// }
+
+body {
+  background-color: $silver;
+}
+
+body, blockquote, fieldset, figure, h1, h2, h3, hr, p, ul, li {
+  margin: 0;
+}
+
+fieldset {
+  padding: 0;
+
+  border: none;
+}

@@ -1,0 +1,103 @@
+.review__title {
+  @include font(25px, 30px, bold);
+
+  margin-bottom: 24px;
+}
+
+.review__block {
+  margin-bottom: 26px;
+
+  color: $tundora;
+
+  @include font(15px, 30px);
+}
+
+.review__name{
+  margin-bottom: 3px;
+
+  @include font(18px, 24px, bold);
+}
+
+.review__twitter {
+  display: block;
+
+  margin-bottom: 30px;
+}
+
+.review__link {
+  text-decoration: none;
+
+  color: $tundora;
+
+  @include font(18px, 30px);
+}
+
+.review__arrows {
+  font-size: 0;
+}
+
+.review__arrow {
+  position: relative;
+
+  display: inline-block;
+
+  box-sizing: border-box;
+  width: 130px;
+  height: 52px;
+  margin-bottom: 38px;
+
+  border: 1px solid $gallery;
+  background-color: $white;
+
+  font-size: 0;
+
+  &--prev {
+    &::before {
+      @include icon-mask-centre(50px, 26px, $black, "../img/icon-left-arrow.svg");
+    }
+  }
+
+  &--prev:hover {
+    cursor: pointer;
+
+    &::before {
+      @include icon-mask-centre(50px, 26px, $tundora, "../img/icon-left-arrow.svg");
+    }
+  }
+
+  &--prev:active {
+    outline: none;
+
+    &::before {
+      @include icon-mask-centre(50px, 26px, $silver-chalice, "../img/icon-left-arrow.svg");
+    }
+  }
+
+  &--next {
+    border-left: none;
+
+    &::before {
+      @include icon-mask-centre(50px, 26px, $black, "../img/icon-right-arrow.svg");
+    }
+  }
+
+  &--next:hover {
+    cursor: pointer;
+
+    &::before {
+      @include icon-mask-centre(50px, 26px, $tundora, "../img/icon-right-arrow.svg");
+    }
+  }
+
+  &--next:active {
+    outline: none;
+
+    &::before {
+      @include icon-mask-centre(50px, 26px, $silver-chalice, "../img/icon-right-arrow.svg");
+    }
+  }
+}
+
+.review__btn {
+  margin-bottom: 44px;
+}

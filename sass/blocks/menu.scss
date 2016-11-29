@@ -1,0 +1,57 @@
+.menu {
+  box-sizing: border-box;
+  position: relative;
+
+  width: 320px;
+  min-height: 80px;
+
+  border-bottom: 1px solid $gallery;
+}
+
+.menu__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.menu__toggle {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+
+  box-sizing: border-box;
+  width: 20px;
+  height: 14px;
+
+  cursor: pointer;
+  transform: translateY(-50%);
+
+  border-bottom: 2px solid $mine-shaft;
+
+  font-size: 0;
+
+  @mixin menu__line {
+    position: absolute;
+
+    width: 20px;
+    height: 2px;
+
+    content: "";
+
+    background-color: $mine-shaft;
+  }
+
+  &::before {
+    top: 0;
+
+    @include menu__line;
+  }
+
+  &::after {
+    top: 6px;
+
+    @include menu__line;
+  }
+}
