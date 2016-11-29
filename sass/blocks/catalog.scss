@@ -4,54 +4,55 @@
 
   &--interior {
     background-color: $downy;
-  }
 
-  &--interior:hover {
-    transform: translateY(-5px);
+    &:hover {
+      transform: translateY(-5px);
 
-    background-color: $fountain-blue;
+      background-color: $fountain-blue;
+    }
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      right: 37px;
+
+      width: 40px;
+      height: 62px;
+
+      content: "";
+      transform: translateY(-50%);
+
+      background-color: $keppel;
+      mask-image: url("../img/icon-interior.svg");
+    }
   }
 
   &--kids {
     background-color: $fountain-blue;
+
+    &:hover {
+      transform: translateY(-5px);
+
+      background-color: $puerto-rico;
+    }
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      right: 26px;
+
+      width: 61px;
+      height: 61px;
+
+      content: "";
+      transform: translateY(-50%);
+
+      background-color: $keppel;
+      mask-image: url("../img/icon-toy.svg");
+    }
   }
 
-  &--kids:hover {
-    transform: translateY(-5px);
-
-    background-color: $puerto-rico;
-  }
-
-  &--interior::before {
-    position: absolute;
-    top: 50%;
-    right: 37px;
-
-    width: 40px;
-    height: 62px;
-
-    content: "";
-    transform: translateY(-50%);
-
-    background-color: $keppel;
-    mask-image: url("../img/icon-interior.svg");
-  }
-
-  &--kids::before {
-    position: absolute;
-    top: 50%;
-    right: 26px;
-
-    width: 61px;
-    height: 61px;
-
-    content: "";
-    transform: translateY(-50%);
-
-    background-color: $keppel;
-    mask-image: url("../img/icon-toy.svg");
-  }
-
+  //Компенсаторы для блоков, которые появляются, когда блоки поднимаются наверх
   @mixin catalog__rectangle($modifier-name, $color) {
     &--#{$modifier-name}::after {
       position: absolute;
@@ -68,6 +69,7 @@
     }
   }
 
+  //Не самое лучшее решение; если добавить transition, то будет дергаться
   @include catalog__rectangle("interior", $fountain-blue);
   @include catalog__rectangle("kids", $puerto-rico);
 }

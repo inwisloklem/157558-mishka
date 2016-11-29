@@ -30,6 +30,14 @@
   color: $tundora;
 
   @include font(18px, 30px);
+
+  &:hover {
+    color: $puerto-rico;
+  }
+
+  &:active {
+    color: $morning-glory;
+  }
 }
 
 .review__arrows {
@@ -47,6 +55,7 @@
   margin-bottom: 38px;
 
   border: 1px solid $gallery;
+  outline: none;
   background-color: $white;
 
   font-size: 0;
@@ -66,8 +75,6 @@
   }
 
   &--prev:active {
-    outline: none;
-
     &::before {
       @include icon-mask-centre(50px, 26px, $silver-chalice, "../img/icon-left-arrow.svg");
     }
@@ -90,8 +97,6 @@
   }
 
   &--next:active {
-    outline: none;
-
     &::before {
       @include icon-mask-centre(50px, 26px, $silver-chalice, "../img/icon-right-arrow.svg");
     }

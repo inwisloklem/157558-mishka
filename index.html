@@ -137,13 +137,15 @@
         <section class="contacts inner-wrapper">
           <h2 class="contacts__title">Контакты</h2>
 
-          <table class="contacts__content">
+          <table class="contacts__table">
             <tr class="contacts__row">
               <td class="contacts__cell contacts__cell--left">
                 E-mail:
               </td>
               <td class="contacts__cell">
-                info@mimimishkashop.ru
+                <a class="contacts__email" href="mailto: info@mimimishkashop.ru">
+                  info@mimimishkashop.ru
+                </a>
               </td>
             </tr>
             <tr class="contacts__row">
@@ -151,12 +153,14 @@
                 Адрес:
               </td>
               <td class="contacts__cell">
-                г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101
+                г. Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8, офис.&nbsp;101
               </td>
             </tr>
           </table>
 
-          <div class="contacts__map"></div>
+          <div class="contacts__map">
+            <div class="contacts__pin"></div>
+          </div>
 
           <a class="btn contacts__btn" href="#">Напишите нам</a>
         </section>
@@ -174,29 +178,38 @@
         <section class="copyright">
           <h2 class="visually-hidden">Информация о разработчике</h2>
 
-          Разработано <a class="copyright__logo" href="#">HTML Academy</a>
+          <div class="copyright__text">
+            <a class="copyright__link" href="#">Разработано
+              <span class="copyright__logo">
+                HTML Academy
+              </span>
+            </a>
+          </div>
         </section>
       </footer>
 
       <section class="modal-cart inner-wrapper">
-        <h2 class="modal-add__title">Добавить в корзину</h2>
+        <h2 class="modal-cart__title">Добавить в корзину</h2>
 
         <form class="modal-cart__form" action="#" method="post">
           <fieldset class="modal-cart__size">
-            <legend>Выберите размер:</legend>
+            <legend class="modal-cart__legend">Выберите размер:</legend>
 
+            <input class="modal-cart__checkbox visually-hidden" id="modal-cart-s" name="modal-cart-size" value="s" type="radio" checked>
             <label class="modal-cart__label" for="modal-cart-s">S</label>
-            <input class="visually-hidden" id="modal-cart-s" name="modal-cart-size" value="s" type="radio" checked>
 
+            <input class="modal-cart__checkbox visually-hidden" id="modal-cart-m" name="modal-cart-size" value="m" type="radio">
             <label class="modal-cart__label" for="modal-cart-m">M</label>
-            <input class="visually-hidden" id="modal-cart-m" name="modal-cart-size" value="m" type="radio">
 
-            <label class="modal-cart__label" for="modal-cart-l">L</label>
-            <input class="visually-hidden" id="modal-cart-l" name="modal-cart-size" value="l" type="radio">
+            <input class="modal-cart__checkbox visually-hidden" id="modal-cart-l" name="modal-cart-size" value="l" type="radio">
+            <label class="modal-cart__label modal-cart__label--last" for="modal-cart-l">L</label>
 
           <button class="btn btn--fill modal-cart__btn" type="submit">Добавить</button>
         </form>
       </section>
     </div>
+
+    <div class="modal-overlay"></div>
+    <script src="js/main.js"></script>
   </body>
 </html>
