@@ -55,3 +55,38 @@
     @include menu__line;
   }
 }
+
+.menu__list {
+  position: absolute;
+  z-index: 10;
+  top: 80px;
+
+  padding: 0;
+
+  list-style: none;
+
+  background-color: $white;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.menu__item {
+  border-bottom: 1px solid $gallery;
+}
+
+.menu__link {
+  box-sizing: border-box;
+  display: block;
+
+  width: 320px;
+  // min-height: 80px;
+  padding: 27px 65px;
+
+  text-decoration: none;
+
+  color: $black;
+
+  @include font(17px, 24px, bold);
+}

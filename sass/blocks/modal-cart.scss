@@ -5,38 +5,33 @@
 
   display: none;
 
-  width: 260px;
-
-  border-top: 1px solid $silver;
-  background-color: $white;
-
-  // Первый вариант тени; неполная тень от блока
-  // box-shadow: 0 10px 30px -20px $black;
+  transform: translateY(-50%);
 
   &--visible {
     display: block;
   }
+}
 
-  &::after {
-    position: relative;
-    right: 30px;
+.modal-cart__wrapper {
+  width: 260px;
+  padding: 0 30px;
 
-    display: block;
+  border-top: 1px solid $silver;
+  background-color: $white;
+}
 
-    width: 320px;
-    height: 15px;
+.modal-cart__shadow {
+  width: 320px;
+  height: 20px;
 
-    content: "";
-
-    //Второй вариант тени; прямоугольник не прозрачный
-    box-shadow: inset 0 15px 30px -20px rgba($black, 0.6);
-  }
+  box-shadow: inset 0 15px 30px -20px rgba($black, 0.6);
 }
 
 .modal-cart__title {
   width: 150px;
   margin: 0 auto;
   margin-top: 41px;
+  margin-bottom: 12px;
 
   text-transform: uppercase;
 

@@ -1,3 +1,7 @@
+.review {
+  padding: 0 30px;
+}
+
 .review__title {
   @include font(25px, 30px, bold);
 

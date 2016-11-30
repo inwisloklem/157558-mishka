@@ -1,5 +1,8 @@
 body {
-  background-color: $silver;
+  width: 320px;
+
+  border-right: 1px solid $gallery;
+  background-color: $white;
 }
 
 body, blockquote, fieldset, figure, h1, h2, h3, hr, p, ul, li {

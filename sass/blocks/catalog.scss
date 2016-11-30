@@ -1,3 +1,7 @@
+.catalog {
+  background-color: $puerto-rico;
+}
+
 .catalog__block {
   position: relative;
   min-height: 103px;
@@ -25,6 +29,21 @@
       background-color: $keppel;
       mask-image: url("../img/icon-interior.svg");
     }
+
+    // Компенсатор для блока, который появляется, когда блок поднимается вверх
+    &::after {
+      position: absolute;
+      z-index: -5;
+
+      display: block;
+
+      width: 320px;
+      height: 5px;
+
+      content: "";
+
+      background-color: $fountain-blue;
+    }
   }
 
   &--kids {
@@ -51,28 +70,8 @@
       mask-image: url("../img/icon-toy.svg");
     }
   }
-
-  //Компенсаторы для блоков, которые появляются, когда блоки поднимаются наверх
-  @mixin catalog__rectangle($modifier-name, $color) {
-    &--#{$modifier-name}::after {
-      position: absolute;
-      z-index: -10;
-
-      display: block;
-
-      width: 320px;
-      height: 5px;
-
-      content: "";
-
-      background-color: $color;
-    }
-  }
-
-  //Не самое лучшее решение; если добавить transition, то будет дергаться
-  @include catalog__rectangle("interior", $fountain-blue);
-  @include catalog__rectangle("kids", $puerto-rico);
 }
+
 
 .catalog__link {
   display: block;

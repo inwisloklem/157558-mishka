@@ -1,26 +1,28 @@
-//Переменные и примеси
+// Переменные и примеси
 @import "variables.scss";
 @import "mixins.scss";
 
-//Сброс отступов у некоторых тегов
+// Сброс отступов у некоторых тегов
 @import "base.scss";
 
-//Служебные блоки общего назначения
-@import "blocks/page-wrapper.scss";
+// Служебные блоки общего назначения
 @import "blocks/visually-hidden.scss";
 
-//Конкретные блоки
+// Конкретные блоки
 @import "blocks/about.scss";
 @import "blocks/btn.scss";
 @import "blocks/caption-image.scss";
+@import "blocks/caption";
+@import "blocks/catalog-item.scss";
 @import "blocks/catalog.scss";
 @import "blocks/contacts.scss";
 @import "blocks/copyright.scss";
-@import "blocks/inner-wrapper.scss";
 @import "blocks/menu.scss";
 @import "blocks/modal-cart.scss";
 @import "blocks/modal-overlay.scss";
+@import "blocks/order.scss";
 @import "blocks/page-separator.scss";
 @import "blocks/preview.scss";
+@import "blocks/process.scss";
 @import "blocks/review.scss";
 @import "blocks/social.scss";
