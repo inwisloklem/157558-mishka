@@ -1,0 +1,40 @@
+.process {
+  padding: 0 30px;
+
+  font-size: 0;
+}
+
+.process__title {
+  display: block;
+
+  box-sizing: border-box;
+  min-height: 97px;
+  margin-top: 30px;
+  padding: 30px;
+  padding-left: 68px;
+
+  border: 1px solid $gallery;
+
+  @include font(17px, 24px, bold);
+}
+
+.process__video {
+  width: 260px;
+  height: 150px;
+}
+
+.process__desc {
+  margin-bottom: 25px;
+
+  color: $tundora;
+
+  @include font(13px, 24px, normal);
+}
+
+.process__wrapper {
+  padding: 30px;
+
+  border: 1px solid $gallery;
+
+  margin-bottom: 58px;
+}

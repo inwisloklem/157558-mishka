@@ -1,0 +1,75 @@
+.order {
+  padding: 0 30px;
+}
+
+.order__desc {
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  color: $tundora;
+
+  @include font(13px, 24px);
+}
+
+.order__title {
+  margin-bottom: 27px;
+
+  text-transform: uppercase;
+
+  color: $downy;
+
+  @include font(17px, 16px, bold);
+}
+
+.order__subtitle {
+  @include font(17px, 18px, bold);
+}
+
+.order__input {
+  display: block;
+
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 50px;
+  margin-bottom: 32px;
+
+  border: none;
+  border-bottom: 2px solid $black;
+  outline: none;
+
+  font-weight: normal !important;
+
+  @include font(17px, 18px);
+}
+
+.order__text {
+  box-sizing: border-box;
+  width: 260px;
+  min-height: 142px;
+  margin-bottom: 19px;
+  padding: 17px;
+
+  border: 2px solid $tundora;
+  outline: none;
+
+  @include font(17px, 18px);
+}
+
+.order__checkbox, .order__radio {
+  display: block;
+
+  margin-bottom: 27px;
+
+  @include font(17px, 18px, bold);
+}
+
+.order__note {
+  color: $tundora;
+
+  @include font(14px, 16px);
+  margin-bottom: 31px;
+}
+
+.order__btn {
+  margin-bottom: 55px;
+}

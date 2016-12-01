@@ -3,27 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
-    <header class="page-wrapper">
+    <header>
       <h1 class="visually-hidden">HTML Academy: Мишка</h1>
 
       <nav class="menu">
-        <a><img class="menu__logo" src="http://placehold.it/86x35" width="86" height="35" alt="Логотип Мишки"></a>
+        <a><img class="menu__logo" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Мишки"></a>
 
         <span class="menu__toggle">Меню</span>
 
-        <ul class="menu__list visually-hidden">
-          <li class="menu__item"><a href="#">Каталог товаров</a></li>
-          <li class="menu__item"><a href="#">Вязание на заказ</a></li>
-          <li class="menu__item menu__item--search"><a href="#">Поиск по сайту</a></li>
-          <li class="menu__item menu__item--cart"><a href="#">Корзина: пока пуста</a></li>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="menu__item menu__item--search">
+            <a class="menu__link" href="#">Поиск по сайту</a>
+          </li>
+          <li class="menu__item menu__item--cart">
+            <a class="menu__link" href="#">Корзина: пока пуста</a>
+          </li>
         </ul>
       </nav>
     </header>
 
-    <main class="page-wrapper">
+    <main>
       <div class="caption-image">
         <h2 class="caption-image__title">Милые штуки ручной работы для дома</h2>
       </div>
@@ -48,23 +57,23 @@
           Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
         </p>
 
-        <table class="preview__product">
+        <table class="preview__table">
           <tr class="preview__row">
             <td class="preview__cell preview__cell--left">Цвет</td>
             <td class="preview__cell">«Тиффани»/серый</td>
           </tr>
-          <tr class="preview__product-row">
+          <tr class="preview__row">
             <td class="preview__cell preview__cell--left">Диаметр:</td>
             <td class="preview__cell">25 см</td>
           </tr>
-          <tr class="preview__product-row">
+          <tr class="preview__row">
             <td class="preview__cell preview__cell--left">Высота:</td>
             <td class="preview__cell">15 см</td>
           </tr>
         </table>
 
         <figure>
-          <img class="preview__image" src="http://placehold.it/360x215" width="360" height="215" alt="Вязаные корзинки">
+          <img class="preview__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
         </figure>
 
         <div class="preview__price">Цена: 990 руб.</div>
@@ -78,22 +87,22 @@
         <h2 class="about__title">Коротко о нас</h2>
 
         <ul class="about__list">
-          <li class="about__item about__item--flower">
+          <li class="about__item about__item--feature-1">
             Экологически чистые материалы
           </li>
-          <li class="about__item about__item--note">
+          <li class="about__item about__item--feature-2">
             Скандинавский стиль по российской цене
           </li>
-          <li class="about__item about__item--heart">
+          <li class="about__item about__item--feature-3">
             Увеличивает лайки на фотографиях
           </li>
-          <li class="about__item about__item--knot">
+          <li class="about__item about__item--feature-4">
             Связано вручную с любовью и умилением
           </li>
-          <li class="about__item about__item--rocket">
+          <li class="about__item about__item--feature-5">
             Поддержка отечественного производителя
           </li>
-          <li class="about__item about__item--gift">
+          <li class="about__item about__item--feature-6">
             Поставляется в подарочной упаковке
           </li>
         </ul>
@@ -111,7 +120,9 @@
 
           <footer>
             <cite class="review__name">Анастасия Красильникова</cite>
-            <cite class="review__twitter"><a href="#">@misssssiskras</a></cite>
+            <cite class="review__twitter">
+              <a class="review__link" href="#">@misssssiskras</a>
+            </cite>
           </footer>
         </blockquote>
 
@@ -133,13 +144,15 @@
       <section class="contacts">
         <h2 class="contacts__title">Контакты</h2>
 
-        <table class="contacts__content">
+        <table class="contacts__table">
           <tr class="contacts__row">
             <td class="contacts__cell contacts__cell--left">
               E-mail:
             </td>
             <td class="contacts__cell">
-              info@mimimishkashop.ru
+              <a class="contacts__email" href="mailto: info@mimimishkashop.ru">
+                info@mimimishkashop.ru
+              </a>
             </td>
           </tr>
           <tr class="contacts__row">
@@ -147,18 +160,20 @@
               Адрес:
             </td>
             <td class="contacts__cell">
-              г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101
+              г. Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8, офис.&nbsp;101
             </td>
           </tr>
         </table>
 
-        <div class="contacts__map"></div>
+        <div class="contacts__map">
+          <div class="contacts__pin"></div>
+        </div>
 
         <a class="btn contacts__btn" href="#">Напишите нам</a>
       </section>
     </main>
 
-    <footer class="page-wrapper">
+    <footer>
       <section class="social">
         <h2 class="visually-hidden">Подписывайтесь на нас в соцсетях</h2>
 
@@ -170,28 +185,40 @@
       <section class="copyright">
         <h2 class="visually-hidden">Информация о разработчике</h2>
 
-        Разработано <a class="copyright__logo" href="#">HTML Academy</a>
+        <div class="copyright__text">
+          <a class="copyright__link" href="#">Разработано
+            <span class="copyright__logo">
+              HTML Academy
+            </span>
+          </a>
+        </div>
       </section>
     </footer>
 
     <section class="modal-cart">
-      <h2 class="modal-add__title">Добавить в корзину</h2>
+      <div class="modal-cart__wrapper">
+        <h2 class="modal-cart__title">Добавить в корзину</h2>
 
-      <form class="modal-cart__form" action="#" method="post">
-        <fieldset class="modal-cart__size">
-          <legend>Выберите размер:</legend>
+        <form class="modal-cart__form" action="#" method="post">
+          <fieldset class="modal-cart__size">
+            <legend class="modal-cart__legend">Выберите размер:</legend>
 
-          <label class="modal-cart__label" for="modal-cart-s">S</label>
-          <input class="visually-hidden" id="modal-cart-s" name="modal-cart-size" value="s" type="radio" checked>
+            <input class="modal-cart__checkbox visually-hidden" id="modal-cart-s" name="modal-cart-size" value="s" type="radio" checked>
+            <label class="modal-cart__label" for="modal-cart-s">S</label>
 
-          <label class="modal-cart__label" for="modal-cart-m">M</label>
-          <input class="visually-hidden" id="modal-cart-m" name="modal-cart-size" value="m" type="radio">
+            <input class="modal-cart__checkbox visually-hidden" id="modal-cart-m" name="modal-cart-size" value="m" type="radio">
+            <label class="modal-cart__label" for="modal-cart-m">M</label>
 
-          <label class="modal-cart__label" for="modal-cart-l">L</label>
-          <input class="visually-hidden" id="modal-cart-l" name="modal-cart-size" value="l" type="radio">
+            <input class="modal-cart__checkbox visually-hidden" id="modal-cart-l" name="modal-cart-size" value="l" type="radio">
+            <label class="modal-cart__label modal-cart__label--last" for="modal-cart-l">L</label>
 
-        <button class="btn btn--fill modal-cart__btn" type="submit">Добавить</button>
-      </form>
+          <button class="btn btn--fill modal-cart__btn" type="submit">Добавить</button>
+        </form>
+      </div>
+      <div class="modal-cart__shadow"></div>
     </section>
+
+    <div class="modal-overlay"></div>
+    <script src="js/main.js"></script>
   </body>
 </html>

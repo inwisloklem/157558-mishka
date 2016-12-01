@@ -1,0 +1,48 @@
+.copyright {
+  overflow: auto;
+
+  min-height: 79px;
+
+  text-align: center;
+
+  background-color: $seashell;
+}
+
+.copyright__logo {
+  display: inline-block;
+
+  width: 27px;
+  height: 34px;
+
+  vertical-align: middle;
+
+  background-color: $downy;
+
+  font-size: 0;
+
+  mask-image: url("../img/logo-htmlacademy.svg");
+}
+
+.copyright__link {
+  text-decoration: none;
+
+  color: $black;
+
+  &:active {
+    color: $silver;
+  }
+}
+
+.copyright__text {
+  margin-top: 21px;
+
+  @include font(19px, 18px, bold);
+
+  &:hover .copyright__logo {
+    background-color: $puerto-rico;
+  }
+
+  &:active .copyright__logo {
+    background-color: $morning-glory;
+  }
+}

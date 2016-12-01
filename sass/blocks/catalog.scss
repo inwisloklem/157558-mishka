@@ -1,0 +1,91 @@
+.catalog {
+  background-color: $puerto-rico;
+}
+
+.catalog__block {
+  position: relative;
+  min-height: 103px;
+
+  &--interior {
+    background-color: $downy;
+
+    &:hover {
+      transform: translateY(-5px);
+
+      background-color: $fountain-blue;
+    }
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      right: 37px;
+
+      width: 40px;
+      height: 62px;
+
+      content: "";
+      transform: translateY(-50%);
+
+      background-color: $keppel;
+      mask-image: url("../img/icon-interior.svg");
+    }
+
+    // Компенсатор для блока, который появляется, когда блок поднимается вверх
+    &::after {
+      position: absolute;
+      z-index: -5;
+
+      display: block;
+
+      width: 320px;
+      height: 5px;
+
+      content: "";
+
+      background-color: $fountain-blue;
+    }
+  }
+
+  &--kids {
+    background-color: $fountain-blue;
+
+    &:hover {
+      transform: translateY(-5px);
+
+      background-color: $puerto-rico;
+    }
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      right: 26px;
+
+      width: 61px;
+      height: 61px;
+
+      content: "";
+      transform: translateY(-50%);
+
+      background-color: $keppel;
+      mask-image: url("../img/icon-toy.svg");
+    }
+  }
+}
+
+
+.catalog__link {
+  display: block;
+
+  width: 150px;
+  padding: 31px 140px 24px 30px;
+
+  text-decoration: none;
+
+  color: $white;
+
+  @include font(19px, 24px, bold);
+
+  &:active {
+    color: $morning-glory;
+  }
+}
