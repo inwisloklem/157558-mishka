@@ -32,3 +32,9 @@
   background-color: $color;
   mask-image: url($url);
 }
+
+@mixin clearfix {
+  display: table;
+  content: "";
+  clear: both;
+}

@@ -1,8 +1,19 @@
+html {
+  background-color: $silver;
+}
+
 body {
   width: 320px;
 
-  border-right: 1px solid $gallery;
   background-color: $white;
+
+  @media #{$tablet} {
+    width: 768px;
+  }
+
+  @media #{$desktop} {
+    width: 1150px;
+  }
 }
 
 body, blockquote, fieldset, figure, h1, h2, h3, hr, p, ul, li {

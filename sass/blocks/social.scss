@@ -33,49 +33,88 @@
     width: 22px;
     height: 21px;
 
-    background-color: $black;
-    mask-image: url("../img/icon-insta.svg");
-
-    &:hover {
-      background-color: $downy;
-    }
-
-    &:active {
-      background-color: $morning-glory;
-    }
+    background-image: url("../img/icon-insta.svg");
   }
 
   &--fb {
     width: 15px;
     height: 28px;
 
-    background-color: $black;
-    mask-image: url("../img/icon-fb.svg");
-
-    &:hover {
-      background-color: $downy;
-    }
-
-    &:active {
-      background-color: $morning-glory;
-    }
+    background-image: url("../img/icon-fb.svg");
   }
 
   &--twitter {
     width: 23px;
     height: 20px;
 
-    background-color: $black;
-    mask-image: url("../img/icon-twitter.svg");
+    background-image: url("../img/icon-twitter.svg");
 
     margin-right: 0;
+  }
+}
 
-    &:hover {
-      background-color: $downy;
+@media #{$tablet} {
+  .social {
+    float: left;
+
+    width: 417px;
+    min-height: 143px;
+    padding-left: 50px;
+
+    text-align: right;
+
+    &::before {
+      display: block;
+      float: left;
+
+      width: 86px;
+      height: 35px;
+      margin-top: 57px;
+
+      content: "";
+
+      background-image: url("../img/logo-mobile.svg");
     }
 
-    &:active {
-      background-color: $morning-glory;
+    &::after {
+      height: 0;
     }
+  }
+
+  .social__item {
+    margin-top: 57px;
+  }
+}
+
+@media #{$desktop} {
+  .social {
+    float: left;
+
+    width: 593px;
+    min-height: 143px;
+    padding-left: 50px;
+
+    text-align: right;
+
+    &::before {
+      display: block;
+      float: left;
+
+      width: 86px;
+      height: 35px;
+      margin-top: 57px;
+
+      content: "";
+
+      background-image: url("../img/logo-mobile.svg");
+    }
+
+    &::after {
+      height: 0;
+    }
+  }
+
+  .social__item {
+    margin-top: 57px;
   }
 }

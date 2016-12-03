@@ -27,22 +27,42 @@
   text-decoration: none;
 
   color: $black;
-
-  &:active {
-    color: $silver;
-  }
 }
 
 .copyright__text {
   margin-top: 21px;
 
   @include font(19px, 18px, bold);
+}
 
-  &:hover .copyright__logo {
-    background-color: $puerto-rico;
+@media #{$tablet} {
+  .copyright {
+    float: right;
+
+    width: 251px;
+    min-height: 143px;
+    padding-right: 50px;
+
+    text-align: right;
   }
 
-  &:active .copyright__logo {
-    background-color: $morning-glory;
+  .copyright__text {
+    margin-top: 57px;
+  }
+}
+
+@media #{$desktop} {
+  .copyright {
+    float: right;
+
+    width: 457px;
+    min-height: 143px;
+    padding-right: 50px;
+
+    text-align: right;
+  }
+
+  .copyright__text {
+    margin-top: 57px;
   }
 }

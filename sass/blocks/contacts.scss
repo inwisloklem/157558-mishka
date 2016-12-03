@@ -1,5 +1,6 @@
 .contacts {
   padding: 0 30px;
+  overflow: auto;
 }
 
 .contacts__title {
@@ -41,15 +42,6 @@
 
   color: $tundora;
   border-bottom: 1px solid $downy;
-
-  &:hover {
-    color: $puerto-rico;
-  }
-
-  &:active {
-    color: $morning-glory;
-    border-color: $morning-glory;
-  }
 }
 
 .contacts__map {
@@ -77,4 +69,130 @@
 
 .contacts__btn {
   margin-bottom: 39px;
+}
+
+@media #{$tablet} {
+  .contacts {
+    padding: 0 50px;
+  }
+
+  .contacts__title {
+    margin-top: 61px;
+    @include font(43px, 50px, bold);
+  }
+
+  .contacts__table {
+    width: 668px;
+  }
+
+  .contacts__row {
+    display: inline-block;
+
+    width: 334px;
+
+    vertical-align: top;
+  }
+
+  .contacts__cell {
+    display: inline-block;
+
+    vertical-align: top;
+  }
+
+  .contacts__cell:last-child {
+    width: 200px;
+  }
+
+  .contacts__map {
+    position: relative;
+    right: 50px;
+
+    display: block;
+
+    box-sizing: border-box;
+    width: 768px;
+    height: 457px;
+    padding-left: 333px;
+
+    background: $seashell;
+    margin-bottom: 55px;
+  }
+
+  .contacts__pin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 67px;
+    height: 100px;
+
+    transform: translate(-50%, -50%);
+
+    background-image: url("../img/icon-map-pin.svg");
+  }
+
+  .contacts__btn {
+    width: 230px;
+    margin: 0 auto;
+    margin-bottom: 57px;
+
+    // Этот отступ по непонятным причинам в цвете html, а не в цвете body
+    // Только в планшетной версии
+  }
+}
+
+@media #{$desktop} {
+  .contacts {
+    overflow: auto;
+
+    padding: 0 50px;
+    padding-left: 225px;
+  }
+
+  .contacts__title {
+    margin-top: 141px;
+
+    @include font(53px, 57px, bold);
+  }
+
+  .contacts__table {
+    float: left;
+
+    margin-bottom: 68px;
+  }
+
+  .contacts__map {
+    position: relative;
+    right: 0;
+
+    display: block;
+    float: right;
+
+    box-sizing: border-box;
+    width: 525px;
+    height: 457px;
+    margin-top: -152px;
+    padding-left: 333px;
+
+    background: $seashell;
+  }
+
+  .contacts__pin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 67px;
+    height: 100px;
+
+    transform: translate(-50%, -50%);
+
+    background-image: url("../img/icon-map-pin.svg");
+  }
+
+  .contacts__btn {
+    float: left;
+
+    width: 230px;
+  }
 }

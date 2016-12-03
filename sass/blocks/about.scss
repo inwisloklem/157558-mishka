@@ -24,94 +24,55 @@
   display: block;
 
   padding-top: 83px;
+}
 
-  &--feature-1::before {
-    position: absolute;
-    bottom: 66px;
-    left: 8px;
-
-    width: 32px;
-    height: 38px;
-
-    content: "";
-
-    background-color: $downy;
-
-    mask-image: url("../img/icon-feature-1.svg");
+@media #{$tablet} {
+  .about {
+    padding: 0 50px;
   }
 
-  &--feature-2::before {
-    position: absolute;
-    bottom: 66px;
-    left: 0;
+  .about__title {
+    margin-top: 49px;
 
-    width: 47px;
-    height: 27px;
-
-    content: "";
-
-    background-color: $downy;
-
-    mask-image: url("../img/icon-feature-2.svg");
+    @include font(43px, 50px, bold);
   }
 
-  &--feature-3::before {
-    position: absolute;
-    bottom: 66px;
-    left: 7px;
-
-    width: 33px;
-    height: 28px;
-
-    content: "";
-
-    background-color: $downy;
-
-    mask-image: url("../img/icon-feature-3.svg");
+  .about__list {
+    font-size: 0;
   }
 
-  &--feature-4::before {
-    position: absolute;
-    bottom: 66px;
-    left: 7px;
+  .about__item {
+    display: inline-block;
 
-    width: 34px;
-    height: 34px;
+    width: 334px;
 
-    content: "";
+    vertical-align: baseline;
 
-    background-color: $downy;
+    @include font(20px, 24px, bold);
+  }
+}
 
-    mask-image: url("../img/icon-feature-4.svg");
+@media #{$desktop} {
+  .about {
+    padding: 0 225px;
   }
 
-  &--feature-5::before {
-    position: absolute;
-    bottom: 66px;
-    left: -3px;
-
-    width: 54px;
-    height: 23px;
-
-    content: "";
-
-    background-color: $downy;
-
-    mask-image: url("../img/icon-feature-5.svg");
+  .about__title {
+    margin-top: 59px;
+    @include font(53px, 57px, bold);
   }
 
-  &--feature-6::before {
-    position: absolute;
-    bottom: 66px;
-    left: 8px;
+  .about__list {
+    font-size: 0;
+  }
 
-    width: 33px;
-    height: 32px;
+  .about__item {
+    display: inline-block;
 
-    content: "";
+    width: 350px;
 
-    background-color: $downy;
+    vertical-align: baseline;
 
-    mask-image: url("../img/icon-feature-6.svg");
+    @include font(20px, 24px, bold);
   }
 }

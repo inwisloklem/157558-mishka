@@ -1,7 +1,7 @@
 .menu {
-  box-sizing: border-box;
   position: relative;
 
+  box-sizing: border-box;
   width: 320px;
   min-height: 80px;
 
@@ -28,32 +28,9 @@
   cursor: pointer;
   transform: translateY(-50%);
 
-  border-bottom: 2px solid $mine-shaft;
+  background-image: url("../img/icon-menu-open.svg");
 
   font-size: 0;
-
-  @mixin menu__line {
-    position: absolute;
-
-    width: 20px;
-    height: 2px;
-
-    content: "";
-
-    background-color: $mine-shaft;
-  }
-
-  &::before {
-    top: 0;
-
-    @include menu__line;
-  }
-
-  &::after {
-    top: 6px;
-
-    @include menu__line;
-  }
 }
 
 .menu__list {
@@ -81,7 +58,6 @@
   display: block;
 
   width: 320px;
-  // min-height: 80px;
   padding: 27px 65px;
 
   text-decoration: none;
@@ -89,4 +65,34 @@
   color: $black;
 
   @include font(17px, 24px, bold);
+}
+
+@media #{$tablet} {
+  .menu {
+    width: 768px;
+    min-height: 88px;
+  }
+
+  .menu__logo {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+
+    transform: translateY(-50%);
+  }
+
+  .menu__toggle {
+    display: none;
+  }
+}
+
+@media #{$desktop} {
+  .menu {
+    width: 1150px;
+    min-height: 88px;
+  }
+
+  .menu__toggle {
+    display: none;
+  }
 }

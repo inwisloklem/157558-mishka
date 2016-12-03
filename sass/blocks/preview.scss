@@ -1,9 +1,11 @@
 .preview {
   padding: 0 30px;
+  overflow: auto;
+  position: relative;
 }
 
 .preview__title {
-  margin-top: 25px;
+  margin-top: 27px;
   margin-bottom: 7px;
 
   @include font(25px, 30px, bold);
@@ -64,4 +66,142 @@
 
 .preview__btn {
   margin-bottom: 35px;
+}
+
+@media #{$tablet} {
+  .preview {
+    padding: 0 50px;
+  }
+
+  .preview__title {
+    margin-top: 46px;
+
+    @include font(43px, 50px, bold);
+  }
+
+  .preview__subtitle {
+    position: relative;
+    bottom: 46px;
+
+    float: right;
+
+    width: 75px;
+
+    text-align: center;
+  }
+
+  .preview__block {
+    float: left;
+
+    width: 292px;
+    margin-top: 43px;
+    margin-bottom: 52px;
+  }
+
+  .preview__table {
+    float: left;
+    clear: left;
+
+    width: 292px;
+    margin-bottom: 69px;
+  }
+
+  .preview__image {
+    display: block;
+    float: right;
+
+    box-sizing: border-box;
+    width: 333px;
+    height: 404px;
+    margin-top: -117px;
+    padding-left: 333px;
+
+    background: $seashell;
+  }
+
+  .preview__price {
+    display: block;
+    float: left;
+
+    width: 292px;
+
+    text-align: center;
+  }
+
+  .preview__btn {
+    float: left;
+    clear: left;
+
+    width: 292px;
+  }
+}
+
+@media #{$desktop} {
+  .preview {
+    padding: 0 50px;
+  }
+
+  .preview__title {
+    position: relative;
+    left: 175px;
+
+    float: left;
+
+    margin-top: 123px;
+    margin-bottom: 51px;
+
+    @include font(53px, 57px, bold);
+  }
+
+  .preview__subtitle {
+    position: absolute;
+    top: 139px;
+
+    width: 75px;
+
+    text-align: center;
+  }
+
+  .preview__block {
+    float: left;
+    clear: left;
+
+    width: 292px;
+    margin-left: 175px;
+  }
+
+  .preview__table {
+    float: left;
+    clear: left;
+
+    margin-bottom: 166px;
+    margin-left: 175px;
+  }
+
+  .preview__btn {
+    float: left;
+
+    width: 292px;
+    margin-left: 175px;
+  }
+
+  .preview__price {
+    float: left;
+
+    width: 292px;
+    margin-left: 175px;
+  }
+
+  .preview__image {
+    display: block;
+    float: right;
+
+    box-sizing: border-box;
+    width: 525;
+    height: 636px;
+    margin-top: -254px;
+    padding-left: 525px;
+
+    background: $seashell;
+  }
 }

@@ -1,5 +1,7 @@
 .review {
   padding: 0 30px;
+  overflow: auto;
+  position: relative;
 }
 
 .review__title {
@@ -34,14 +36,6 @@
   color: $tundora;
 
   @include font(18px, 30px);
-
-  &:hover {
-    color: $puerto-rico;
-  }
-
-  &:active {
-    color: $morning-glory;
-  }
 }
 
 .review__arrows {
@@ -58,6 +52,8 @@
   height: 52px;
   margin-bottom: 38px;
 
+  cursor: pointer;
+
   border: 1px solid $gallery;
   outline: none;
   background-color: $white;
@@ -66,21 +62,7 @@
 
   &--prev {
     &::before {
-      @include icon-mask-centre(50px, 26px, $black, "../img/icon-left-arrow.svg");
-    }
-  }
-
-  &--prev:hover {
-    cursor: pointer;
-
-    &::before {
-      @include icon-mask-centre(50px, 26px, $tundora, "../img/icon-left-arrow.svg");
-    }
-  }
-
-  &--prev:active {
-    &::before {
-      @include icon-mask-centre(50px, 26px, $silver-chalice, "../img/icon-left-arrow.svg");
+      @include icon-centre(50px, 26px, "../img/icon-left-arrow.svg");
     }
   }
 
@@ -88,25 +70,103 @@
     border-left: none;
 
     &::before {
-      @include icon-mask-centre(50px, 26px, $black, "../img/icon-right-arrow.svg");
-    }
-  }
-
-  &--next:hover {
-    cursor: pointer;
-
-    &::before {
-      @include icon-mask-centre(50px, 26px, $tundora, "../img/icon-right-arrow.svg");
-    }
-  }
-
-  &--next:active {
-    &::before {
-      @include icon-mask-centre(50px, 26px, $silver-chalice, "../img/icon-right-arrow.svg");
+      @include icon-centre(50px, 26px, "../img/icon-right-arrow.svg");
     }
   }
 }
 
 .review__btn {
   margin-bottom: 44px;
+}
+
+@media #{$tablet} {
+  .review {
+    padding: 0 50px;
+  }
+
+  .review__title {
+    margin-top: 101px;
+    @include font(43px, 50px, bold);
+  }
+
+  .review__block {
+    @include font(17px, 30px);
+  }
+
+  .review__name {
+    float: left;
+
+    @include font(17px, 24px, bold);
+  }
+
+  .review__twitter {
+    float: left;
+    clear: left;
+    margin-bottom: 115px;
+  }
+
+  .review__arrows {
+    float: right;
+
+    margin-top: -25px;
+    margin-right: -43px;
+  }
+
+  .review__arrow {
+    border: none;
+  }
+
+  .review__btn {
+    position: absolute;
+    top: 101px;
+    right: 50px;
+
+    clear: both;
+
+    width: 175px;
+  }
+}
+
+@media #{$desktop} {
+  .review {
+    padding: 0 50px;
+    padding-left: 225px;
+  }
+
+  .review__title {
+    margin-top: 101px;
+    @include font(43px, 50px, bold);
+  }
+  .review__name {
+    float: left;
+
+    @include font(17px, 24px, bold);
+  }
+
+  .review__twitter {
+    float: left;
+    clear: left;
+    margin-bottom: 163px;
+  }
+
+  .review__arrows {
+    float: right;
+
+    margin-top: -25px;
+    margin-right: -43px;
+  }
+
+  .review__arrow {
+    border: none;
+  }
+
+  .review__btn {
+    position: absolute;
+    top: 101px;
+    right: 50px;
+
+    clear: both;
+
+    width: 175px;
+  }
 }
