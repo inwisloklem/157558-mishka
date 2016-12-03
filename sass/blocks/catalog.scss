@@ -28,10 +28,6 @@
   color: $white;
 
   @include font(19px, 24px, bold);
-
-  &:active {
-    color: $morning-glory;
-  }
 }
 
 @media #{$tablet} {

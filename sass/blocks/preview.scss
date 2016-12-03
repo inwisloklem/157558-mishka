@@ -1,7 +1,9 @@
 .preview {
-  padding: 0 30px;
-  overflow: auto;
   position: relative;
+
+  overflow: auto;
+
+  padding: 0 30px;
 }
 
 .preview__title {
@@ -139,11 +141,11 @@
 @media #{$desktop} {
   .preview {
     padding: 0 50px;
+    padding-left: 225px;
   }
 
   .preview__title {
     position: relative;
-    left: 175px;
 
     float: left;
 
@@ -156,6 +158,9 @@
   .preview__subtitle {
     position: absolute;
     top: 139px;
+    left: 97px;
+
+    display: block;
 
     width: 75px;
 
@@ -167,29 +172,25 @@
     clear: left;
 
     width: 292px;
-    margin-left: 175px;
   }
 
   .preview__table {
     float: left;
     clear: left;
 
-    margin-bottom: 166px;
-    margin-left: 175px;
+    margin-bottom: 158px;
   }
 
   .preview__btn {
     float: left;
 
     width: 292px;
-    margin-left: 175px;
   }
 
   .preview__price {
     float: left;
 
     width: 292px;
-    margin-left: 175px;
   }
 
   .preview__image {
@@ -197,7 +198,7 @@
     float: right;
 
     box-sizing: border-box;
-    width: 525;
+    width: 525px;
     height: 636px;
     margin-top: -254px;
     padding-left: 525px;
