@@ -226,6 +226,10 @@
     left: 110px;
   }
 
+  .order__input {
+    @include font(19px, 18px);
+  }
+
   .order__text, .order__input {
     width: 700px;
   }
