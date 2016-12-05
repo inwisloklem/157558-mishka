@@ -49,3 +49,134 @@
 .catalog-item__cart {
   font-size: 0;
 }
+
+@media #{$tablet} {
+  .catalog-item {
+    position: relative;
+    overflow: auto;
+
+    padding: 0 50px;
+  }
+
+  .catalog-item__image {
+    display: block;
+    float: left;
+
+    box-sizing: border-box;
+    width: 334px;
+    height: 334px;
+    margin-top: 54px;
+    padding-left: 334px;
+
+    background: $seashell;
+  }
+
+  .catalog-item:first-of-type .catalog-item__image {
+    margin-top: 82px;
+  }
+
+  .catalog-item__wrapper {
+    float: right;
+
+    width: 334px;
+    height: 334px;
+    margin-top: 54px;
+  }
+
+  .catalog-item:first-of-type .catalog-item__wrapper {
+    margin-top: 82px;
+  }
+
+  .catalog-item__title {
+    width: 240px;
+
+    @include font(20px, 24px, bold);
+  }
+
+  .catalog-item__desc {
+    border: none;
+
+    @include font(15px, 30px);
+  }
+
+  .catalog-item__price {
+    position: absolute;
+    bottom: 0;
+
+    width: 268px;
+    padding: 25px 0;
+
+    border-top: 1px solid $gallery;
+
+    @include font(17px, 24px, bold);
+  }
+}
+
+@media #{$desktop} {
+  // 50 + 317 + 49 + 317 + 50 + 317 + 50 = 1150
+
+  .catalog-item {
+    position: relative;
+
+    display: inline-block;
+
+    margin-top: 131px;
+    margin-right: 50px;
+    padding: 0;
+
+    vertical-align: top;
+  }
+
+  .catalog-item:nth-of-type(3n+1) {
+    margin-right: 49px;
+    margin-left: 50px;
+  }
+
+  .catalog-item:nth-of-type(3n+3) {
+    margin-right: 50px;
+  }
+
+  .catalog-item:nth-of-type(n+4) {
+    margin-top: 50px;
+  }
+
+  .catalog-item__image {
+    display: block;
+
+    box-sizing: border-box;
+    width: 317px;
+    height: 463px;
+    padding-left: 317px;
+
+    background: $seashell;
+  }
+
+  .catalog-item__title {
+    width: 235px;
+
+    @include font(20px, 24px, bold);
+  }
+
+  .catalog-item__desc {
+    border: none;
+
+    @include font(15px, 30px);
+  }
+
+  .catalog-item__price {
+    position: absolute;
+    bottom: 0;
+
+    width: 256px;
+    padding: 25px 0;
+
+    border-top: 1px solid $gallery;
+
+    @include font(17px, 24px, bold);
+  }
+
+  .catalog-item__wrapper {
+    width: 317px;
+    height: 196px;
+  }
+}

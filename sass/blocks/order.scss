@@ -73,3 +73,180 @@
 .order__btn {
   margin-bottom: 55px;
 }
+
+@media #{$tablet} {
+  .order {
+    position: relative;
+
+    overflow: auto;
+
+    padding: 0;
+
+    font-size: 0;
+  }
+
+  .order__desc {
+    padding: 0 50px;
+
+    @include font(17px, 30px);
+  }
+
+  .order__block {
+    padding-top: 50px;
+    padding-left: 225px;
+  }
+
+  .order__input {
+    width: 501px;
+
+    @include font(19px, 18px);
+  }
+
+  .order__block:nth-of-type(2),
+  .order__block:nth-of-type(4),
+  .order__block:nth-of-type(5), {
+    background-color: $seashell;
+  }
+
+  .order__block:nth-of-type(4) .order__input,
+  .order__block:nth-of-type(5) .order__input {
+    background-color: $seashell;
+  }
+
+  .order__block:nth-of-type(5) .order__input {
+    margin-bottom: 50px;
+  }
+
+  .order__block:nth-of-type(2) > p {
+    display: inline-block;
+
+    vertical-align: top;
+  }
+
+  .order__radio {
+    margin-bottom: 50px;
+  }
+
+  .order__checkbox {
+    display: inline-block;
+
+    width: 250px;
+    margin-bottom: 50px;
+  }
+
+  .order__radio, .order__checkbox, .order__subtitle {
+    @include font(19px, 15px, bold);
+  }
+
+  .order__title {
+    position: absolute;
+    left: 50px;
+  }
+
+  .order__text {
+    width: 501px;
+  }
+
+  .order__btn {
+    float: left;
+
+    width: 230px;
+    margin-top: 53px;
+    margin-left: 50px;
+  }
+
+  .order__note {
+    float: right;
+
+    margin-top: 53px;
+    margin-right: 50px;
+
+    @include font(17px, 30px);
+  }
+}
+
+@media #{$desktop} {
+  .order {
+    position: relative;
+
+    overflow: auto;
+
+    padding: 0;
+
+    font-size: 0;
+  }
+
+  .order__radio, .order__checkbox, .order__subtitle {
+    @include font(19px, 18px, bold);
+  }
+
+  .order__block:nth-of-type(2) > p {
+    display: inline-block;
+
+    vertical-align: top;
+  }
+
+  .order__block:nth-of-type(2),
+  .order__block:nth-of-type(4),
+  .order__block:nth-of-type(5), {
+    background-color: $seashell;
+  }
+
+  .order__block:nth-of-type(4) .order__input,
+  .order__block:nth-of-type(5) .order__input {
+    background-color: $seashell;
+  }
+
+  .order__block:nth-of-type(5) .order__input {
+    margin-bottom: 50px;
+  }
+
+  .order__radio {
+    margin-bottom: 50px;
+  }
+
+  .order__desc {
+    padding: 0 225px;
+
+    @include font(17px, 30px);
+  }
+
+  .order__block {
+    padding-top: 50px;
+    padding-left: 225px;
+  }
+
+  .order__checkbox {
+    width: 262px;
+    margin-bottom: 50px;
+  }
+
+  .order__title {
+    position: absolute;
+    left: 110px;
+  }
+
+  .order__input {
+    @include font(19px, 18px);
+  }
+
+  .order__text, .order__input {
+    width: 700px;
+  }
+  .order__btn {
+    float: left;
+
+    width: 230px;
+    margin-top: 53px;
+    margin-left: 225px;
+  }
+
+  .order__note {
+    float: right;
+
+    margin-top: 53px;
+    margin-right: 225px;
+
+    @include font(17px, 30px);
+  }
+}

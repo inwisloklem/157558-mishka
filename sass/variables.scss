@@ -1,7 +1,13 @@
 $font-stack: "Open Sans", Tahoma, sans-serif;
 
+// Значения экранов для медиа-запросов
+
+$tablet: "(min-width: 768px) and (max-width: 1149px)";
+$desktop: "(min-width: 1150px)";
+
 // Таблица используемых цветов http://chir.ag/projects/name-that-color
 
+$alabaster: #f9f9f9;
 $black: #000000;
 $downy: #63d1bb;
 $fountain-blue: #56c3b2;

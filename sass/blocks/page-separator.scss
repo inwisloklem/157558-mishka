@@ -2,5 +2,13 @@
   min-height: 7px;
 
   border: none;
-  background-color: $gallery;
+  background-color: $seashell;
+
+  @media #{$tablet} {
+    min-height: 17px;
+  }
+
+  @media #{$desktop} {
+    min-height: 23px;
+  }
 }
