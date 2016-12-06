@@ -1,5 +1,11 @@
+// Пока непонятно, какое из двух решений лучше
+
 @mixin font($font-size, $line-height, $font-weight: normal)  {
-  font: $font-weight #{$font-size}/#{$line-height} $font-stack;
+  // font: $font-weight #{$font-size}/#{$line-height} $font-stack;
+
+  font-size: #{$font-size};
+  @if $font-weight == "bold" { font-weight: $font-weight; }
+  line-height: #{$line-height};
 }
 
 @mixin icon-centre($width, $height, $url) {

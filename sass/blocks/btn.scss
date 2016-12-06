@@ -14,5 +14,14 @@
   border: 2px solid $tundora;
   background-color: transparent;
 
-  @include font(18px, 16px, bold);
+  @include font(17px, 16px, bold);
+}
+
+@media #{$desktop} {
+  .btn {
+    &:hover {
+      color: $white;
+      background-color: $tundora;
+    }
+  }
 }

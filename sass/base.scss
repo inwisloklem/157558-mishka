@@ -1,3 +1,7 @@
+body, button, input, table {
+  font-family: $font-stack;
+}
+
 body, blockquote, fieldset, figure, h1, h2, h3, hr, p, ul, li {
   margin: 0;
 }
@@ -21,12 +25,16 @@ body {
   background-color: $white;
 
   font-size: 0;
+}
 
-  @media #{$tablet} {
+@media #{$tablet} {
+  body {
     width: 768px;
   }
+}
 
-  @media #{$desktop} {
+@media #{$desktop} {
+  body {
     width: 1150px;
     margin: 0 auto;
   }

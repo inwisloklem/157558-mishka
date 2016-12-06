@@ -64,6 +64,8 @@
 
 @media #{$desktop} {
   .catalog {
+    position: relative;
+
     flex-direction: row;
 
     padding: 0 50px;
