@@ -1,11 +1,9 @@
 .catalog {
-  background-color: $puerto-rico;
-  overflow: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .catalog__block {
-  position: relative;
-
   min-height: 103px;
 
   &--interior {
@@ -20,8 +18,9 @@
 .catalog__link {
   display: block;
 
-  width: 150px;
-  padding: 31px 140px 24px 30px;
+  box-sizing: border-box;
+  min-height: inherit;
+  padding: 30px;
 
   text-decoration: none;
 
@@ -34,28 +33,62 @@
   .catalog {
     padding: 0 50px;
 
+    flex-direction: row;
+
     background-color: $alabaster;
   }
 
   .catalog__block {
-    float: left;
-
     width: 334px;
     min-height: 119px;
   }
 }
 
+// Миксин для добавления полосок того же цвета, как и блок, при наведении
+
+@mixin catalog__line($color) {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  z-index: -10;
+
+  display: block;
+
+  width: 525px;
+  height: 5px;
+
+  content: "";
+
+  background-color: $color;
+}
+
 @media #{$desktop} {
   .catalog {
+    flex-direction: row;
+
     padding: 0 50px;
 
     background-color: $alabaster;
   }
 
   .catalog__block {
-    float: left;
-
     width: 525px;
     min-height: 119px;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    &:first-of-type > .catalog__link {
+      &::after {
+        @include catalog__line($downy);
+      }
+    }
+
+    &:last-of-type > .catalog__link {
+      &::after {
+        @include catalog__line($fountain-blue);
+      }
+    }
   }
 }

@@ -7,6 +7,7 @@ menuToggle.addEventListener("click", function(event) {
   event.preventDefault();
 
   menuList.classList.toggle("menu__list--hidden");
+  menuToggle.classList.toggle("menu__toggle--close");
 });
 
 var makeOrder = document.querySelector(".preview__btn");
