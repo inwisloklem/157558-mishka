@@ -1,7 +1,10 @@
 .review {
-  padding: 0 30px;
-  overflow: auto;
   position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 30px;
 }
 
 .review__title {
@@ -10,7 +13,7 @@
   margin-bottom: 24px;
 }
 
-.review__block {
+.review__text {
   margin-bottom: 26px;
 
   color: $tundora;
@@ -21,6 +24,8 @@
 .review__name{
   margin-bottom: 3px;
 
+  font-style: normal;
+
   @include font(18px, 24px, bold);
 }
 
@@ -28,6 +33,8 @@
   display: block;
 
   margin-bottom: 30px;
+
+  font-style: normal;
 }
 
 .review__link {
@@ -46,6 +53,7 @@
   position: relative;
 
   display: inline-block;
+  vertical-align: baseline;
 
   box-sizing: border-box;
   width: 130px;
@@ -62,7 +70,7 @@
 
   &--prev {
     &::before {
-      @include icon-centre(50px, 26px, "../img/icon-left-arrow.svg");
+      @include icon(50px, 26px, "../img/icon-left-arrow.svg");
     }
   }
 
@@ -70,7 +78,7 @@
     border-left: none;
 
     &::before {
-      @include icon-centre(50px, 26px, "../img/icon-right-arrow.svg");
+      @include icon(50px, 26px, "../img/icon-right-arrow.svg");
     }
   }
 }
@@ -85,34 +93,49 @@
   }
 
   .review__title {
+    width: 450px;
     margin-top: 101px;
+    margin-bottom: 49px;
+
     @include font(43px, 50px, bold);
   }
 
   .review__block {
+    display: flex;
+
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    margin-bottom: 115px;
+  }
+
+  .review__text {
     @include font(17px, 30px);
+
+    width: 100%;
+    margin-bottom: 59px;
   }
 
   .review__name {
-    float: left;
-
     @include font(17px, 24px, bold);
   }
 
   .review__twitter {
-    float: left;
-    clear: left;
-    margin-bottom: 115px;
+    margin: 0;
+  }
+
+  .review__footer {
+    width: 334px;
   }
 
   .review__arrows {
-    float: right;
-
-    margin-top: -25px;
-    margin-right: -43px;
+    width: 168px;
   }
 
   .review__arrow {
+    width: 84px;
+    margin: 0;
+
     border: none;
   }
 
@@ -120,8 +143,6 @@
     position: absolute;
     top: 101px;
     right: 50px;
-
-    clear: both;
 
     width: 175px;
   }
@@ -135,28 +156,43 @@
 
   .review__title {
     margin-top: 101px;
+    margin-bottom: 49px;
+
     @include font(43px, 50px, bold);
   }
-  .review__name {
-    float: left;
 
+  .review__block {
+    display: flex;
+
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    margin-bottom: 163px;
+  }
+
+  .review__text {
+    width: 100%;
+    margin-bottom: 59px;
+
+    @include font(17px, 30px);
+  }
+
+  .review__name {
     @include font(17px, 24px, bold);
   }
 
   .review__twitter {
-    float: left;
-    clear: left;
-    margin-bottom: 163px;
+    margin: 0;
   }
 
   .review__arrows {
-    float: right;
-
-    margin-top: -25px;
-    margin-right: -43px;
+    width: 168px;
   }
 
   .review__arrow {
+    width: 84px;
+    margin: 0;
+
     border: none;
   }
 
@@ -164,8 +200,6 @@
     position: absolute;
     top: 101px;
     right: 50px;
-
-    clear: both;
 
     width: 175px;
   }
