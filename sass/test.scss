@@ -1,7 +1,6 @@
 // Тестовый блок
 
-$list: "about", "menu", "caption", "caption-image", "catalog", "catalog-item",
-       "preview", "review", "contacts", "social", "copyright";
+$list: "about", "menu", "caption", "caption-image", "catalog", "catalog-item", "preview", "review", "contacts", "social", "copyright";
 
 @each $block in $list {
   .#{$block}, .#{$block} * {
