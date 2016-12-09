@@ -1,7 +1,24 @@
 .process {
-  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
 
-  font-size: 0;
+  padding: 0 30px;
+}
+
+.process__video {
+  width: 260px;
+  height: 150px;
+}
+
+.process__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 58px;
+  padding: 30px;
+  padding-bottom: 0;
+
+  border: 1px solid $gallery;
 }
 
 .process__title {
@@ -18,11 +35,6 @@
   @include font(17px, 24px, bold);
 }
 
-.process__video {
-  width: 260px;
-  height: 150px;
-}
-
 .process__desc {
   margin-bottom: 25px;
 
@@ -31,32 +43,33 @@
   @include font(13px, 24px, normal);
 }
 
-.process__wrapper {
-  padding: 30px;
-
-  border: 1px solid $gallery;
-
-  margin-bottom: 58px;
+.process__btn {
+  margin-bottom: 32px;
 }
 
 @media #{$tablet} {
   .process {
-    overflow: auto;
     position: relative;
 
     padding: 0 50px;
   }
 
   .process__video {
-    margin-top: 54px;
     display: block;
 
     box-sizing: border-box;
     width: 668px;
     height: 455px;
+    margin-top: 54px;
     padding-left: 668px;
 
     background: $seashell;
+  }
+
+  .process__wrapper {
+    min-height: 167px;
+    padding: 40px;
+    padding-bottom: 0;
   }
 
   .process__title {
@@ -70,14 +83,12 @@
     @include font(20px, 24px, bold);
   }
 
-  .process__wrapper {
-    padding: 40px;
-
-    min-height: 167px;
-  }
-
   .process__desc {
     margin-top: 66px;
+  }
+
+  .process__btn {
+    margin-bottom: 45px;
   }
 }
 
@@ -85,7 +96,7 @@
   .process {
     position: relative;
 
-    overflow: auto;
+    flex-direction: row;
 
     padding: 0 50px;
   }
@@ -105,8 +116,6 @@
   }
 
   .process__video {
-    float: left;
-
     box-sizing: border-box;
     width: 683px;
     height: 455px;
@@ -117,24 +126,22 @@
   }
 
   .process__wrapper {
-    float: right;
-    overflow: auto;
-
     box-sizing: border-box;
     width: 367px;
-    height: 455px;
     margin-top: 53px;
     padding: 59px;
+    padding-bottom: 0;
     padding-left: 79px;
   }
 
   .process__desc {
     margin-top: 107px;
+    margin-bottom: 56px;
 
     @include font(15px, 30px);
   }
 
   .process__btn {
-    margin-top: 55px;
+    margin-bottom: 59px;
   }
 }

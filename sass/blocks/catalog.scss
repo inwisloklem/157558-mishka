@@ -62,6 +62,8 @@
   background-color: $color;
 }
 
+// Это решение мне не очень нравится. Как это реализовать на флексах, чтобы росло вверх?
+
 @media #{$desktop} {
   .catalog {
     position: relative;

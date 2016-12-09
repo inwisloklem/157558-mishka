@@ -1,3 +1,5 @@
+// Меню, наверное, надо переделывать. При добавлении новых пунктов оно разъезжается
+
 .menu {
   position: relative;
 
@@ -10,6 +12,7 @@
 
 .menu__logo {
   position: absolute;
+  z-index: 20;
   top: 50%;
   left: 50%;
 

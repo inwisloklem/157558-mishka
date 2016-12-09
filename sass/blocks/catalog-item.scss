@@ -1,7 +1,8 @@
 .catalog-item {
-  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
 
-  font-size: 0;
+  padding: 0 30px;
 }
 
 .catalog-item__image {
@@ -13,14 +14,19 @@
 }
 
 .catalog-item__wrapper {
+  display: flex;
+  flex-direction: column;
+
   box-sizing: border-box;
   min-height: 179px;
-  padding: 30px;
+  padding: 27px 30px 0;
 
   border: 1px solid $gallery;
 }
 
 .catalog-item__title {
+  margin-bottom: 4px;
+
   @include font(17px, 24px, bold);
 }
 
@@ -33,16 +39,19 @@
 .catalog-item__desc {
   display: block;
 
-  margin-bottom: 15px;
-  padding-bottom: 19px;
+  margin-bottom: 20px;
 
   color: $tundora;
-  border-bottom: 1px solid $gallery;
+
 
   @include font(13px, 30px, normal);
 }
 
 .catalog-item__price {
+  margin-top: auto;
+  border-top: 1px solid $gallery;
+  padding: 21px 0;
+
   @include font(15px, 24px, bold);
 }
 
@@ -52,15 +61,14 @@
 
 @media #{$tablet} {
   .catalog-item {
-    position: relative;
-    overflow: auto;
+    display: flex;
+    flex-direction: row;
 
     padding: 0 50px;
   }
 
   .catalog-item__image {
     display: block;
-    float: left;
 
     box-sizing: border-box;
     width: 334px;
@@ -76,11 +84,13 @@
   }
 
   .catalog-item__wrapper {
-    float: right;
+    display: flex;
+    flex-direction: column;
 
     width: 334px;
     height: 334px;
     margin-top: 54px;
+    padding: 25px 30px 0;
   }
 
   .catalog-item:first-of-type .catalog-item__wrapper {
@@ -89,6 +99,7 @@
 
   .catalog-item__title {
     width: 240px;
+    margin-bottom: 5px;
 
     @include font(20px, 24px, bold);
   }
@@ -100,11 +111,9 @@
   }
 
   .catalog-item__price {
-    position: absolute;
-    bottom: 0;
-
     width: 268px;
-    padding: 25px 0;
+    margin-top: auto;
+    padding: 21px 0;
 
     border-top: 1px solid $gallery;
 
@@ -116,29 +125,31 @@
   // 50 + 317 + 49 + 317 + 50 + 317 + 50 = 1150
 
   .catalog-item {
-    position: relative;
-
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: column;
 
     margin-top: 131px;
     margin-right: 50px;
     padding: 0;
 
     vertical-align: top;
+
+    &:nth-of-type(3n+1) {
+      margin-right: 49px;
+      margin-left: 50px;
+    }
+
+    &:nth-of-type(3n+3) {
+      margin-right: 50px;
+    }
+
+    &:nth-of-type(n+4) {
+      margin-top: 50px;
+    }
   }
 
-  .catalog-item:nth-of-type(3n+1) {
-    margin-right: 49px;
-    margin-left: 50px;
-  }
-
-  .catalog-item:nth-of-type(3n+3) {
-    margin-right: 50px;
-  }
-
-  .catalog-item:nth-of-type(n+4) {
-    margin-top: 50px;
-  }
+  // Здесь, возможно, нужно придумать что-нибудь получше nth-of-type,
+  // но делать обёртку и выносить её в отдельный файл не хочется
 
   .catalog-item__image {
     display: block;
@@ -151,32 +162,39 @@
     background: $seashell;
   }
 
+  .catalog-item__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    width: 317px;
+    height: 197px;
+
+    padding: 25px 30px 0;
+  }
+
   .catalog-item__title {
     width: 235px;
+    margin-bottom: 5px;
 
     @include font(20px, 24px, bold);
   }
 
   .catalog-item__desc {
+    margin: 0;
+    padding: 0;
+
     border: none;
 
     @include font(15px, 30px);
   }
 
   .catalog-item__price {
-    position: absolute;
-    bottom: 0;
-
     width: 256px;
-    padding: 25px 0;
+    margin-top: auto;
+    padding: 21px 0;
 
     border-top: 1px solid $gallery;
 
     @include font(17px, 24px, bold);
-  }
-
-  .catalog-item__wrapper {
-    width: 317px;
-    height: 196px;
   }
 }
