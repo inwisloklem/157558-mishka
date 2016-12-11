@@ -1,5 +1,3 @@
-// Меню, наверное, надо переделывать. При добавлении новых пунктов оно разъезжается
-
 .menu {
   position: relative;
 
@@ -8,6 +6,18 @@
   min-height: 80px;
 
   border-bottom: 1px solid $gallery;
+
+  @media #{$tablet} {
+    width: 768px;
+  }
+
+  @media #{$desktop} {
+    width: 1150px;
+  }
+
+  @media#{$tablet-and-desktop} {
+    min-height: 88px;
+  }
 }
 
 .menu__logo {
@@ -17,6 +27,12 @@
   left: 50%;
 
   transform: translate(-50%, -50%);
+
+  @media #{$tablet} {
+    left: 50px;
+
+    transform: translateY(-50%);
+  }
 }
 
 .menu__toggle {
@@ -41,6 +57,10 @@
 
     background-image: url("../img/icon-menu-close.svg");
   }
+
+  @media#{$tablet-and-desktop} {
+    display: none;
+  }
 }
 
 .menu__list {
@@ -60,50 +80,8 @@
   &--hidden {
     display: none;
   }
-}
 
-.menu__item {
-  border-bottom: 1px solid $gallery;
-
-  &--more {
-    display: none;
-  }
-}
-
-.menu__link {
-  box-sizing: border-box;
-  display: block;
-
-  width: 320px;
-  padding: 27px 65px;
-
-  text-decoration: none;
-
-  color: $black;
-
-  @include font(17px, 24px, bold);
-}
-
-@media #{$tablet} {
-  .menu {
-    width: 768px;
-    min-height: 88px;
-  }
-
-  .menu__logo {
-    position: absolute;
-    top: 50%;
-    left: 50px;
-
-    transform: translateY(-50%);
-  }
-
-  .menu__toggle {
-    display: none;
-  }
-
-  .menu__list {
-    position: absolute;
+  @media #{$tablet-and-desktop} {
     top: 0;
 
     display: flex;
@@ -114,8 +92,16 @@
 
     flex-flow: row wrap;
   }
+}
 
-  .menu__item {
+.menu__item {
+  border-bottom: 1px solid $gallery;
+
+  &--more {
+    display: none;
+  }
+
+  @media #{$tablet} {
     width: 167px;
     border: none;
 
@@ -135,11 +121,9 @@
       background-color: $white;
 
       order: -2;
-
-      // background: url("../img/icon-search.svg") 50% 36px no-repeat;
     }
 
-    &--search > .menu__link {
+    &--search .menu__link {
       font-size: 0;
 
       &::before {
@@ -174,49 +158,7 @@
     }
   }
 
-  .menu__link, .menu__text {
-    padding: 31px 0 23px;
-  }
-
-  .menu__link {
-    width: inherit;
-    min-height: inherit;
-  }
-
-  .menu__text {
-    width: 334px;
-    margin-left: auto;
-
-    text-align: right;
-
-    @include font(15px, 24px);
-  }
-}
-
-@media #{$desktop} {
-  .menu {
-    width: 1150px;
-    min-height: 88px;
-  }
-
-  .menu__toggle {
-    display: none;
-  }
-
-  .menu__list {
-    position: absolute;
-    top: 0;
-
-    display: flex;
-
-    padding: 0 50px;
-
-    background-color: transparent;
-
-    flex-flow: row wrap;
-  }
-
-  .menu__item {
+  @media #{$desktop} {
     width: 220px;
 
     border: none;
@@ -235,7 +177,7 @@
       width: 235px;
     }
 
-    &--form > .menu__link {
+    &--form .menu__link {
       padding-left: 35px;
     }
 
@@ -253,7 +195,7 @@
       background-color: $white;
     }
 
-    &--search > .menu__link {
+    &--search .menu__link {
       font-size: 0;
 
       &::before {
@@ -289,28 +231,44 @@
       display: flex;
     }
 
-    &--more > .menu__link {
+    &--more .menu__link {
       @include font(15px, 24px, bold);
     }
   }
+}
 
-  .menu__link, .menu__text {
-    padding: 31px 0 32px;
-  }
+.menu__link {
+  box-sizing: border-box;
+  display: block;
 
-  .menu__link {
+  width: 320px;
+  padding: 27px 65px;
+
+  text-decoration: none;
+
+  color: $black;
+
+  @include font(17px, 24px, bold);
+
+  @media #{$tablet-and-desktop} {
     width: inherit;
     min-height: inherit;
-
-    @include font(17px, 24px, bold);
   }
+}
 
-  .menu__text {
+.menu__text {
+  @media #{$tablet-and-desktop} {
     width: 334px;
     margin-left: auto;
 
     text-align: right;
 
     @include font(15px, 24px);
+  }
+}
+
+.menu__link, .menu__text {
+  @media #{$tablet-and-desktop} {
+    padding: 31px 0 23px;
   }
 }

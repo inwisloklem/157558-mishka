@@ -5,12 +5,51 @@
   flex-direction: column;
 
   padding: 0 30px;
+
+  @media #{$tablet-and-desktop} {
+    padding: 0 50px;
+  }
+
+  @media #{$desktop} {
+    padding-left: 225px;
+  }
 }
 
 .review__title {
   @include font(25px, 30px, bold);
 
   margin-bottom: 24px;
+
+  @media #{$tablet} {
+    width: 450px;
+    margin-top: 101px;
+    margin-bottom: 49px;
+
+    @include font(43px, 50px, bold);
+  }
+
+  @media #{$desktop} {
+    margin-top: 101px;
+    margin-bottom: 49px;
+
+    @include font(43px, 50px, bold);
+  }
+}
+
+.review__block {
+  @media #{$tablet-and-desktop} {
+    display: flex;
+
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  @media #{$tablet} {
+    margin-bottom: 115px;
+  }
+  @media #{$desktop} {
+    margin-bottom: 163px;
+  }
 }
 
 .review__text {
@@ -19,6 +58,13 @@
   color: $tundora;
 
   @include font(15px, 30px);
+
+  @media #{$tablet-and-desktop} {
+    width: 100%;
+    margin-bottom: 59px;
+
+    @include font(17px, 30px);
+  }
 }
 
 .review__name{
@@ -27,6 +73,11 @@
   font-style: normal;
 
   @include font(18px, 24px, bold);
+
+
+  @media #{$tablet-and-desktop} {
+    @include font(17px, 24px, bold);
+  }
 }
 
 .review__twitter {
@@ -35,6 +86,10 @@
   margin-bottom: 30px;
 
   font-style: normal;
+
+  @media #{$tablet-and-desktop} {
+    margin: 0;
+  }
 }
 
 .review__link {
@@ -43,10 +98,6 @@
   color: $tundora;
 
   @include font(18px, 30px);
-}
-
-.review__arrows {
-  font-size: 0;
 }
 
 .review__arrow {
@@ -81,122 +132,19 @@
       @include icon(50px, 26px, "../img/icon-right-arrow.svg");
     }
   }
+
+  @media #{$tablet-and-desktop} {
+    width: 84px;
+    margin: 0;
+
+    border: none;
+  }
 }
 
 .review__btn {
   margin-bottom: 44px;
-}
 
-@media #{$tablet} {
-  .review {
-    padding: 0 50px;
-  }
-
-  .review__title {
-    width: 450px;
-    margin-top: 101px;
-    margin-bottom: 49px;
-
-    @include font(43px, 50px, bold);
-  }
-
-  .review__block {
-    display: flex;
-
-    flex-flow: row wrap;
-    justify-content: space-between;
-
-    margin-bottom: 115px;
-  }
-
-  .review__text {
-    @include font(17px, 30px);
-
-    width: 100%;
-    margin-bottom: 59px;
-  }
-
-  .review__name {
-    @include font(17px, 24px, bold);
-  }
-
-  .review__twitter {
-    margin: 0;
-  }
-
-  .review__footer {
-    width: 334px;
-  }
-
-  .review__arrows {
-    width: 168px;
-  }
-
-  .review__arrow {
-    width: 84px;
-    margin: 0;
-
-    border: none;
-  }
-
-  .review__btn {
-    position: absolute;
-    top: 101px;
-    right: 50px;
-
-    width: 175px;
-  }
-}
-
-@media #{$desktop} {
-  .review {
-    padding: 0 50px;
-    padding-left: 225px;
-  }
-
-  .review__title {
-    margin-top: 101px;
-    margin-bottom: 49px;
-
-    @include font(43px, 50px, bold);
-  }
-
-  .review__block {
-    display: flex;
-
-    flex-flow: row wrap;
-    justify-content: space-between;
-
-    margin-bottom: 163px;
-  }
-
-  .review__text {
-    width: 100%;
-    margin-bottom: 59px;
-
-    @include font(17px, 30px);
-  }
-
-  .review__name {
-    @include font(17px, 24px, bold);
-  }
-
-  .review__twitter {
-    margin: 0;
-  }
-
-  .review__arrows {
-    width: 168px;
-  }
-
-  .review__arrow {
-    width: 84px;
-    margin: 0;
-
-    border: none;
-  }
-
-  .review__btn {
+  @media #{$tablet-and-desktop} {
     position: absolute;
     top: 101px;
     right: 50px;

@@ -3,11 +3,42 @@
   flex-direction: column;
 
   padding: 0 30px;
+
+  @media #{$desktop} {
+    flex-direction: row;
+  }
+
+  @media #{$tablet-and-desktop} {
+    position: relative;
+
+    padding: 0 50px;
+  }
 }
 
 .process__video {
   width: 260px;
   height: 150px;
+
+  @media #{$tablet} {
+    box-sizing: border-box;
+    width: 668px;
+    padding-left: 668px;
+
+    background: $seashell;
+  }
+
+  @media #{$desktop} {
+    box-sizing: border-box;
+    width: 683px;
+    padding-left: 683px;
+
+    background: $seashell;
+  }
+
+  @media #{$tablet-and-desktop} {
+    height: 455px;
+    margin-top: 54px;
+  }
 }
 
 .process__wrapper {
@@ -19,13 +50,26 @@
   padding-bottom: 0;
 
   border: 1px solid $gallery;
+
+  @media #{$tablet} {
+    min-height: 167px;
+    padding: 40px;
+  }
+
+  @media #{$desktop} {
+    box-sizing: border-box;
+    width: 367px;
+    margin-top: 54px;
+    padding: 59px;
+    padding-left: 79px;
+  }
+
+  @media #{$tablet-and-desktop} {
+    padding-bottom: 0;
+  }
 }
 
 .process__title {
-  display: block;
-
-  box-sizing: border-box;
-  min-height: 97px;
   margin-top: 30px;
   padding: 30px;
   padding-left: 68px;
@@ -33,6 +77,29 @@
   border: 1px solid $gallery;
 
   @include font(17px, 24px, bold);
+
+  @media #{$tablet} {
+    top: 480px;
+    left: 89px;
+
+    width: 668px;
+  }
+
+  @media #{$desktop} {
+    top: 23px;
+    right: 108px;
+
+    width: 200px;
+    padding-top: 100px;
+  }
+
+  @media #{$tablet-and-desktop} {
+    position: absolute;
+
+    border: none;
+
+    @include font(20px, 24px, bold);
+  }
 }
 
 .process__desc {
@@ -41,107 +108,29 @@
   color: $tundora;
 
   @include font(13px, 24px, normal);
-}
 
-.process__btn {
-  margin-bottom: 32px;
-}
+  @media #{$tablet} {
+    margin-top: 46px;
 
-@media #{$tablet} {
-  .process {
-    position: relative;
-
-    padding: 0 50px;
+    @include font(15px, 30px);
   }
 
-  .process__video {
-    display: block;
-
-    box-sizing: border-box;
-    width: 668px;
-    height: 455px;
-    margin-top: 54px;
-    padding-left: 668px;
-
-    background: $seashell;
-  }
-
-  .process__wrapper {
-    min-height: 167px;
-    padding: 40px;
-    padding-bottom: 0;
-  }
-
-  .process__title {
-    position: absolute;
-    top: 480px;
-
-    width: 668px;
-
-    border: none;
-
-    @include font(20px, 24px, bold);
-  }
-
-  .process__desc {
-    margin-top: 66px;
-  }
-
-  .process__btn {
-    margin-bottom: 45px;
-  }
-}
-
-@media #{$desktop} {
-  .process {
-    position: relative;
-
-    flex-direction: row;
-
-    padding: 0 50px;
-  }
-
-  .process__title {
-    position: absolute;
-    top: 23px;
-    right: 105px;
-
-    box-sizing: border-box;
-    width: 300px;
-    padding-top: 100px;
-
-    border: none;
-
-    @include font(20px, 24px, bold);
-  }
-
-  .process__video {
-    box-sizing: border-box;
-    width: 683px;
-    height: 455px;
-    margin-top: 53px;
-    padding-left: 683px;
-
-    background: $seashell;
-  }
-
-  .process__wrapper {
-    box-sizing: border-box;
-    width: 367px;
-    margin-top: 53px;
-    padding: 59px;
-    padding-bottom: 0;
-    padding-left: 79px;
-  }
-
-  .process__desc {
+  @media #{$desktop} {
     margin-top: 107px;
     margin-bottom: 56px;
 
     @include font(15px, 30px);
   }
+}
 
-  .process__btn {
-    margin-bottom: 59px;
+.process__btn {
+  margin-bottom: 32px;
+
+  @media #{$tablet} {
+      margin-bottom: 45px;
+  }
+
+  @media #{$desktop} {
+      margin-bottom: 59px;
   }
 }

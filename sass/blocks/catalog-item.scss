@@ -3,130 +3,23 @@
   flex-direction: column;
 
   padding: 0 30px;
-}
 
-.catalog-item__image {
-  width: 260px;
-  height: 195px;
-  margin-top: 30px;
-
-  background-color: $gallery;
-}
-
-.catalog-item__wrapper {
-  display: flex;
-  flex-direction: column;
-
-  box-sizing: border-box;
-  min-height: 179px;
-  padding: 27px 30px 0;
-
-  border: 1px solid $gallery;
-}
-
-.catalog-item__title {
-  margin-bottom: 4px;
-
-  @include font(17px, 24px, bold);
-}
-
-.catalog-item__link {
-  text-decoration: none;
-
-  color: $black;
-}
-
-.catalog-item__desc {
-  display: block;
-
-  margin-bottom: 20px;
-
-  color: $tundora;
-
-
-  @include font(13px, 30px, normal);
-}
-
-.catalog-item__price {
-  margin-top: auto;
-  border-top: 1px solid $gallery;
-  padding: 21px 0;
-
-  @include font(15px, 24px, bold);
-}
-
-.catalog-item__cart {
-  font-size: 0;
-}
-
-@media #{$tablet} {
-  .catalog-item {
-    display: flex;
+  @media #{$tablet} {
     flex-direction: row;
 
     padding: 0 50px;
+
+    &:first-of-type .catalog-item__image {
+      margin-top: 82px;
+    }
+
+    &:first-of-type .catalog-item__wrapper {
+      margin-top: 82px;
+    }
   }
 
-  .catalog-item__image {
-    display: block;
-
-    box-sizing: border-box;
-    width: 334px;
-    height: 334px;
-    margin-top: 54px;
-    padding-left: 334px;
-
-    background: $seashell;
-  }
-
-  .catalog-item:first-of-type .catalog-item__image {
-    margin-top: 82px;
-  }
-
-  .catalog-item__wrapper {
-    display: flex;
-    flex-direction: column;
-
-    width: 334px;
-    height: 334px;
-    margin-top: 54px;
-    padding: 25px 30px 0;
-  }
-
-  .catalog-item:first-of-type .catalog-item__wrapper {
-    margin-top: 82px;
-  }
-
-  .catalog-item__title {
-    width: 240px;
-    margin-bottom: 5px;
-
-    @include font(20px, 24px, bold);
-  }
-
-  .catalog-item__desc {
-    border: none;
-
-    @include font(15px, 30px);
-  }
-
-  .catalog-item__price {
-    width: 268px;
-    margin-top: auto;
-    padding: 21px 0;
-
-    border-top: 1px solid $gallery;
-
-    @include font(17px, 24px, bold);
-  }
-}
-
-@media #{$desktop} {
-  // 50 + 317 + 49 + 317 + 50 + 317 + 50 = 1150
-
-  .catalog-item {
+  @media #{$desktop} {
     display: inline-flex;
-    flex-direction: column;
 
     margin-top: 131px;
     margin-right: 50px;
@@ -147,54 +40,108 @@
       margin-top: 50px;
     }
   }
+}
 
-  // Здесь, возможно, нужно придумать что-нибудь получше nth-of-type,
-  // но делать обёртку и выносить её в отдельный файл не хочется
+.catalog-item__image {
+  width: 260px;
+  height: 195px;
+  margin-top: 30px;
 
-  .catalog-item__image {
-    display: block;
+  background: $seashell;
 
+  @media #{$tablet} {
     box-sizing: border-box;
-    width: 317px;
-    height: 463px;
-    padding-left: 317px;
-
-    background: $seashell;
+    width: 334px;
+    height: 334px;
+    margin-top: 54px;
+    padding-left: 334px;
   }
 
-  .catalog-item__wrapper {
-    display: flex;
-    flex-direction: column;
+  @media #{$desktop} {
+      box-sizing: border-box;
+      width: 317px;
+      height: 463px;
+      padding-left: 317px;
+  }
+}
 
-    width: 317px;
-    height: 197px;
+.catalog-item__wrapper {
+  display: flex;
+  flex-direction: column;
 
+  box-sizing: border-box;
+  min-height: 179px;
+  padding: 27px 30px 0;
+
+  border: 1px solid $gallery;
+
+  @media #{$tablet} {
+    width: 334px;
+    min-height: 334px;
+    margin-top: 54px;
     padding: 25px 30px 0;
   }
 
-  .catalog-item__title {
+  @media #{$desktop} {
+    width: 317px;
+    min-height: 197px;
+    padding: 25px 30px 0;
+  }
+}
+
+.catalog-item__title {
+  margin-bottom: 4px;
+
+  @include font(17px, 24px, bold);
+
+  @media #{$tablet} {
+    width: 240px;
+    margin-bottom: 5px;
+  }
+
+  @media #{$desktop} {
     width: 235px;
     margin-bottom: 5px;
+  }
 
+  @media #{$tablet-and-desktop} {
     @include font(20px, 24px, bold);
   }
+}
 
-  .catalog-item__desc {
-    margin: 0;
-    padding: 0;
+.catalog-item__desc {
+  display: block;
 
-    border: none;
+  margin-bottom: 20px;
 
+  color: $tundora;
+
+  @include font(13px, 30px, normal);
+
+  @media #{$tablet-and-desktop} {
     @include font(15px, 30px);
   }
+}
 
-  .catalog-item__price {
-    width: 256px;
-    margin-top: auto;
-    padding: 21px 0;
+.catalog-item__price {
+  margin-top: auto;
+  padding: 21px 0;
 
-    border-top: 1px solid $gallery;
+  border-top: 1px solid $gallery;
 
+  @include font(15px, 24px, bold);
+
+  @media #{$tablet-and-desktop} {
     @include font(17px, 24px, bold);
   }
+}
+
+.catalog-item__link {
+  text-decoration: none;
+
+  color: $black;
+}
+
+.catalog-item__cart {
+  font-size: 0;
 }

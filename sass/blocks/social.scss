@@ -20,6 +20,39 @@
 
     background-color: $silver;
   }
+
+  @media #{$tablet} {
+    width: 417px;
+  }
+
+  @media #{$desktop} {
+    width: 593px;
+  }
+
+  @media #{$tablet-and-desktop} {
+    min-height: 143px;
+    padding-left: 50px;
+
+    text-align: right;
+
+    &::before {
+      position: absolute;
+
+      display: block;
+
+      width: 86px;
+      height: 35px;
+      margin-top: 57px;
+
+      content: "";
+
+      background-image: url("../img/logo-mobile.svg");
+    }
+
+    &::after {
+      height: 0;
+    }
+  }
 }
 
 .social__item {
@@ -53,72 +86,8 @@
 
     background-image: url("../img/icon-twitter.svg");
   }
-}
 
-@media #{$tablet} {
-  .social {
-    position: relative;
-
-    width: 417px;
-    min-height: 143px;
-    padding-left: 50px;
-
-    text-align: right;
-
-    &::before {
-      position: absolute;
-
-      display: block;
-
-      width: 86px;
-      height: 35px;
-      margin-top: 57px;
-
-      content: "";
-
-      background-image: url("../img/logo-mobile.svg");
-    }
-
-    &::after {
-      height: 0;
-    }
-  }
-
-  .social__item {
-    margin-top: 57px;
-  }
-}
-
-@media #{$desktop} {
-  .social {
-    position: relative;
-
-    width: 593px;
-    min-height: 143px;
-    padding-left: 50px;
-
-    text-align: right;
-
-    &::before {
-      position: absolute;
-
-      display: block;
-
-      width: 86px;
-      height: 35px;
-      margin-top: 57px;
-
-      content: "";
-
-      background-image: url("../img/logo-mobile.svg");
-    }
-
-    &::after {
-      height: 0;
-    }
-  }
-
-  .social__item {
+  @media #{$tablet-and-desktop} {
     margin-top: 57px;
   }
 }

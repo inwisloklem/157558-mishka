@@ -1,16 +1,8 @@
 .page-footer {
   display: flex;
   flex-direction: column;
-}
 
-@media #{$tablet} {
-  .page-footer {
-    flex-direction: row;
-  }
-}
-
-@media #{$desktop} {
-  .page-footer {
+  @media #{$tablet-and-desktop} {
     flex-direction: row;
   }
 }

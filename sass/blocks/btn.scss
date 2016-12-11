@@ -15,10 +15,8 @@
   background-color: transparent;
 
   @include font(17px, 16px, bold);
-}
 
-@media #{$desktop} {
-  .btn {
+  @media #{$desktop} {
     &:hover {
       color: $white;
       background-color: $tundora;

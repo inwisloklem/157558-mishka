@@ -2,40 +2,38 @@
   min-height: 176px;
 
   background-color: $seashell;
+
+  @media #{$tablet} {
+    min-height: 223px;
+  }
+
+  @media #{$desktop} {
+    min-height: 251px;
+  }
 }
 
 .caption__title {
   width: 250px;
-  margin: 0 auto;
+  margin: auto;
   padding-top: 68px;
 
   text-align: center;
 
   @include font(27px, 30px, bold);
-}
 
-@media #{$tablet} {
-  .caption {
-    min-height: 223px;
-  }
-
-  .caption__title {
+  @media #{$tablet} {
     width: 450px;
-    padding-top: 94px;
 
     @include font(43px, 50px, bold);
   }
-}
 
-@media #{$desktop} {
-  .caption {
-    min-height: 251px;
-  }
-
-  .caption__title {
+  @media #{$desktop} {
     width: 650px;
-    padding-top: 94px;
 
     @include font(53px, 57px, bold);
+  }
+
+  @media #{$tablet-and-desktop} {
+    padding-top: 94px;
   }
 }

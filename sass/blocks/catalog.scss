@@ -1,50 +1,19 @@
 .catalog {
   display: flex;
   flex-direction: column;
-}
 
-.catalog__block {
-  min-height: 103px;
-
-  &--interior {
-    background-color: $downy;
+  @media #{$desktop} {
+    position: relative;
   }
 
-  &--kids {
-    background-color: $fountain-blue;
-  }
-}
-
-.catalog__link {
-  display: block;
-
-  box-sizing: border-box;
-  min-height: inherit;
-  padding: 30px;
-
-  text-decoration: none;
-
-  color: $white;
-
-  @include font(19px, 24px, bold);
-}
-
-@media #{$tablet} {
-  .catalog {
-    padding: 0 50px;
-
+  @media #{$tablet-and-desktop} {
     flex-direction: row;
+
+    padding: 0 50px;
 
     background-color: $alabaster;
   }
-
-  .catalog__block {
-    width: 334px;
-    min-height: 119px;
-  }
 }
-
-// Миксин для добавления полосок того же цвета, как и блок, при наведении
 
 @mixin catalog__line($color) {
   position: absolute;
@@ -62,37 +31,56 @@
   background-color: $color;
 }
 
-// Это решение мне не очень нравится. Как это реализовать на флексах, чтобы росло вверх?
+.catalog__block {
+  min-height: 103px;
 
-@media #{$desktop} {
-  .catalog {
-    position: relative;
-
-    flex-direction: row;
-
-    padding: 0 50px;
-
-    background-color: $alabaster;
+  &--interior {
+    background-color: $downy;
   }
 
-  .catalog__block {
+  &--kids {
+    background-color: $fountain-blue;
+  }
+
+  @media #{$tablet} {
+    width: 334px;
+  }
+
+  @media #{$desktop} {
     width: 525px;
-    min-height: 119px;
 
     &:hover {
       transform: translateY(-5px);
     }
 
-    &:first-of-type > .catalog__link {
+    &:first-of-type .catalog__link {
       &::after {
         @include catalog__line($downy);
       }
     }
 
-    &:last-of-type > .catalog__link {
+    &:last-of-type .catalog__link {
       &::after {
         @include catalog__line($fountain-blue);
       }
     }
   }
+
+  @media #{$tablet-and-desktop} {
+    min-height: 119px;
+  }
+}
+
+.catalog__link {
+  display: block;
+
+  box-sizing: border-box;
+  min-height: inherit;
+  padding: 30px;
+
+  text-decoration: none;
+
+  color: $white;
+
+  @include font(19px, 24px, bold);
 }

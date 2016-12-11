@@ -3,6 +3,14 @@
 
   display: flex;
   flex-direction: column;
+
+  @media #{$tablet} {
+    padding: 0 50px;
+  }
+
+  @media #{$desktop} {
+    padding: 0 225px;
+  }
 }
 
 .about__title {
@@ -10,6 +18,18 @@
   margin-bottom: 3px;
 
   @include font(25px, 30px, bold);
+
+  @media #{$tablet} {
+    margin-top: 49px;
+
+    @include font(43px, 50px, bold);
+  }
+
+  @media #{$desktop} {
+    margin-top: 59px;
+
+    @include font(53px, 57px, bold);
+  }
 }
 
 .about__list {
@@ -19,6 +39,12 @@
   list-style: none;
 
   @include font(17px, 20px, bold);
+
+  @media #{$tablet-and-desktop} {
+    display: flex;
+
+    flex-flow: row wrap;
+  }
 }
 
 .about__item {
@@ -115,82 +141,21 @@
 
     mask-image: url("../img/icon-feature-6.svg");
   }
-}
 
-@media #{$tablet} {
-  .about {
-    padding: 0 50px;
-  }
-
-  .about__title {
-    margin-top: 49px;
-
-    @include font(43px, 50px, bold);
-  }
-
-  .about__list {
-    display: flex;
-
-    flex-flow: row wrap;
-  }
-
-  // Не придумал как лучше задать им такой же порядок, как в макете;
-  // только с помощью order. Возможно надо сделать две обёртки, чтобы
-  // перестраивались в правильном порядке из мобильной в планшетнную и десктопную версию
-
-  .about__item {
+  @media #{$tablet} {
     width: 334px;
-
-    @include font(20px, 24px, bold);
-
-    &--feature-1 {
-      order: 2;
-    }
-
-    &--feature-4 {
-      order: 2;
-    }
-
-    &--feature-2 {
-      order: 3;
-    }
-
-    &--feature-5 {
-      order: 4;
-    }
-
-    &--feature-3 {
-      order: 5;
-    }
-
-    &--feature-6 {
-      order: 6;
-    }
-  }
-}
-
-@media #{$desktop} {
-  .about {
-    padding: 0 225px;
   }
 
-  .about__title {
-    margin-top: 59px;
-    @include font(53px, 57px, bold);
-  }
-
-  .about__list {
-    display: flex;
-
-    flex-flow: row wrap;
-  }
-
-  // Не придумал как лучше задать им такой же порядок, как в макете
-
-  .about__item {
+  @media #{$desktop} {
     width: 350px;
+  }
 
+  @media #{$tablet-and-desktop} {
     @include font(20px, 24px, bold);
+
+    // Не придумал как лучше задать им такой же порядок, как в макете;
+    // только с помощью order. Возможно надо сделать две обёртки, чтобы
+    // перестраивались в правильном порядке из мобильной в планшетнную и десктопную версию
 
     &--feature-1 {
       order: 2;
