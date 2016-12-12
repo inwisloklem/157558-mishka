@@ -3,6 +3,12 @@
   flex-direction: column;
 
   padding: 0 30px;
+
+  @media #{$tablet-and-desktop} {
+    position: relative;
+
+    padding: 0;
+  }
 }
 
 .order__desc {
@@ -12,6 +18,20 @@
   color: $tundora;
 
   @include font(13px, 24px);
+
+  @media #{$tablet} {
+    padding: 0 50px;
+  }
+
+  @media #{$desktop} {
+    margin-top: 124px;
+    margin-bottom: 24px;
+    padding: 0 225px;
+  }
+
+  @media #{$tablet-and-desktop} {
+    @include font(17px, 30px);
+  }
 }
 
 .order__title {
@@ -36,6 +56,24 @@
 
     border-bottom: 1px solid $downy;
   }
+
+  @media #{$tablet} {
+    left: 50px;
+  }
+
+  @media #{$desktop} {
+    left: 110px;
+  }
+
+  @media #{$tablet-and-desktop} {
+    position: absolute;
+
+    margin-top: 19px;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .order__subtitle {
@@ -57,11 +95,27 @@
   font-weight: normal;
 
   @include font(17px, 18px);
+
+  @media #{$desktop} {
+    margin-bottom: 26px;
+    padding-left: 18px;
+
+    &--tel {
+      margin-bottom: 0;
+    }
+
+    @media #{$tablet-and-desktop} {
+      margin-bottom: 26px;
+      padding-left: 18px;
+
+      @include font(19px, 18px);
+    }
+  }
 }
 
 .order__text {
   box-sizing: border-box;
-  width: 260px;
+  width: 100%;
   min-height: 142px;
   margin-bottom: 19px;
   padding: 17px;
@@ -70,6 +124,10 @@
   outline: none;
 
   @include font(17px, 18px);
+
+  @media #{$tablet-and-desktop} {
+    margin-bottom: 26px;
+  }
 }
 
 .order__checkbox-label, .order__radio-label {
@@ -100,6 +158,16 @@
     border: 2px solid $tundora;
     border-radius: 50%;
   }
+
+  @media #{$tablet-and-desktop} {
+    margin-bottom: 26px;
+    padding-left: 82px;
+
+    &::before {
+      width: 48px;
+      height: 48px;
+    }
+  }
 }
 
 .order__radio:checked ~ .order__radio-label {
@@ -118,6 +186,15 @@
 
     border-radius: 50%;
     background-color: $downy;
+  }
+
+  @media #{$tablet-and-desktop} {
+    &::after {
+      left: 15px;
+
+      width: 22px;
+      height: 22px;
+    }
   }
 }
 
@@ -139,6 +216,28 @@
 
     border: 2px solid $tundora;
   }
+
+  @media #{$tablet-and-desktop} {
+    width: 180px;
+    margin-bottom: 24px;
+    padding-left: 82px;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+
+      display: block;
+
+      width: 48px;
+      height: 48px;
+
+      content: "";
+      transform: translateY(-50%);
+
+      border: 2px solid $tundora;
+    }
+  }
 }
 
 .order__checkbox:checked ~ .order__checkbox-label {
@@ -159,395 +258,114 @@
     border-top: none;
     border-left: none;
   }
+
+  @media #{$tablet-and-desktop} {
+    &::after {
+      bottom: 16px;
+      left: 18px;
+
+      width: 15px;
+      height: 26px;
+    }
+  }
+}
+
+.order__block {
+  @media #{$tablet} {
+    padding: 50px 50px 24px 225px;
+  }
+
+  @media #{$desktop} {
+    padding: 50px 225px 24px;
+  }
+
+  @media #{$tablet-and-desktop} {
+    &--highlight {
+      background-color: $seashell;
+    }
+
+    &--highlight .order__input {
+      background-color: $seashell;
+    }
+
+    &--name .order__item {
+      display: flex;
+      flex-direction: row;
+
+      align-items: baseline;
+    }
+
+    &--name .order__subtitle {
+      padding-right: 24px;
+    }
+
+    &--colors {
+      padding-right: 0;
+    }
+
+    &--colors .order__item {
+      display: inline-flex;
+    }
+
+    &--tel {
+      padding-bottom: 0;
+    }
+
+    &--mail {
+      padding-top: 0;
+    }
+  }
+}
+
+.order__radio-label, .order__checkbox-label, .order__subtitle {
+  @media #{$tablet-and-desktop} {
+    @include font(19px, 52px, bold);
+  }
+}
+
+.order__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  @media #{$tablet} {
+    padding: 0 50px;
+  }
+
+  @media #{$desktop} {
+    padding: 0 225px;
+  }
+
+  @media #{$tablet-and-desktop} {
+    flex-direction: row;
+  }
 }
 
 .order__note {
   margin-bottom: 31px;
 
+  display: block;
+
   color: $tundora;
 
   @include font(14px, 16px);
+
+  @media #{$desktop} {
+    width: 350px;
+
+    text-align: right;
+  }
+
+  @media #{$tablet-and-desktop} {
+    @include font(17px, 30px);
+  }
 }
 
 .order__btn {
   margin-bottom: 55px;
-}
 
-@media #{$tablet} {
-  .order {
-    position: relative;
-
-    padding: 0;
-  }
-
-  .order__desc {
-    padding: 0 50px;
-
-    @include font(17px, 30px);
-  }
-
-  .order__title {
-    position: absolute;
-    left: 50px;
-
-    margin-top: 19px;
-
-    &::after {
-      display: none;
-    }
-  }
-
-  .order__input {
-    margin-bottom: 26px;
-    padding-left: 18px;
-
-    @include font(19px, 18px);
-  }
-
-  .order__block {
-    padding: 50px 50px 24px 225px;
-
-    &--highlight {
-      background-color: $seashell;
-    }
-
-    &--highlight .order__input {
-      background-color: $seashell;
-    }
-
-    &--name .order__item {
-      display: flex;
-      flex-direction: row;
-
-      align-items: baseline;
-    }
-
-    &--name .order__subtitle {
-      padding-right: 24px;
-    }
-
-    &--colors {
-      padding-right: 0;
-    }
-
-    &--colors .order__item {
-      display: inline-flex;
-    }
-
-    &--tel {
-      padding-bottom: 0;
-    }
-
-    &--mail {
-      padding-top: 0;
-    }
-  }
-
-  .order__radio-label, .order__checkbox-label, .order__subtitle {
-    @include font(19px, 52px, bold);
-  }
-
-  .order__radio-label {
-    position: relative;
-
-    margin-bottom: 26px;
-    padding-left: 82px;
-
-    &::before {
-      position: absolute;
-      top: 50%;
-      left: 0;
-
-      display: block;
-
-      width: 48px;
-      height: 48px;
-
-      content: "";
-      transform: translateY(-50%);
-
-      border: 2px solid $tundora;
-      border-radius: 50%;
-    }
-  }
-
-  .order__radio:checked ~ .order__radio-label {
-    &::after {
-      position: absolute;
-      top: 50%;
-      left: 15px;
-
-      display: block;
-
-      width: 22px;
-      height: 22px;
-
-      content: "";
-      transform: translateY(-50%);
-
-      border-radius: 50%;
-      background-color: $downy;
-    }
-  }
-
-  .order__checkbox-label {
-    position: relative;
-
-    width: 180px;
-    margin-bottom: 24px;
-    padding-left: 82px;
-
-    &::before {
-      position: absolute;
-      top: 50%;
-      left: 0;
-
-      display: block;
-
-      width: 48px;
-      height: 48px;
-
-      content: "";
-      transform: translateY(-50%);
-
-      border: 2px solid $tundora;
-    }
-  }
-
-  .order__checkbox:checked ~ .order__checkbox-label {
-    &::after {
-      position: absolute;
-      bottom: 16px;
-      left: 18px;
-
-      display: block;
-
-      width: 15px;
-      height: 26px;
-
-      content: "";
-      transform: rotate(45deg);
-
-      border: 2px solid $thunder;
-      border-top: none;
-      border-left: none;
-    }
-  }
-
-  .order__text {
-    width: 100%;
-    margin-bottom: 26px;
-  }
-
-  .order__wrapper {
-    display: flex;
-
-    padding: 0 50px;
-
-    justify-content: space-between;
-  }
-
-  .order__note {
-    @include font(17px, 30px);
-  }
-
-  .order__btn {
-    width: 230px;
-
-    order: -1;
-  }
-}
-
-@media #{$desktop} {
-  .order {
-    position: relative;
-
-    padding: 0;
-  }
-
-  .order__desc {
-    margin-top: 124px;
-    margin-bottom: 24px;
-
-    @include font(17px, 30px);
-  }
-
-  .order__title {
-    position: absolute;
-    left: 110px;
-
-    margin-top: 19px;
-
-    &::after {
-      display: none;
-    }
-  }
-
-  .order__desc, .order__wrapper {
-    padding: 0 225px;
-  }
-
-  .order__block {
-    padding: 50px 225px 24px;
-
-    &--highlight {
-      background-color: $seashell;
-    }
-
-    &--highlight .order__input {
-      background-color: $seashell;
-    }
-
-    &--name .order__item {
-      display: flex;
-      flex-direction: row;
-
-      align-items: baseline;
-    }
-
-    &--name .order__subtitle {
-      padding-right: 24px;
-    }
-
-    &--colors {
-      padding-right: 0;
-    }
-
-    &--colors .order__item {
-      display: inline-flex;
-    }
-
-    &--tel {
-      padding-bottom: 0;
-    }
-
-    &--mail {
-      padding-top: 0;
-    }
-  }
-
-  .order__radio-label {
-    position: relative;
-
-    margin-bottom: 26px;
-    padding-left: 82px;
-
-    &::before {
-      position: absolute;
-      top: 50%;
-      left: 0;
-
-      display: block;
-
-      width: 48px;
-      height: 48px;
-
-      content: "";
-      transform: translateY(-50%);
-
-      border: 2px solid $tundora;
-      border-radius: 50%;
-    }
-  }
-
-  .order__radio:checked ~ .order__radio-label {
-    &::after {
-      position: absolute;
-      top: 50%;
-      left: 15px;
-
-      display: block;
-
-      width: 22px;
-      height: 22px;
-
-      content: "";
-      transform: translateY(-50%);
-
-      border-radius: 50%;
-      background-color: $downy;
-    }
-  }
-
-  .order__checkbox-label {
-    position: relative;
-
-    width: 180px;
-    margin-bottom: 26px;
-    padding-left: 82px;
-
-    &::before {
-      position: absolute;
-      top: 50%;
-      left: 0;
-
-      display: block;
-
-      width: 48px;
-      height: 48px;
-
-      content: "";
-      transform: translateY(-50%);
-
-      border: 2px solid $tundora;
-    }
-  }
-
-  .order__checkbox:checked ~ .order__checkbox-label {
-    &::after {
-      position: absolute;
-      bottom: 16px;
-      left: 18px;
-
-      display: block;
-
-      width: 15px;
-      height: 26px;
-
-      content: "";
-      transform: rotate(45deg);
-
-      border: 2px solid $thunder;
-      border-top: none;
-      border-left: none;
-    }
-  }
-
-  .order__radio-label, .order__checkbox-label, .order__subtitle {
-    @include font(19px, 52px, bold);
-  }
-
-  .order__input {
-    margin-bottom: 26px;
-    padding-left: 18px;
-
-    @include font(19px, 18px);
-
-    &--tel {
-      margin-bottom: 0;
-    }
-  }
-
-  .order__text {
-    width: 100%;
-    margin-bottom: 49px;
-  }
-
-  .order__wrapper {
-    display: flex;
-
-    justify-content: space-between;
-  }
-
-  .order__note {
-    width: 350px;
-
-    text-align: right;
-
-    @include font(17px, 30px);
-  }
-
-  .order__btn {
+  @media #{$tablet-and-desktop} {
     width: 230px;
 
     order: -1;
