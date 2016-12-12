@@ -3,6 +3,17 @@
   flex-direction: column;
 
   padding: 0 30px;
+
+  @media #{$tablet-and-desktop} {
+    padding: 0 50px;
+
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  @media #{$desktop} {
+    padding-left: 225px;
+  }
 }
 
 .preview__title {
@@ -10,6 +21,31 @@
   margin-bottom: 7px;
 
   @include font(25px, 30px, bold);
+
+  @media #{$tablet} {
+    position: relative;
+
+    width: 100%;
+    margin-top: 46px;
+    margin-bottom: 61px;
+
+    @include font(43px, 50px, bold);
+  }
+
+  @media #{$desktop} {
+    position: absolute;
+
+    overflow: hidden;
+
+    width: 875px;
+    margin-top: 123px;
+    margin-bottom: 51px;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    @include font(53px, 57px, bold);
+  }
 }
 
 .preview__subtitle {
@@ -20,6 +56,27 @@
   color: $downy;
 
   @include font(17px, 16px, bold);
+
+  @media #{$tablet} {
+    right: 0;
+
+  }
+
+  @media #{$desktop} {
+    left: -130px;
+
+    white-space: normal;
+  }
+
+  @media #{$tablet-and-desktop} {
+    position: absolute;
+    top: 50%;
+
+    width: 75px;
+
+    transform: translateY(-50%);
+    text-align: center;
+  }
 }
 
 .preview__block {
@@ -70,36 +127,6 @@
 }
 
 @media #{$tablet} {
-  .preview {
-    padding: 0 50px;
-
-    flex-flow: row wrap;
-    justify-content: space-between;
-  }
-
-  .preview__title {
-    position: relative;
-
-    display: block;
-
-    width: 100%;
-    margin-top: 46px;
-    margin-bottom: 61px;
-
-    @include font(43px, 50px, bold);
-  }
-
-  .preview__subtitle {
-    position: absolute;
-    top: 50%;
-    right: 0;
-
-    width: 75px;
-
-    transform: translateY(-50%);
-    text-align: center;
-  }
-
   .preview__image {
     box-sizing: border-box;
     width: 333px;
@@ -144,43 +171,6 @@
 }
 
 @media #{$desktop} {
-  .preview {
-    display: flex;
-    flex-direction: row;
-
-    padding: 0 50px;
-    padding-left: 225px;
-
-    justify-content: space-between;
-  }
-
-  .preview__title {
-    position: absolute;
-
-    overflow: hidden;
-
-    width: 875px;
-    margin-top: 123px;
-    margin-bottom: 51px;
-
-    white-space: nowrap;
-    text-overflow: ellipsis;
-
-    @include font(53px, 57px, bold);
-  }
-
-  .preview__subtitle {
-    position: absolute;
-    top: 50%;
-    left: -130px;
-
-    width: 75px;
-
-    transform: translateY(-50%);
-    text-align: center;
-    white-space: normal;
-  }
-
   .preview__image {
     box-sizing: border-box;
     width: 525px;
