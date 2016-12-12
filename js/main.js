@@ -12,14 +12,14 @@ menuToggle.addEventListener("click", function(event) {
 
 var makeOrder = document.querySelector(".preview__btn");
 var modalCart = document.querySelector(".modal-cart");
-var modalOverlay = document.querySelector(".modal-overlay");
+var body = document.querySelector("body");
 
 if (makeOrder) {
   makeOrder.addEventListener("click", function(event) {
     event.preventDefault();
 
     modalCart.classList.add("modal-cart--visible");
-    modalOverlay.classList.add("modal-overlay--visible");
+    body.classList.add("modal-overlay");
   });
 };
 
