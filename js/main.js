@@ -1,12 +1,17 @@
 var menuToggle =  document.querySelector(".menu__toggle");
-var menuList = document.querySelector(".menu__list");
+var menuItems = document.querySelectorAll(".menu__item");
 
-  menuList.classList.add("menu__list--hidden");
+for (let i = 0; i < menuItems.length; i++) {
+  menuItems[i].classList.add("menu__item--hidden");
+}
 
 menuToggle.addEventListener("click", function(event) {
   event.preventDefault();
 
-  menuList.classList.toggle("menu__list--hidden");
+  for (let i = 0; i < menuItems.length; i++) {
+    menuItems[i].classList.toggle("menu__item--hidden");
+  }
+
   menuToggle.classList.toggle("menu__toggle--close");
 });
 

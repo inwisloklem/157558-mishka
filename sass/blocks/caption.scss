@@ -4,17 +4,21 @@
   background-color: $seashell;
 
   @media #{$tablet} {
-    min-height: 223px;
+
+    // 223 - 58 = 165
+    min-height: 165px;
   }
 
   @media #{$desktop} {
-    min-height: 251px;
+    // 251 - 58 = 193
+    min-height: 193px;
   }
 }
 
 .caption__title {
   width: 250px;
   margin: auto;
+
   padding-top: 68px;
 
   text-align: center;
@@ -34,6 +38,7 @@
   }
 
   @media #{$tablet-and-desktop} {
-    padding-top: 94px;
+    // 94 - 58 = 36
+    padding-top: 36px;
   }
 }

@@ -18,14 +18,16 @@
     background: $alabaster;
   }
 
+  // 626 - 58 = 568
   @media #{$tablet-and-desktop} {
-    min-height: 626px;
+    min-height: 568px;
   }
 }
 
 .image__title {
   width: 250px;
   margin: auto;
+
   padding-top: 68px;
 
   text-align: center;
@@ -45,6 +47,7 @@
   }
 
   @media #{$tablet-and-desktop} {
-    padding-top: 154px;
+    // 154 - 58 = 96
+    padding-top: 96px;
   }
 }

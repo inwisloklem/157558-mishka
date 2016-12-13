@@ -11,44 +11,50 @@
     <header>
       <h1 class="visually-hidden">HTML Academy: Мишка</h1>
 
-      <nav class="menu">
-        <a href="index.html">
-          <img class="menu__logo" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Мишки">
-        </a>
-
-        <span class="menu__toggle">Меню</span>
-
+      <nav class="menu menu--dark">
         <ul class="menu__list">
-          <li class="menu__item menu__item--catalog menu__item--active">
-            <a class="menu__link" href="catalog.html">
-              Каталог товаров
+          <li class="menu__logo">
+            <a href="index.html">
+              <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Мишки">
             </a>
+            <span class="menu__toggle">Меню</span>
           </li>
-          <li class="menu__item menu__item--form">
-            <a class="menu__link" href="form.html">
-              Вязание на заказ
-            </a>
-          </li>
-          <li class="menu__item menu__item--search">
-            <a class="menu__link" href="#">
-              Поиск по сайту
-            </a>
-          </li>
-          <li class="menu__item menu__item--cart">
-            <a class="menu__link" href="#">
-              Корзина: пока пуста
-            </a>
-          </li>
-          <li class="menu__item menu__item--more">
-            <a class="menu__link" href="#">
-              Новые поступления
-            </a>
-          </li>
-          <li class="menu__item menu__item--more">
-            <a class="menu__link" href="#">
-              Распродажа
-            </a>
-          </li>
+          <div class="menu__block-1">
+            <li class="menu__item menu__item--catalog menu__item--active">
+              <a class="menu__link">
+                Каталог товаров
+              </a>
+            </li>
+            <li class="menu__item menu__item--form">
+              <a class="menu__link" href="form.html">
+                Вязание на заказ
+              </a>
+            </li>
+          </div>
+          <div class="menu__block-2">
+            <li class="menu__item menu__item--search">
+              <a class="menu__link" href="#">
+                Поиск по сайту
+              </a>
+            </li>
+            <li class="menu__item menu__item--cart">
+              <a class="menu__link" href="#">
+                Корзина: пока пуста
+              </a>
+            </li>
+          </div>
+          <div class="menu__block-3">
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                Новые поступления
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                Распродажа
+              </a>
+            </li>
+          </div>
 
           <div class="menu__text">Бесплатная доставка по России</div>
         </ul>
