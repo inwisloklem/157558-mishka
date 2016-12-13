@@ -1,7 +1,7 @@
 .btn {
-  box-sizing: border-box;
   display: block;
 
+  box-sizing: border-box;
   width: 100%;
   padding: 16px 0;
 
@@ -14,5 +14,18 @@
   border: 2px solid $tundora;
   background-color: transparent;
 
-  @include font(18px, 16px, bold);
+  @include font(17px, 16px, bold);
+
+  &--fill {
+    color: $white;
+    border-color: $downy;
+    background-color: $downy;
+  }
+
+  @media #{$desktop} {
+    &:hover {
+      color: $white;
+      background-color: $tundora;
+    }
+  }
 }

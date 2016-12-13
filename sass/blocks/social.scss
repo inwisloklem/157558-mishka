@@ -1,33 +1,69 @@
 .social {
   position: relative;
+
   min-height: 81px;
+
   text-align: center;
 
   background-color: $seashell;
 
   &::after {
     position: absolute;
-    left: 50%;
     bottom: 0;
+    left: 50%;
 
     width: 80%;
     height: 1px;
 
+    content: "";
     transform: translateX(-50%);
 
-    content: "";
-
     background-color: $silver;
+  }
+
+  @media #{$tablet} {
+    width: 417px;
+  }
+
+  @media #{$desktop} {
+    width: 593px;
+  }
+
+  @media #{$tablet-and-desktop} {
+    min-height: 143px;
+    padding-left: 50px;
+
+    text-align: right;
+
+    &::before {
+      position: absolute;
+
+      display: block;
+
+      width: 86px;
+      height: 35px;
+      margin-top: 57px;
+
+      content: "";
+
+      background-image: url("../img/logo-mobile.svg");
+    }
+
+    &::after {
+      height: 0;
+    }
   }
 }
 
 .social__item {
-  margin-top: 24px;
   display: inline-block;
 
-  vertical-align: middle;
-  font-size: 0;
+  margin-top: 24px;
   margin-right: 41px;
+
+  vertical-align: middle;
+
+  font-size: 0;
 
   &--inst {
     width: 22px;
@@ -46,75 +82,12 @@
   &--twitter {
     width: 23px;
     height: 20px;
+    margin-right: 0;
 
     background-image: url("../img/icon-twitter.svg");
-
-    margin-right: 0;
-  }
-}
-
-@media #{$tablet} {
-  .social {
-    float: left;
-
-    width: 417px;
-    min-height: 143px;
-    padding-left: 50px;
-
-    text-align: right;
-
-    &::before {
-      display: block;
-      float: left;
-
-      width: 86px;
-      height: 35px;
-      margin-top: 57px;
-
-      content: "";
-
-      background-image: url("../img/logo-mobile.svg");
-    }
-
-    &::after {
-      height: 0;
-    }
   }
 
-  .social__item {
-    margin-top: 57px;
-  }
-}
-
-@media #{$desktop} {
-  .social {
-    float: left;
-
-    width: 593px;
-    min-height: 143px;
-    padding-left: 50px;
-
-    text-align: right;
-
-    &::before {
-      display: block;
-      float: left;
-
-      width: 86px;
-      height: 35px;
-      margin-top: 57px;
-
-      content: "";
-
-      background-image: url("../img/logo-mobile.svg");
-    }
-
-    &::after {
-      height: 0;
-    }
-  }
-
-  .social__item {
+  @media #{$tablet-and-desktop} {
     margin-top: 57px;
   }
 }

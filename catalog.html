@@ -11,26 +11,52 @@
     <header>
       <h1 class="visually-hidden">HTML Academy: Мишка</h1>
 
-      <nav class="menu">
-        <a href="index.html">
-          <img class="menu__logo" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Мишки">
-        </a>
-
-        <span class="menu__toggle">Меню</span>
-
+      <nav class="menu menu--dark">
         <ul class="menu__list">
-          <li class="menu__item menu__item--active">
-            <a class="menu__link">Каталог товаров</a>
+          <li class="menu__logo">
+            <a href="index.html">
+              <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Мишки">
+            </a>
+            <span class="menu__toggle">Меню</span>
           </li>
-          <li class="menu__item">
-            <a class="menu__link" href="form.html">Вязание на заказ</a>
-          </li>
-          <li class="menu__item menu__item--search">
-            <a class="menu__link" href="#">Поиск по сайту</a>
-          </li>
-          <li class="menu__item menu__item--cart">
-            <a class="menu__link" href="#">Корзина: пока пуста</a>
-          </li>
+          <div class="menu__block-1">
+            <li class="menu__item menu__item--catalog menu__item--active">
+              <a class="menu__link">
+                Каталог товаров
+              </a>
+            </li>
+            <li class="menu__item menu__item--form">
+              <a class="menu__link" href="form.html">
+                Вязание на заказ
+              </a>
+            </li>
+          </div>
+          <div class="menu__block-2">
+            <li class="menu__item menu__item--search">
+              <a class="menu__link" href="#">
+                Поиск по сайту
+              </a>
+            </li>
+            <li class="menu__item menu__item--cart">
+              <a class="menu__link" href="#">
+                Корзина: пока пуста
+              </a>
+            </li>
+          </div>
+          <div class="menu__block-3">
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                Новые поступления
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                Распродажа
+              </a>
+            </li>
+          </div>
+
+          <div class="menu__text">Бесплатная доставка по России</div>
         </ul>
       </nav>
     </header>
@@ -110,52 +136,51 @@
       </section>
     </main>
 
-        <footer>
-          <section class="social">
-            <h2 class="visually-hidden">Подписывайтесь на нас в соцсетях</h2>
+    <footer class="page-footer">
+      <section class="social">
+        <h2 class="visually-hidden">Подписывайтесь на нас в соцсетях</h2>
 
-            <a class="social__item social__item--inst" href="#">Instagram</a>
-            <a class="social__item social__item--fb" href="#">Facebook</a>
-            <a class="social__item social__item--twitter" href="#">Twitter</a>
-          </section>
+        <a class="social__item social__item--inst" href="#">Instagram</a>
+        <a class="social__item social__item--fb" href="#">Facebook</a>
+        <a class="social__item social__item--twitter" href="#">Twitter</a>
+      </section>
 
-          <section class="copyright">
-            <h2 class="visually-hidden">Информация о разработчике</h2>
+      <section class="copyright">
+        <h2 class="visually-hidden">Информация о разработчике</h2>
 
-            <div class="copyright__text">
-              <a class="copyright__link" href="#">Разработано
-                <span class="copyright__logo">
-                  HTML Academy
-                </span>
-              </a>
-            </div>
-          </section>
-        </footer>
+        <div class="copyright__text">
+          <a class="copyright__link" href="#">Разработано
+            <span class="copyright__logo">
+              HTML Academy
+            </span>
+          </a>
+        </div>
+      </section>
+    </footer>
 
-        <section class="modal-cart">
-          <div class="modal-cart__wrapper">
-            <h2 class="modal-cart__title">Добавить в корзину</h2>
+    <section class="modal-cart">
+      <div class="modal-cart__wrapper">
+        <h2 class="modal-cart__title">Добавить в корзину</h2>
 
-            <form class="modal-cart__form" action="#" method="post">
-              <fieldset class="modal-cart__size">
-                <legend class="modal-cart__legend">Выберите размер:</legend>
+        <form class="modal-cart__form" action="#" method="post">
+          <fieldset class="modal-cart__size">
+            <legend class="modal-cart__legend">Выберите размер:</legend>
 
-                <input class="modal-cart__checkbox visually-hidden" id="modal-cart-s" name="modal-cart-size" value="s" type="radio" checked>
-                <label class="modal-cart__label" for="modal-cart-s">S</label>
+            <input class="modal-cart__checkbox visually-hidden" id="modal-cart-s" name="modal-cart-size" value="s" type="radio" checked>
+            <label class="modal-cart__label" for="modal-cart-s">S</label>
 
-                <input class="modal-cart__checkbox visually-hidden" id="modal-cart-m" name="modal-cart-size" value="m" type="radio">
-                <label class="modal-cart__label" for="modal-cart-m">M</label>
+            <input class="modal-cart__checkbox visually-hidden" id="modal-cart-m" name="modal-cart-size" value="m" type="radio">
+            <label class="modal-cart__label" for="modal-cart-m">M</label>
 
-                <input class="modal-cart__checkbox visually-hidden" id="modal-cart-l" name="modal-cart-size" value="l" type="radio">
-                <label class="modal-cart__label modal-cart__label--last" for="modal-cart-l">L</label>
+            <input class="modal-cart__checkbox visually-hidden" id="modal-cart-l" name="modal-cart-size" value="l" type="radio">
+            <label class="modal-cart__label modal-cart__label--last" for="modal-cart-l">L</label>
 
-              <button class="btn btn--fill modal-cart__btn" type="submit">Добавить</button>
-            </form>
-          </div>
-          <div class="modal-cart__shadow"></div>
-        </section>
+          <button class="btn btn--fill modal-cart__btn" type="submit">Добавить</button>
+        </form>
+      </div>
+      <div class="modal-cart__shadow"></div>
+    </section>
 
-        <div class="modal-overlay"></div>
-        <script src="js/main.js"></script>
-      </body>
-    </html>
+    <script src="js/main.js"></script>
+  </body>
+</html>

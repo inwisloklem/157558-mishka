@@ -1,11 +1,24 @@
 .copyright {
-  overflow: auto;
-
   min-height: 79px;
 
   text-align: center;
 
   background-color: $seashell;
+
+  @media #{$tablet} {
+    width: 251px;
+  }
+
+  @media #{$desktop} {
+    width: 457px;
+  }
+
+  @media #{$tablet-and-desktop} {
+    min-height: 143px;
+    padding-right: 50px;
+
+    text-align: right;
+  }
 }
 
 .copyright__logo {
@@ -33,36 +46,8 @@
   margin-top: 21px;
 
   @include font(19px, 18px, bold);
-}
 
-@media #{$tablet} {
-  .copyright {
-    float: right;
-
-    width: 251px;
-    min-height: 143px;
-    padding-right: 50px;
-
-    text-align: right;
-  }
-
-  .copyright__text {
-    margin-top: 57px;
-  }
-}
-
-@media #{$desktop} {
-  .copyright {
-    float: right;
-
-    width: 457px;
-    min-height: 143px;
-    padding-right: 50px;
-
-    text-align: right;
-  }
-
-  .copyright__text {
+  @media #{$tablet-and-desktop} {
     margin-top: 57px;
   }
 }

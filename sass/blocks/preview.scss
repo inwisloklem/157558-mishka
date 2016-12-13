@@ -1,9 +1,19 @@
 .preview {
-  position: relative;
-
-  overflow: auto;
+  display: flex;
+  flex-direction: column;
 
   padding: 0 30px;
+
+  @media #{$tablet-and-desktop} {
+    padding: 0 50px;
+
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  @media #{$desktop} {
+    padding-left: 225px;
+  }
 }
 
 .preview__title {
@@ -11,6 +21,26 @@
   margin-bottom: 7px;
 
   @include font(25px, 30px, bold);
+
+  @media #{$tablet} {
+    position: relative;
+
+    width: 100%;
+    margin-top: 46px;
+    margin-bottom: 61px;
+
+    @include font(43px, 50px, bold);
+  }
+
+  @media #{$desktop} {
+    position: absolute;
+
+    width: 875px;
+    margin-top: 123px;
+    margin-bottom: 51px;
+
+    @include font(53px, 57px, bold);
+  }
 }
 
 .preview__subtitle {
@@ -21,6 +51,70 @@
   color: $downy;
 
   @include font(17px, 16px, bold);
+
+  @media #{$tablet} {
+    right: 0;
+  }
+
+  @media #{$desktop} {
+    left: -130px;
+  }
+
+  @media #{$tablet-and-desktop} {
+    position: absolute;
+    top: 50%;
+
+    width: 75px;
+
+    transform: translateY(-50%);
+    text-align: center;
+  }
+}
+
+.preview__image {
+  margin-bottom: 26px;
+
+  @media #{$tablet} {
+    box-sizing: border-box;
+    width: 333px;
+    height: 404px;
+    margin: 0;
+    padding-left: 333px;
+
+    background: $seashell;
+  }
+
+  @media #{$desktop} {
+    box-sizing: border-box;
+    width: 525px;
+    height: 636px;
+    margin-top: 73px;
+    padding-left: 525px;
+
+    background: $seashell;
+  }
+}
+
+.preview__wrapper {
+  @media #{$tablet} {
+    min-height: 404px;
+    margin-bottom: 52px;
+  }
+
+  @media #{$desktop} {
+    height: 478px;
+    margin-top: 231px;
+    margin-bottom: 73px;
+  }
+
+  @media #{$tablet-and-desktop} {
+    display: flex;
+    flex-direction: column;
+
+    width: 292px;
+
+    justify-content: space-between;
+  }
 }
 
 .preview__block {
@@ -39,21 +133,26 @@
   border-collapse: collapse;
 
   @include font(15px, 20px);
+
+
+  @media #{$tablet-and-desktop} {
+    width: 100%;
+  }
 }
 
 .preview__row {
   border-bottom: 1px solid $gallery;
+
+  @media #{$tablet-and-desktop} {
+    height: 40px;
+  }
 }
 
 .preview__cell {
   &--left {
     width: 98px;
-    height: 37px;
+    min-height: 37px;
   }
-}
-
-.preview__image {
-  margin-bottom: 26px;
 }
 
 .preview__price {
@@ -64,145 +163,16 @@
   @include font(17px, 24px, bold);
 
   margin-bottom: 28px;
+
+  @media #{$desktop} {
+    margin-top: auto;
+  }
 }
 
 .preview__btn {
   margin-bottom: 35px;
-}
 
-@media #{$tablet} {
-  .preview {
-    padding: 0 50px;
-  }
-
-  .preview__title {
-    margin-top: 46px;
-
-    @include font(43px, 50px, bold);
-  }
-
-  .preview__subtitle {
-    position: relative;
-    bottom: 46px;
-
-    float: right;
-
-    width: 75px;
-
-    text-align: center;
-  }
-
-  .preview__block {
-    float: left;
-
-    width: 292px;
-    margin-top: 43px;
-    margin-bottom: 52px;
-  }
-
-  .preview__table {
-    float: left;
-    clear: left;
-
-    width: 292px;
-    margin-bottom: 69px;
-  }
-
-  .preview__image {
-    display: block;
-    float: right;
-
-    box-sizing: border-box;
-    width: 333px;
-    height: 404px;
-    margin-top: -117px;
-    padding-left: 333px;
-
-    background: $seashell;
-  }
-
-  .preview__price {
-    display: block;
-    float: left;
-
-    width: 292px;
-
-    text-align: center;
-  }
-
-  .preview__btn {
-    float: left;
-    clear: left;
-
-    width: 292px;
-  }
-}
-
-@media #{$desktop} {
-  .preview {
-    padding: 0 50px;
-    padding-left: 225px;
-  }
-
-  .preview__title {
-    position: relative;
-
-    float: left;
-
-    margin-top: 123px;
-    margin-bottom: 51px;
-
-    @include font(53px, 57px, bold);
-  }
-
-  .preview__subtitle {
-    position: absolute;
-    top: 139px;
-    left: 97px;
-
-    display: block;
-
-    width: 75px;
-
-    text-align: center;
-  }
-
-  .preview__block {
-    float: left;
-    clear: left;
-
-    width: 292px;
-  }
-
-  .preview__table {
-    float: left;
-    clear: left;
-
-    margin-bottom: 158px;
-  }
-
-  .preview__btn {
-    float: left;
-
-    width: 292px;
-  }
-
-  .preview__price {
-    float: left;
-
-    width: 292px;
-  }
-
-  .preview__image {
-    display: block;
-    float: right;
-
-    box-sizing: border-box;
-    width: 525px;
-    height: 636px;
-    margin-top: -254px;
-    padding-left: 525px;
-
-    background: $seashell;
+  @media #{$tablet-and-desktop} {
+    margin: 0;
   }
 }

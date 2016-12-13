@@ -1,5 +1,16 @@
 .about {
   padding: 0 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  @media #{$tablet} {
+    padding: 0 50px;
+  }
+
+  @media #{$desktop} {
+    padding: 0 225px;
+  }
 }
 
 .about__title {
@@ -7,6 +18,18 @@
   margin-bottom: 3px;
 
   @include font(25px, 30px, bold);
+
+  @media #{$tablet} {
+    margin-top: 49px;
+
+    @include font(43px, 50px, bold);
+  }
+
+  @media #{$desktop} {
+    margin-top: 59px;
+
+    @include font(53px, 57px, bold);
+  }
 }
 
 .about__list {
@@ -16,63 +39,146 @@
   list-style: none;
 
   @include font(17px, 20px, bold);
+
+  @media #{$tablet-and-desktop} {
+    display: flex;
+
+    flex-flow: row wrap;
+  }
 }
 
 .about__item {
   position: relative;
 
-  display: block;
-
   padding-top: 83px;
-}
 
-@media #{$tablet} {
-  .about {
-    padding: 0 50px;
+  &--feature-1::before {
+    position: absolute;
+    bottom: 66px;
+    left: 8px;
+
+    width: 32px;
+    height: 38px;
+
+    content: "";
+
+    background-color: $downy;
+
+    mask-image: url("../img/icon-feature-1.svg");
   }
 
-  .about__title {
-    margin-top: 49px;
+  &--feature-2::before {
+    position: absolute;
+    bottom: 66px;
+    left: 0;
 
-    @include font(43px, 50px, bold);
+    width: 47px;
+    height: 27px;
+
+    content: "";
+
+    background-color: $downy;
+
+    mask-image: url("../img/icon-feature-2.svg");
   }
 
-  .about__list {
-    font-size: 0;
+  &--feature-3::before {
+    position: absolute;
+    bottom: 66px;
+    left: 7px;
+
+    width: 33px;
+    height: 28px;
+
+    content: "";
+
+    background-color: $downy;
+
+    mask-image: url("../img/icon-feature-3.svg");
   }
 
-  .about__item {
-    display: inline-block;
+  &--feature-4::before {
+    position: absolute;
+    bottom: 66px;
+    left: 7px;
 
+    width: 34px;
+    height: 34px;
+
+    content: "";
+
+    background-color: $downy;
+
+    mask-image: url("../img/icon-feature-4.svg");
+  }
+
+  &--feature-5::before {
+    position: absolute;
+    bottom: 66px;
+    left: -3px;
+
+    width: 54px;
+    height: 23px;
+
+    content: "";
+
+    background-color: $downy;
+
+    mask-image: url("../img/icon-feature-5.svg");
+  }
+
+  &--feature-6::before {
+    position: absolute;
+    bottom: 66px;
+    left: 8px;
+
+    width: 33px;
+    height: 32px;
+
+    content: "";
+
+    background-color: $downy;
+
+    mask-image: url("../img/icon-feature-6.svg");
+  }
+
+  @media #{$tablet} {
     width: 334px;
-
-    vertical-align: baseline;
-
-    @include font(20px, 24px, bold);
-  }
-}
-
-@media #{$desktop} {
-  .about {
-    padding: 0 225px;
   }
 
-  .about__title {
-    margin-top: 59px;
-    @include font(53px, 57px, bold);
-  }
-
-  .about__list {
-    font-size: 0;
-  }
-
-  .about__item {
-    display: inline-block;
-
+  @media #{$desktop} {
     width: 350px;
+  }
 
-    vertical-align: baseline;
-
+  @media #{$tablet-and-desktop} {
     @include font(20px, 24px, bold);
+
+    // Не придумал как лучше задать им такой же порядок, как в макете;
+    // только с помощью order. Возможно надо сделать две обёртки, чтобы
+    // перестраивались в правильном порядке из мобильной в планшетнную и десктопную версию
+
+    &--feature-1 {
+      order: 2;
+    }
+
+    &--feature-4 {
+      order: 2;
+    }
+
+    &--feature-2 {
+      order: 3;
+    }
+
+    &--feature-5 {
+      order: 4;
+    }
+
+    &--feature-3 {
+      order: 5;
+    }
+
+    &--feature-6 {
+      order: 6;
+    }
   }
 }

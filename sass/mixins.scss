@@ -1,8 +1,16 @@
+// Пока непонятно, какое из двух решений лучше
+// font: $font-weight #{$font-size}/#{$line-height} $font-stack;
+
 @mixin font($font-size, $line-height, $font-weight: normal)  {
-  font: $font-weight #{$font-size}/#{$line-height} $font-stack;
+  font-size: #{$font-size};
+  line-height: #{$line-height};
+
+  @if $font-weight == "bold" {
+    font-weight: $font-weight;
+  }
 }
 
-@mixin icon-centre($width, $height, $url) {
+@mixin icon($width, $height, $url) {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -14,27 +22,4 @@
   transform: translate(-50%, -50%);
 
   background-image: url($url);
-}
-
-//TODO: Временное решение, подлежит замене после изучения векторного формата
-
-@mixin icon-mask-centre($width, $height, $color, $url) {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-  width: $width;
-  height: $height;
-
-  content: "";
-  transform: translate(-50%, -50%);
-
-  background-color: $color;
-  mask-image: url($url);
-}
-
-@mixin clearfix {
-  display: table;
-  content: "";
-  clear: both;
 }

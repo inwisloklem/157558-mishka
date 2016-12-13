@@ -1,6 +1,21 @@
 .contacts {
+  display: flex;
+  flex-direction: column;
+
   padding: 0 30px;
-  overflow: auto;
+
+  @media #{$tablet} {
+    padding: 0 50px;
+  }
+
+  @media #{$desktop} {
+    position: relative;
+
+    padding: 0 50px;
+    padding-left: 225px;
+
+    flex-flow: row wrap;
+  }
 }
 
 .contacts__title {
@@ -8,6 +23,22 @@
   margin-bottom: 25px;
 
   @include font(18px, 30px, bold);
+
+  @media #{$tablet} {
+    margin-top: 61px;
+
+    @include font(43px, 50px, bold);
+  }
+
+  @media #{$desktop} {
+    width: 350px;
+    margin-top: 140px;
+    margin-bottom: 47px;
+
+    word-break: break-all;
+
+    @include font(53px, 57px, bold);
+  }
 }
 
 .contacts__table {
@@ -18,20 +49,47 @@
   border-collapse: collapse;
 
   @include font(15px, 30px);
+
+  @media #{$tablet} {
+    width: 668px;
+  }
+
+  @media #{$desktop} {
+    margin-bottom: 68px;
+    padding-bottom: 103px;
+  }
 }
 
 .contacts__cell {
-  display: inline-block;
-
   width: 150px;
-
-  vertical-align: top;
 
   &--left {
     width: 78px;
     height: 58px;
 
     text-transform: lowercase;
+  }
+
+  @media #{$tablet} {
+    &:last-of-type {
+      width: 200px;
+    }
+  }
+
+  @media #{$tablet-and-desktop} {
+    display: inline-block;
+
+    vertical-align: top;
+  }
+}
+
+.contacts__row {
+  @media #{$tablet} {
+    display: inline-block;
+
+    width: 334px;
+
+    vertical-align: top;
   }
 }
 
@@ -42,6 +100,17 @@
 
   color: $tundora;
   border-bottom: 1px solid $downy;
+
+  @media #{$desktop} {
+    &:hover {
+      color: $downy;
+    }
+
+    &:active {
+      color: $morning-glory;
+      border-color: $morning-glory;
+    }
+  }
 }
 
 .contacts__map {
@@ -52,8 +121,32 @@
   height: 457px;
   margin-bottom: 39px;
 
-  background-color: $gallery;
-  background-image: url("../img/map-mobile@1x.jpg");
+  background: $seashell url("../img/map-mobile@1x.jpg");
+
+  @media #{$tablet} {
+    right: 50px;
+
+    box-sizing: border-box;
+    width: 768px;
+    height: 457px;
+    padding-left: 333px;
+
+    background: $seashell;
+    margin-bottom: 55px;
+  }
+
+  @media #{$desktop} {
+    right: 0;
+
+    box-sizing: border-box;
+    width: 525px;
+    height: 457px;
+    padding-left: 333px;
+
+    background: $seashell;
+    margin-top: 70px;
+    margin-bottom: 105px;
+  }
 }
 
 .contacts__pin {
@@ -65,134 +158,40 @@
   height: 100px;
 
   background-image: url("../img/icon-map-pin.svg");
+
+  @media #{$tablet-and-desktop} {
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+}
+
+.contacts__wrapper {
+  @media #{$desktop} {
+    display: flex;
+    flex-direction: column;
+
+    width: 350px;
+  }
 }
 
 .contacts__btn {
   margin-bottom: 39px;
-}
 
-@media #{$tablet} {
-  .contacts {
-    padding: 0 50px;
-  }
-
-  .contacts__title {
-    margin-top: 61px;
-    @include font(43px, 50px, bold);
-  }
-
-  .contacts__table {
-    width: 668px;
-  }
-
-  .contacts__row {
-    display: inline-block;
-
-    width: 334px;
-
-    vertical-align: top;
-  }
-
-  .contacts__cell {
-    display: inline-block;
-
-    vertical-align: top;
-  }
-
-  .contacts__cell:last-child {
-    width: 200px;
-  }
-
-  .contacts__map {
-    position: relative;
-    right: 50px;
-
-    display: block;
-
-    box-sizing: border-box;
-    width: 768px;
-    height: 457px;
-    padding-left: 333px;
-
-    background: $seashell;
-    margin-bottom: 55px;
-  }
-
-  .contacts__pin {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    width: 67px;
-    height: 100px;
-
-    transform: translate(-50%, -50%);
-
-    background-image: url("../img/icon-map-pin.svg");
-  }
-
-  .contacts__btn {
-    width: 230px;
-    margin: 0 auto;
+  @media #{$tablet} {
+    margin: auto;
     margin-bottom: 57px;
-
-    // Этот отступ по непонятным причинам в цвете html, а не в цвете body
-    // Только в планшетной версии
-  }
-}
-
-@media #{$desktop} {
-  .contacts {
-    overflow: auto;
-
-    padding: 0 50px;
-    padding-left: 225px;
   }
 
-  .contacts__title {
-    margin-top: 141px;
-
-    @include font(53px, 57px, bold);
-  }
-
-  .contacts__table {
-    float: left;
-
-    margin-bottom: 68px;
-  }
-
-  .contacts__map {
-    position: relative;
-    right: 0;
-
-    display: block;
-    float: right;
-
-    box-sizing: border-box;
-    width: 525px;
-    height: 457px;
-    margin-top: -152px;
-    padding-left: 333px;
-
-    background: $seashell;
-  }
-
-  .contacts__pin {
+  @media #{$desktop} {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    bottom: 105px;
 
-    width: 67px;
-    height: 100px;
-
-    transform: translate(-50%, -50%);
-
-    background-image: url("../img/icon-map-pin.svg");
+    margin: 0;
   }
 
-  .contacts__btn {
-    float: left;
-
+  @media #{$tablet-and-desktop} {
     width: 230px;
   }
 }

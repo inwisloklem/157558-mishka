@@ -1,5 +1,14 @@
 .order {
+  display: flex;
+  flex-direction: column;
+
   padding: 0 30px;
+
+  @media #{$tablet-and-desktop} {
+    position: relative;
+
+    padding: 0;
+  }
 }
 
 .order__desc {
@@ -9,16 +18,62 @@
   color: $tundora;
 
   @include font(13px, 24px);
+
+  @media #{$tablet} {
+    padding: 0 50px;
+  }
+
+  @media #{$desktop} {
+    margin-top: 124px;
+    margin-bottom: 24px;
+    padding: 0 225px;
+  }
+
+  @media #{$tablet-and-desktop} {
+    @include font(17px, 30px);
+  }
 }
 
 .order__title {
-  margin-bottom: 27px;
+  margin-bottom: 33px;
 
   text-transform: uppercase;
 
   color: $downy;
 
   @include font(17px, 16px, bold);
+
+  &::after {
+    position: relative;
+    top: -9px;
+    left: 60px;
+
+    display: block;
+
+    width: 198px;
+
+    content: "";
+
+    border-bottom: 1px solid $downy;
+  }
+
+  @media #{$tablet} {
+    left: 50px;
+  }
+
+  @media #{$desktop} {
+    left: 110px;
+  }
+
+  @media #{$tablet-and-desktop} {
+    position: absolute;
+
+    margin-top: 19px;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .order__subtitle {
@@ -37,14 +92,30 @@
   border-bottom: 2px solid $black;
   outline: none;
 
-  font-weight: normal !important;
+  font-weight: normal;
 
   @include font(17px, 18px);
+
+  @media #{$desktop} {
+    margin-bottom: 26px;
+    padding-left: 18px;
+
+    &--tel {
+      margin-bottom: 0;
+    }
+
+    @media #{$tablet-and-desktop} {
+      margin-bottom: 26px;
+      padding-left: 18px;
+
+      @include font(19px, 18px);
+    }
+  }
 }
 
 .order__text {
   box-sizing: border-box;
-  width: 260px;
+  width: 100%;
   min-height: 142px;
   margin-bottom: 19px;
   padding: 17px;
@@ -53,200 +124,250 @@
   outline: none;
 
   @include font(17px, 18px);
+
+  @media #{$tablet-and-desktop} {
+    margin-bottom: 26px;
+  }
 }
 
-.order__checkbox, .order__radio {
+.order__checkbox-label, .order__radio-label {
   display: block;
 
-  margin-bottom: 27px;
+  margin-bottom: 42px;
+  padding-left: 64px;
 
   @include font(17px, 18px, bold);
 }
 
+.order__radio-label {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    display: block;
+
+    width: 36px;
+    height: 36px;
+
+    content: "";
+    transform: translateY(-50%);
+
+    border: 2px solid $tundora;
+    border-radius: 50%;
+  }
+
+  @media #{$tablet-and-desktop} {
+    margin-bottom: 26px;
+    padding-left: 82px;
+
+    &::before {
+      width: 48px;
+      height: 48px;
+    }
+  }
+}
+
+.order__radio:checked ~ .order__radio-label {
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+
+    display: block;
+
+    width: 16px;
+    height: 16px;
+
+    content: "";
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+    background-color: $downy;
+  }
+
+  @media #{$tablet-and-desktop} {
+    &::after {
+      left: 15px;
+
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
+
+.order__checkbox-label {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    display: block;
+
+    width: 36px;
+    height: 36px;
+
+    content: "";
+    transform: translateY(-50%);
+
+    border: 2px solid $tundora;
+  }
+
+  @media #{$tablet-and-desktop} {
+    width: 180px;
+    margin-bottom: 24px;
+    padding-left: 82px;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+
+      display: block;
+
+      width: 48px;
+      height: 48px;
+
+      content: "";
+      transform: translateY(-50%);
+
+      border: 2px solid $tundora;
+    }
+  }
+}
+
+.order__checkbox:checked ~ .order__checkbox-label {
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+
+    display: block;
+
+    width: 8px;
+    height: 20px;
+
+    content: "";
+    transform: rotate(45deg);
+
+    border: 2px solid $thunder;
+    border-top: none;
+    border-left: none;
+  }
+
+  @media #{$tablet-and-desktop} {
+    &::after {
+      bottom: 16px;
+      left: 18px;
+
+      width: 15px;
+      height: 26px;
+    }
+  }
+}
+
+.order__block {
+  @media #{$tablet} {
+    padding: 50px 50px 24px 225px;
+  }
+
+  @media #{$desktop} {
+    padding: 50px 225px 24px;
+  }
+
+  @media #{$tablet-and-desktop} {
+    &--highlight {
+      background-color: $seashell;
+    }
+
+    &--highlight .order__input {
+      background-color: $seashell;
+    }
+
+    &--name .order__item {
+      display: flex;
+      flex-direction: row;
+
+      align-items: baseline;
+    }
+
+    &--name .order__subtitle {
+      padding-right: 24px;
+    }
+
+    &--colors {
+      padding-right: 0;
+    }
+
+    &--colors .order__item {
+      display: inline-flex;
+    }
+
+    &--tel {
+      padding-bottom: 0;
+    }
+
+    &--mail {
+      padding-top: 0;
+    }
+  }
+}
+
+.order__radio-label, .order__checkbox-label, .order__subtitle {
+  @media #{$tablet-and-desktop} {
+    @include font(19px, 52px, bold);
+  }
+}
+
+.order__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  @media #{$tablet} {
+    padding: 0 50px;
+  }
+
+  @media #{$desktop} {
+    padding: 0 225px;
+  }
+
+  @media #{$tablet-and-desktop} {
+    flex-direction: row;
+  }
+}
+
 .order__note {
+  margin-bottom: 31px;
+
+  display: block;
+
   color: $tundora;
 
   @include font(14px, 16px);
-  margin-bottom: 31px;
+
+  @media #{$desktop} {
+    width: 350px;
+
+    text-align: right;
+  }
+
+  @media #{$tablet-and-desktop} {
+    @include font(17px, 30px);
+  }
 }
 
 .order__btn {
   margin-bottom: 55px;
-}
 
-@media #{$tablet} {
-  .order {
-    position: relative;
-
-    overflow: auto;
-
-    padding: 0;
-
-    font-size: 0;
-  }
-
-  .order__desc {
-    padding: 0 50px;
-
-    @include font(17px, 30px);
-  }
-
-  .order__block {
-    padding-top: 50px;
-    padding-left: 225px;
-  }
-
-  .order__input {
-    width: 501px;
-
-    @include font(19px, 18px);
-  }
-
-  .order__block:nth-of-type(2),
-  .order__block:nth-of-type(4),
-  .order__block:nth-of-type(5), {
-    background-color: $seashell;
-  }
-
-  .order__block:nth-of-type(4) .order__input,
-  .order__block:nth-of-type(5) .order__input {
-    background-color: $seashell;
-  }
-
-  .order__block:nth-of-type(5) .order__input {
-    margin-bottom: 50px;
-  }
-
-  .order__block:nth-of-type(2) > p {
-    display: inline-block;
-
-    vertical-align: top;
-  }
-
-  .order__radio {
-    margin-bottom: 50px;
-  }
-
-  .order__checkbox {
-    display: inline-block;
-
-    width: 250px;
-    margin-bottom: 50px;
-  }
-
-  .order__radio, .order__checkbox, .order__subtitle {
-    @include font(19px, 15px, bold);
-  }
-
-  .order__title {
-    position: absolute;
-    left: 50px;
-  }
-
-  .order__text {
-    width: 501px;
-  }
-
-  .order__btn {
-    float: left;
-
+  @media #{$tablet-and-desktop} {
     width: 230px;
-    margin-top: 53px;
-    margin-left: 50px;
-  }
 
-  .order__note {
-    float: right;
-
-    margin-top: 53px;
-    margin-right: 50px;
-
-    @include font(17px, 30px);
-  }
-}
-
-@media #{$desktop} {
-  .order {
-    position: relative;
-
-    overflow: auto;
-
-    padding: 0;
-
-    font-size: 0;
-  }
-
-  .order__radio, .order__checkbox, .order__subtitle {
-    @include font(19px, 18px, bold);
-  }
-
-  .order__block:nth-of-type(2) > p {
-    display: inline-block;
-
-    vertical-align: top;
-  }
-
-  .order__block:nth-of-type(2),
-  .order__block:nth-of-type(4),
-  .order__block:nth-of-type(5), {
-    background-color: $seashell;
-  }
-
-  .order__block:nth-of-type(4) .order__input,
-  .order__block:nth-of-type(5) .order__input {
-    background-color: $seashell;
-  }
-
-  .order__block:nth-of-type(5) .order__input {
-    margin-bottom: 50px;
-  }
-
-  .order__radio {
-    margin-bottom: 50px;
-  }
-
-  .order__desc {
-    padding: 0 225px;
-
-    @include font(17px, 30px);
-  }
-
-  .order__block {
-    padding-top: 50px;
-    padding-left: 225px;
-  }
-
-  .order__checkbox {
-    width: 262px;
-    margin-bottom: 50px;
-  }
-
-  .order__title {
-    position: absolute;
-    left: 110px;
-  }
-
-  .order__input {
-    @include font(19px, 18px);
-  }
-
-  .order__text, .order__input {
-    width: 700px;
-  }
-  .order__btn {
-    float: left;
-
-    width: 230px;
-    margin-top: 53px;
-    margin-left: 225px;
-  }
-
-  .order__note {
-    float: right;
-
-    margin-top: 53px;
-    margin-right: 225px;
-
-    @include font(17px, 30px);
+    order: -1;
   }
 }

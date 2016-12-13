@@ -1,11 +1,37 @@
 .catalog {
-  background-color: $puerto-rico;
-  overflow: auto;
+  display: flex;
+  flex-direction: column;
+
+  @media #{$desktop} {
+    position: relative;
+  }
+
+  @media #{$tablet-and-desktop} {
+    flex-direction: row;
+
+    padding: 0 50px;
+
+    background-color: $alabaster;
+  }
+}
+
+@mixin catalog__line($color) {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  z-index: -10;
+
+  display: block;
+
+  width: 525px;
+  height: 5px;
+
+  content: "";
+
+  background-color: $color;
 }
 
 .catalog__block {
-  position: relative;
-
   min-height: 103px;
 
   &--interior {
@@ -15,47 +41,46 @@
   &--kids {
     background-color: $fountain-blue;
   }
+
+  @media #{$tablet} {
+    width: 334px;
+  }
+
+  @media #{$desktop} {
+    width: 525px;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    &:first-of-type .catalog__link {
+      &::after {
+        @include catalog__line($downy);
+      }
+    }
+
+    &:last-of-type .catalog__link {
+      &::after {
+        @include catalog__line($fountain-blue);
+      }
+    }
+  }
+
+  @media #{$tablet-and-desktop} {
+    min-height: 119px;
+  }
 }
 
 .catalog__link {
   display: block;
 
-  width: 150px;
-  padding: 31px 140px 24px 30px;
+  box-sizing: border-box;
+  min-height: inherit;
+  padding: 30px;
 
   text-decoration: none;
 
   color: $white;
 
   @include font(19px, 24px, bold);
-}
-
-@media #{$tablet} {
-  .catalog {
-    padding: 0 50px;
-
-    background-color: $alabaster;
-  }
-
-  .catalog__block {
-    float: left;
-
-    width: 334px;
-    min-height: 119px;
-  }
-}
-
-@media #{$desktop} {
-  .catalog {
-    padding: 0 50px;
-
-    background-color: $alabaster;
-  }
-
-  .catalog__block {
-    float: left;
-
-    width: 525px;
-    min-height: 119px;
-  }
 }

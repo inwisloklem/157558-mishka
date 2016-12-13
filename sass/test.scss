@@ -1,0 +1,13 @@
+// Тестовый блок
+
+$list: "about", "menu", "caption", "caption-image", "catalog", "catalog-item", "preview", "review", "contacts", "social", "copyright";
+
+@each $block in $list {
+  .#{$block}, .#{$block} * {
+    background: adjust-hue(rgba(sandybrown, 0.25), random(360));
+  }
+}
+
+.page-separator {
+  background: rgba(red, 0.35);
+}
