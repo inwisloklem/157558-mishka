@@ -1,7 +1,7 @@
 .btn {
-  box-sizing: border-box;
   display: block;
 
+  box-sizing: border-box;
   width: 100%;
   padding: 16px 0;
 
@@ -15,6 +15,12 @@
   background-color: transparent;
 
   @include font(17px, 16px, bold);
+
+  &--fill {
+    color: $white;
+    border-color: $downy;
+    background-color: $downy;
+  }
 
   @media #{$desktop} {
     &:hover {
