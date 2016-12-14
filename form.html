@@ -15,7 +15,11 @@
         <ul class="menu__list">
           <li class="menu__logo">
             <a href="index.html">
-              <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Мишки">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img class="menu__img" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Мишки">
+              </picture>
             </a>
             <span class="menu__toggle">Меню</span>
           </li>
@@ -25,7 +29,7 @@
                 Каталог товаров
               </a>
             </li>
-            <li class="menu__item menu__item--form menu__item--active">
+            <li class="menu__item menu__item--form menu__item--current">
               <a class="menu__link">
                 Вязание на заказ
               </a>

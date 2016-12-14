@@ -2,10 +2,6 @@
   display: flex;
   flex-direction: column;
 
-  @media #{$desktop} {
-    position: relative;
-  }
-
   @media #{$tablet-and-desktop} {
     flex-direction: row;
 
@@ -13,22 +9,15 @@
 
     background-color: $alabaster;
   }
-}
 
-@mixin catalog__line($color) {
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  z-index: -10;
+  @media #{$desktop} {
+    position: relative;
+    bottom: 5px;
 
-  display: block;
+    min-height: 124px;
 
-  width: 525px;
-  height: 5px;
-
-  content: "";
-
-  background-color: $color;
+    align-items: flex-end;
+  }
 }
 
 .catalog__block {
@@ -38,7 +27,7 @@
     background-color: $downy;
   }
 
-  &--kids {
+  &--toy {
     background-color: $fountain-blue;
   }
 
@@ -50,18 +39,18 @@
     width: 525px;
 
     &:hover {
-      transform: translateY(-5px);
+      min-height: 124px;
     }
 
-    &:first-of-type .catalog__link {
-      &::after {
-        @include catalog__line($downy);
+    &--interior {
+      &:hover {
+        background-color: $fountain-blue;
       }
     }
 
-    &:last-of-type .catalog__link {
-      &::after {
-        @include catalog__line($fountain-blue);
+    &--toy {
+      &:hover {
+        background-color: $puerto-rico;
       }
     }
   }
@@ -71,7 +60,22 @@
   }
 }
 
+.catalog__icon {
+  position: absolute;
+  top: 50%;
+  right: 36px;
+
+  width: 41px;
+  height: 62px;
+
+  transform: translateY(-50%);
+
+  fill: $keppel;
+}
+
 .catalog__link {
+  position: relative;
+
   display: block;
 
   box-sizing: border-box;

@@ -9,10 +9,7 @@
 
     padding: 0 50px;
 
-    &:first-of-type .catalog-item__image {
-      margin-top: 82px;
-    }
-
+    &:first-of-type .catalog-item__img,
     &:first-of-type .catalog-item__wrapper {
       margin-top: 82px;
     }
@@ -42,7 +39,7 @@
   }
 }
 
-.catalog-item__image {
+.catalog-item__img {
   width: 260px;
   height: 195px;
   margin-top: 30px;
@@ -50,18 +47,14 @@
   background: $seashell;
 
   @media #{$tablet} {
-    box-sizing: border-box;
     width: 334px;
     height: 334px;
     margin-top: 54px;
-    padding-left: 334px;
   }
 
   @media #{$desktop} {
-      box-sizing: border-box;
       width: 317px;
       height: 463px;
-      padding-left: 317px;
   }
 }
 

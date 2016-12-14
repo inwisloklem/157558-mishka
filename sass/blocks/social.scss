@@ -40,13 +40,13 @@
 
       display: block;
 
-      width: 86px;
-      height: 35px;
+      width: 102px;
+      height: 34px;
       margin-top: 57px;
 
       content: "";
 
-      background-image: url("../img/logo-mobile.svg");
+      background-image: url("../img/logo-footer.svg");
     }
 
     &::after {
@@ -65,29 +65,44 @@
 
   font-size: 0;
 
-  &--inst {
-    width: 22px;
-    height: 21px;
-
-    background-image: url("../img/icon-insta.svg");
-  }
-
-  &--fb {
-    width: 15px;
-    height: 28px;
-
-    background-image: url("../img/icon-fb.svg");
-  }
-
-  &--twitter {
-    width: 23px;
-    height: 20px;
+  &--last {
     margin-right: 0;
-
-    background-image: url("../img/icon-twitter.svg");
   }
 
   @media #{$tablet-and-desktop} {
     margin-top: 57px;
   }
+
+  @media #{$desktop} {
+    &:hover {
+      .social__icon-insta,
+      .social__icon-fb,
+      .social__icon-twitter {
+        fill: $downy;
+      }
+    }
+
+    &:active {
+      .social__icon-insta,
+      .social__icon-fb,
+      .social__icon-twitter {
+        fill: rgba($puerto-rico, 0.3);
+      }
+    }
+  }
+}
+
+.social__icon-insta {
+  width: 22px;
+  height: 21px;
+}
+
+.social__icon-fb {
+  width: 15px;
+  height: 28px;
+}
+
+.social__icon-twitter {
+  width: 23px;
+  height: 20px;
 }
