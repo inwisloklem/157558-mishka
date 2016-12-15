@@ -155,6 +155,7 @@
       width: 167px;
 
       border-bottom: none;
+      background-color: transparent;
     }
 
     .menu__link {
@@ -210,6 +211,8 @@
 
       border-bottom: none;
 
+      background-color: transparent;
+
       &:last-of-type {
         padding-left: 46px;
       }
@@ -231,6 +234,8 @@
   &--hidden {
     display: none;
   }
+
+  background-color: $white;
 
   @media #{$tablet-and-desktop} {
     display: block;

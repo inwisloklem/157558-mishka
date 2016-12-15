@@ -1,14 +1,21 @@
 .page-separator {
+  position: relative;
+
   min-height: 7px;
 
   border: none;
-  background-color: $seashell;
+  background: $white url("../img/bg-zigzag-line.svg");
+  background-size: auto 7px;
 
   @media #{$tablet} {
     min-height: 17px;
+
+    background-size: auto 17px;
   }
 
   @media #{$desktop} {
     min-height: 23px;
+
+    background-size: auto 23px;
   }
 }

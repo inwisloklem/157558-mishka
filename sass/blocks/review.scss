@@ -98,6 +98,16 @@
   color: $tundora;
 
   @include font(18px, 30px);
+
+  @media #{$desktop} {
+    &:hover {
+      color: $downy;
+    }
+  }
+
+  &:active {
+    color: $morning-glory;
+  }
 }
 
 .review__arrow {
@@ -119,18 +129,8 @@
 
   font-size: 0;
 
-  &--prev {
-    &::before {
-      @include icon(50px, 26px, "../img/icon-left-arrow.svg");
-    }
-  }
-
   &--next {
     border-left: none;
-
-    &::before {
-      @include icon(50px, 26px, "../img/icon-right-arrow.svg");
-    }
   }
 
   @media #{$tablet-and-desktop} {
@@ -139,6 +139,32 @@
 
     border: none;
   }
+
+  @media #{$desktop} {
+    &:hover {
+      .review__icon-left-arrow,
+      .review__icon-right-arrow {
+        fill: rgba($black, 0.6);
+      }
+    }
+  }
+
+  &:active {
+    .review__icon-left-arrow,
+    .review__icon-right-arrow {
+      fill: rgba($black, 0.3);
+    }
+  }
+}
+
+.review__icon-left-arrow {
+  width: 50px;
+  height: 26px;
+}
+
+.review__icon-right-arrow {
+  width: 50px;
+  height: 26px;
 }
 
 .review__btn {

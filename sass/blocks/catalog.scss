@@ -25,10 +25,18 @@
 
   &--interior {
     background-color: $downy;
+
+    .catalog__link:active {
+      color: rgba($white, 0.3);
+    }
   }
 
   &--toy {
     background-color: $fountain-blue;
+
+    .catalog__link:active {
+      color: rgba($white, 0.3);
+    }
   }
 
   @media #{$tablet} {
@@ -44,7 +52,7 @@
 
     &--interior {
       &:hover {
-        background-color: $fountain-blue;
+        background-color: $viking;
       }
     }
 

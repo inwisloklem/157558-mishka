@@ -52,96 +52,6 @@
 
   padding-top: 83px;
 
-  &--feature-1::before {
-    position: absolute;
-    bottom: 66px;
-    left: 8px;
-
-    width: 32px;
-    height: 38px;
-
-    content: "";
-
-    background-color: $downy;
-
-    mask-image: url("../img/icon-feature-1.svg");
-  }
-
-  &--feature-2::before {
-    position: absolute;
-    bottom: 66px;
-    left: 0;
-
-    width: 47px;
-    height: 27px;
-
-    content: "";
-
-    background-color: $downy;
-
-    mask-image: url("../img/icon-feature-2.svg");
-  }
-
-  &--feature-3::before {
-    position: absolute;
-    bottom: 66px;
-    left: 7px;
-
-    width: 33px;
-    height: 28px;
-
-    content: "";
-
-    background-color: $downy;
-
-    mask-image: url("../img/icon-feature-3.svg");
-  }
-
-  &--feature-4::before {
-    position: absolute;
-    bottom: 66px;
-    left: 7px;
-
-    width: 34px;
-    height: 34px;
-
-    content: "";
-
-    background-color: $downy;
-
-    mask-image: url("../img/icon-feature-4.svg");
-  }
-
-  &--feature-5::before {
-    position: absolute;
-    bottom: 66px;
-    left: -3px;
-
-    width: 54px;
-    height: 23px;
-
-    content: "";
-
-    background-color: $downy;
-
-    mask-image: url("../img/icon-feature-5.svg");
-  }
-
-  &--feature-6::before {
-    position: absolute;
-    bottom: 66px;
-    left: 8px;
-
-    width: 33px;
-    height: 32px;
-
-    content: "";
-
-    background-color: $downy;
-
-    mask-image: url("../img/icon-feature-6.svg");
-  }
-
   @media #{$tablet} {
     width: 334px;
   }
@@ -181,4 +91,70 @@
       order: 6;
     }
   }
+}
+
+.about__icon-feature-1 {
+  position: absolute;
+  bottom: 66px;
+  left: 8px;
+
+  width: 32px;
+  height: 38px;
+
+  fill: $downy;
+}
+
+.about__icon-feature-2 {
+  position: absolute;
+  bottom: 66px;
+  left: 0;
+
+  width: 47px;
+  height: 27px;
+
+  fill: $downy;
+}
+
+.about__icon-feature-3 {
+  position: absolute;
+  bottom: 66px;
+  left: 7px;
+
+  width: 33px;
+  height: 28px;
+
+  fill: $downy;
+}
+
+.about__icon-feature-4 {
+  position: absolute;
+  bottom: 66px;
+  left: 7px;
+
+  width: 34px;
+  height: 34px;
+
+  fill: $downy;
+}
+
+.about__icon-feature-5 {
+  position: absolute;
+  bottom: 66px;
+  left: -3px;
+
+  width: 54px;
+  height: 23px;
+
+  fill: $downy;
+}
+
+.about__icon-feature-6 {
+  position: absolute;
+  bottom: 66px;
+  left: 8px;
+
+  width: 33px;
+  height: 32px;
+
+  fill: $downy;
 }

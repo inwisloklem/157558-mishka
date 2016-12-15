@@ -14,7 +14,7 @@
       <nav class="menu menu--dark">
         <ul class="menu__list">
           <li class="menu__logo">
-            <a href="index.html">
+            <a>
               <picture>
                 <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
                 <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -30,7 +30,7 @@
               </a>
             </li>
             <li class="menu__item menu__item--form menu__item--current">
-              <a class="menu__link">
+              <a class="menu__link" href="form.html">
                 Вязание на заказ
               </a>
             </li>
@@ -39,11 +39,17 @@
             <li class="menu__item menu__item--search">
               <a class="menu__link" href="#">
                 Поиск по сайту
+                <svg class="menu__icon-search">
+                  <use xlink:href="img/sprite.svg#icon-search">
+                </svg>
               </a>
             </li>
             <li class="menu__item menu__item--cart">
               <a class="menu__link" href="#">
                 Корзина: пока пуста
+                <svg class="menu__icon-cart">
+                  <use xlink:href="img/sprite.svg#icon-cart">
+                </svg>
               </a>
             </li>
           </div>
@@ -186,19 +192,43 @@
       <section class="social">
         <h2 class="visually-hidden">Подписывайтесь на нас в соцсетях</h2>
 
-        <a class="social__item social__item--inst" href="#">Instagram</a>
-        <a class="social__item social__item--fb" href="#">Facebook</a>
-        <a class="social__item social__item--twitter" href="#">Twitter</a>
+        <a href="index.html" class="social__link">
+          <svg class="social__logo-footer">
+            <use xlink:href="img/sprite.svg#logo-footer">
+          </svg>
+        </a>
+
+        <a class="social__item" href="#">
+          Instagram
+          <svg class="social__icon-insta">
+            <use xlink:href="img/sprite.svg#icon-insta">
+          </svg>
+        </a>
+        <a class="social__item" href="#">
+          Facebook
+          <svg class="social__icon-fb">
+            <use xlink:href="img/sprite.svg#icon-fb">
+          </svg>
+        </a>
+        <a class="social__item social__item--last" href="#">
+          Twitter
+          <svg class="social__icon-twitter">
+            <use xlink:href="img/sprite.svg#icon-twitter">
+          </svg>
+        </a>
       </section>
 
       <section class="copyright">
         <h2 class="visually-hidden">Информация о разработчике</h2>
 
-        <div class="copyright__text">
-          <a class="copyright__link" href="#">Разработано
-            <span class="copyright__logo">
-              HTML Academy
+          <a class="copyright__link" href="https://htmlacademy.ru" target="_blank">
+            <span class="copyright__text">
+              Разработано
+              <svg class="copyright__icon-htmlacademy">
+                <use xlink:href="img/sprite.svg#icon-htmlacademy">
+              </svg>
             </span>
+            HTML Academy
           </a>
         </div>
       </section>

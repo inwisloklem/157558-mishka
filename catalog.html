@@ -25,7 +25,7 @@
           </li>
           <div class="menu__block-1">
             <li class="menu__item menu__item--catalog menu__item--current">
-              <a class="menu__link">
+              <a class="menu__link" href="catalog.html">
                 Каталог товаров
               </a>
             </li>
@@ -39,11 +39,17 @@
             <li class="menu__item menu__item--search">
               <a class="menu__link" href="#">
                 Поиск по сайту
+                <svg class="menu__icon-search">
+                  <use xlink:href="img/sprite.svg#icon-search">
+                </svg>
               </a>
             </li>
             <li class="menu__item menu__item--cart">
               <a class="menu__link" href="#">
                 Корзина: пока пуста
+                <svg class="menu__icon-cart">
+                  <use xlink:href="img/sprite.svg#icon-cart">
+                </svg>
               </a>
             </li>
           </div>
@@ -71,69 +77,75 @@
       </div>
 
       <article class="catalog-item">
-        <a href="#">
+        <a class="catalog-item__link" href="#">
           <picture>
             <source media="(min-width: 1150px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/photo-1-tablet@1x.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
             <img class="catalog-item__img" src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" width="260" height="195" alt="Зайчик-попрыгайчик">
           </picture>
-        </a>
 
-        <div class="catalog-item__wrapper">
-          <h3 class="catalog-item__title">
-            <a class="catalog-item__link" href="#">Зайчик-попрыгайчик</a>
-          </h3>
-          <p class="catalog-item__desc">Рост 30 см, вес 200 г</p>
+          <div class="catalog-item__wrapper">
+            <h3 class="catalog-item__title">
+              Зайчик-попрыгайчик
+            </h3>
+            <p class="catalog-item__desc">Рост 30 см, вес 200 г</p>
 
-          <div class="catalog-item__price">
-            <b>1 200 руб.</b>
-            <a class="catalog-item__cart" href="#">Корзина</a>
+            <div class="catalog-item__price">
+              <b>1 200 руб.</b>
+              <svg class="catalog-item__icon-cart">
+                <use xlink:href="img/sprite.svg#icon-cart">
+              </svg>
+            </div>
           </div>
-        </div>
+        </a>
       </article>
 
       <article class="catalog-item">
-        <a href="#">
+        <a class="catalog-item__link" href="#">
           <picture>
             <source media="(min-width: 1150px)" srcset="img/photo-2-desktop@1x.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/photo-2-tablet@1x.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
-            <img class="catalog-item__img" src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" width="260" height="195" alt="Зайчик-попрыгайчик">
+            <img class="catalog-item__img" src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" width="260" height="195" alt="Корзинка для белья">
           </picture>
-        </a>
 
-        <div class="catalog-item__wrapper">
-          <h3 class="catalog-item__title">
-            <a class="catalog-item__link" href="#">Корзинка для белья</a>
-          </h3>
-          <p class="catalog-item__desc">Диаметр 15 см, высота 10 см</p>
+          <div class="catalog-item__wrapper">
+            <h3 class="catalog-item__title">
+              Корзинка для белья
+            </h3>
+            <p class="catalog-item__desc">Диаметр 15 см, высота 10 см</p>
 
-          <div class="catalog-item__price">
-            <b>690 руб.</b>
-            <a class="catalog-item__cart" href="#">Корзина</a>
+            <div class="catalog-item__price">
+              <b>690 руб.</b>
+              <svg class="catalog-item__icon-cart">
+                <use xlink:href="img/sprite.svg#icon-cart">
+              </svg>
+            </div>
           </div>
-        </div>
+        </a>
       </article>
 
       <article class="catalog-item">
-        <a href="#">
+        <a class="catalog-item__link" href="#">
           <picture>
             <source media="(min-width: 1150px)" srcset="img/photo-3-desktop@1x.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
-            <img class="catalog-item__img" src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" width="260" height="195" alt="Зайчик-попрыгайчик">
+            <img class="catalog-item__img" src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" width="260" height="195" alt="Корзинка для белья">
           </picture>
-        </a>
 
-        <div class="catalog-item__wrapper">
-          <h3 class="catalog-item__title">
-            <a class="catalog-item__link" href="#">Большая корзинка для игрушек</a>
-          </h3>
-          <p class="catalog-item__desc">Диаметр 30 см, высота 30 см</p>
+          <div class="catalog-item__wrapper">
+            <h3 class="catalog-item__title">
+              Большая корзинка для игрушек
+            </h3>
+            <p class="catalog-item__desc">Диаметр 30 см, высота 30 см</p>
 
-          <div class="catalog-item__price">
-            <b>1 500 руб.</b>
-            <a class="catalog-item__cart" href="#">Корзина</a>
+            <div class="catalog-item__price">
+              <b>1 500 руб.</b>
+              <svg class="catalog-item__icon-cart">
+                <use xlink:href="img/sprite.svg#icon-cart">
+              </svg>
+            </div>
           </div>
-        </div>
+        </a>
       </article>
 
       <section class="process">
@@ -162,19 +174,43 @@
       <section class="social">
         <h2 class="visually-hidden">Подписывайтесь на нас в соцсетях</h2>
 
-        <a class="social__item social__item--inst" href="#">Instagram</a>
-        <a class="social__item social__item--fb" href="#">Facebook</a>
-        <a class="social__item social__item--twitter" href="#">Twitter</a>
+        <a href="index.html" class="social__link">
+          <svg class="social__logo-footer">
+            <use xlink:href="img/sprite.svg#logo-footer">
+          </svg>
+        </a>
+
+        <a class="social__item" href="#">
+          Instagram
+          <svg class="social__icon-insta">
+            <use xlink:href="img/sprite.svg#icon-insta">
+          </svg>
+        </a>
+        <a class="social__item" href="#">
+          Facebook
+          <svg class="social__icon-fb">
+            <use xlink:href="img/sprite.svg#icon-fb">
+          </svg>
+        </a>
+        <a class="social__item social__item--last" href="#">
+          Twitter
+          <svg class="social__icon-twitter">
+            <use xlink:href="img/sprite.svg#icon-twitter">
+          </svg>
+        </a>
       </section>
 
       <section class="copyright">
         <h2 class="visually-hidden">Информация о разработчике</h2>
 
-        <div class="copyright__text">
-          <a class="copyright__link" href="#">Разработано
-            <span class="copyright__logo">
-              HTML Academy
+          <a class="copyright__link" href="https://htmlacademy.ru" target="_blank">
+            <span class="copyright__text">
+              Разработано
+              <svg class="copyright__icon-htmlacademy">
+                <use xlink:href="img/sprite.svg#icon-htmlacademy">
+              </svg>
             </span>
+            HTML Academy
           </a>
         </div>
       </section>
