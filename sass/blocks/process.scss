@@ -18,28 +18,34 @@
 .process__video {
   position: relative;
 
-  &::after {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    width: 101px;
-    height: 78px;
-
-    content: "";
-    transform: translate(-50%, -50%);
-
-    background: url("../img/icon-play.svg");
-  }
-
-  // @media #{$desktop} {
-  //   &:hover::after {
-  //     transform: translate(-50%, -50%) scale(1.2);
-  //   }
-  // }
-
   @media #{$tablet-and-desktop} {
     margin-top: 54px;
+  }
+}
+
+.process__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 101px;
+  height: 77px;
+
+  content: "";
+  transform: translate(-50%, -50%);
+
+  background: url("../img/icon-play.svg");
+
+  @media #{$desktop} {
+    cursor: pointer;
+
+    &:hover {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+  }
+
+  &:active {
+    transform: translate(-50%, -50%) scale(0.8);
   }
 }
 
