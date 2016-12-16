@@ -337,7 +337,11 @@
 }
 
 .menu__text {
+  display: none;
+
   @media #{$tablet-and-desktop} {
+    display: block;
+
     width: 334px;
     padding: 16px 0 18px;
     padding-right: 50px;

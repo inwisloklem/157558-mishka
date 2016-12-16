@@ -11,27 +11,3 @@ fieldset {
 
   border: none;
 }
-
-html {
-  min-height: 100%;
-
-  background-color: $white;
-}
-
-body {
-  width: 320px;
-  min-height: 100%;
-
-  background-color: $white;
-
-  font-size: 0;
-
-  @media #{$tablet} {
-    width: 768px;
-  }
-
-  @media #{$desktop} {
-    width: 1150px;
-    margin: auto;
-  }
-}
