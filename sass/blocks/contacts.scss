@@ -22,12 +22,34 @@
   margin-top: 35px;
   margin-bottom: 25px;
 
+  position: relative;
+
   @include font(18px, 30px, bold);
+
+  @media #{$tablet-and-desktop} {
+    &::before {
+      position: absolute;
+      top: 50%;
+
+      width: 47px;
+      height: 81px;
+
+      content: "";
+
+      transform: translateY(-50%);
+
+      background: url("../img/icon-flag.svg");
+    }
+  }
 
   @media #{$tablet} {
     margin-top: 61px;
 
     @include font(43px, 50px, bold);
+
+    &::before {
+      right: 0;
+    }
   }
 
   @media #{$desktop} {
@@ -38,6 +60,10 @@
     word-break: break-all;
 
     @include font(53px, 57px, bold);
+
+    &::before {
+      left: -112px;
+    }
   }
 }
 
