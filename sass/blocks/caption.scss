@@ -1,17 +1,44 @@
 .caption {
+  position: relative;
+
   min-height: 176px;
 
   background-color: $seashell;
 
-  @media #{$tablet} {
+  @media #{$tablet-and-desktop} {
+    &::after {
+      position: absolute;
+      z-index: 50;
+      bottom: 0;
+      left: 0;
 
-    // 223 - 58 = 165
+      width: 1150px;
+      height: 34px;
+
+      content: "";
+
+      background: url("../img/bg-zigzag-fill.svg");
+    }
+  }
+
+  @media #{$tablet} {
     min-height: 165px;
+
+    &::after {
+      width: 768px;
+      height: 22px;
+
+      background-size: contain;
+    }
   }
 
   @media #{$desktop} {
-    // 251 - 58 = 193
     min-height: 193px;
+
+    &::after {
+      width: 1150px;
+      height: 34px;
+    }
   }
 }
 
@@ -38,7 +65,6 @@
   }
 
   @media #{$tablet-and-desktop} {
-    // 94 - 58 = 36
     padding-top: 36px;
   }
 }

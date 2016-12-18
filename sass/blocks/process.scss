@@ -23,6 +23,27 @@
   }
 }
 
+.process__icon-video {
+  position: absolute;
+  top: 35px;
+  left: 33px;
+
+  width: 32px;
+  height: 32px;
+
+  fill: $downy;
+
+  @media #{$tablet} {
+    top: 25px;
+    left: 25px;
+  }
+
+  @media #{$desktop} {
+    top: 46px;
+    left: 90px;
+  }
+}
+
 .process__play {
   position: absolute;
   top: 50%;
@@ -97,17 +118,19 @@
 }
 
 .process__title {
+  position: relative;
+
   margin-top: 30px;
   padding: 30px;
-  padding-left: 68px;
+  padding-left: 89px;
 
   border: 1px solid $gallery;
 
   @include font(17px, 24px, bold);
 
   @media #{$tablet} {
-    top: 480px;
-    left: 89px;
+    top: 488px;
+    left: 67px;
 
     width: 668px;
   }

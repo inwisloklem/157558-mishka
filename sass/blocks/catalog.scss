@@ -3,20 +3,49 @@
   flex-direction: column;
 
   @media #{$tablet-and-desktop} {
+    position: relative;
+
     flex-direction: row;
 
     padding: 0 50px;
 
     background-color: $alabaster;
+
+    &::after {
+      position: absolute;
+      z-index: 50;
+      bottom: 0;
+      left: 0;
+
+      width: 1150px;
+      height: 34px;
+
+      content: "";
+
+      background: url("../img/bg-zigzag-fill.svg");
+    }
+  }
+
+  @media #{$tablet} {
+    &::after {
+      width: 768px;
+      height: 22px;
+
+      background-size: contain;
+    }
   }
 
   @media #{$desktop} {
-    position: relative;
     bottom: 5px;
 
     min-height: 124px;
 
     align-items: flex-end;
+
+    &::after {
+      width: 1150px;
+      height: 34px;
+    }
   }
 }
 
