@@ -1,4 +1,10 @@
-var menuToggle =  document.querySelector(".menu__toggle");
+var menu = document.querySelector(".menu");
+var menuList = document.querySelector(".menu__list");
+
+menuList.classList.add("menu__list--js");
+menu.classList.add("menu--js");
+
+var menuToggle = document.querySelector(".menu__toggle");
 var menuItems = document.querySelectorAll(".menu__item");
 
 for (let i = 0; i < menuItems.length; i++) {
@@ -15,6 +21,8 @@ menuToggle.addEventListener("click", function(event) {
   menuToggle.classList.toggle("menu__toggle--close");
 });
 
+// При нажатии на кнопку "Заказать" открывается модальное окно
+
 var makeOrder = document.querySelector(".preview__btn");
 var modalCart = document.querySelector(".modal-cart");
 var body = document.querySelector("body");
@@ -27,5 +35,3 @@ if (makeOrder) {
     body.classList.add("modal-overlay");
   });
 };
-
-//TODO: Добавить закрытие по кнопке ESC

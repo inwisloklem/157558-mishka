@@ -16,7 +16,7 @@ function initMap() {
     new google.maps.Size(66, 100)
   );
 
-  var marker = new google.maps.Marker({
+  new google.maps.Marker({
     position: location,
     map: map,
     icon: markerImage
