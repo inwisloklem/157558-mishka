@@ -1,5 +1,5 @@
 mapCanvas = document.querySelector(".contacts__map");
-mapCanvas.classList.add("contacts__map--no-pin");
+mapCanvas.classList.add("contacts__map--js");
 
 function initMap() {
   var location = {lat: 59.936331, lng: 30.321582};
@@ -22,9 +22,9 @@ function initMap() {
     icon: markerImage
   });
 
-  google.maps.event.addListener(map, "bounds_changed", function() {
+  window.onresize = function() {
     map.setCenter(location);
-  });
+  }
 }
 
 google.maps.event.addDomListener(window, "load", initMap);
