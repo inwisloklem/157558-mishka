@@ -11,7 +11,7 @@
     <header>
       <h1 class="visually-hidden">HTML Academy: Мишка</h1>
 
-      <nav class="menu menu--dark">
+      <nav class="menu menu--dark container">
         <ul class="menu__list">
           <li class="menu__logo">
             <a href="index.html">
@@ -72,11 +72,11 @@
     </header>
 
     <main>
-      <div class="caption">
+      <div class="caption container">
         <h2 class="caption__title">Вязание на заказ</h2>
       </div>
 
-      <section class="order">
+      <section class="order container">
         <h2 class="visually-hidden">Форма заказа</h2>
 
         <form class="order__form" action="#" method="post">
@@ -158,6 +158,9 @@
             <p class="order__item">
               <label class="visually-hidden" for="order-tel">Телефон:</label>
               <input class="order__input" id="order-tel" type="tel" name="order-tel" placeholder="+7 ХХХ ХХ ХХ*">
+              <svg class="order__icon-phone">
+                <use xlink:href="img/sprite.svg#icon-phone">
+              </svg>
             </p>
           </fieldset>
 
@@ -167,6 +170,9 @@
             <p class="order__item">
               <label class="visually-hidden" for="order-mail">E-mail:</label>
               <input class="order__input" id="order-mail" type="tel" name="order-mail" placeholder="Ваш Email*">
+              <svg class="order__icon-mail">
+                <use xlink:href="img/sprite.svg#icon-mail">
+              </svg>
             </p>
           </fieldset>
 
@@ -188,7 +194,7 @@
       </section>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer container">
       <section class="social">
         <h2 class="visually-hidden">Подписывайтесь на нас в соцсетях</h2>
 

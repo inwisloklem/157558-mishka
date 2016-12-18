@@ -21,6 +21,9 @@
 }
 
 .catalog__block {
+  position: relative;
+  z-index: 15;
+
   min-height: 103px;
 
   &--interior {

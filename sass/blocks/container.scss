@@ -2,13 +2,14 @@
   box-sizing: border-box;
   width: 320px;
 
+  font-size: 0;
+
   @media #{$tablet} {
     width: 768px;
   }
 
   @media #{$desktop} {
     width: 1150px;
-    margin-right: auto;
-    margin-left: auto;
+    margin: auto;
   }
 }
