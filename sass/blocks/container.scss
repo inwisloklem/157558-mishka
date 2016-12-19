@@ -5,6 +5,17 @@
 
   font-size: 0;
 
+  &--footer {
+    display: flex;
+    flex-direction: column;
+
+    background-color: $seashell;
+
+    @media #{$tablet-and-desktop} {
+      flex-direction: row;
+    }
+  }
+
   @media #{$tablet} {
     width: 768px;
   }

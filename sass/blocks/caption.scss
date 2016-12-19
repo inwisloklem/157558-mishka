@@ -1,11 +1,37 @@
 .caption {
+  @media #{$desktop} {
+    position: relative;
+
+    min-height: 193px;
+
+    background: $seashell;
+
+    &::after {
+      position: absolute;
+      z-index: 50;
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      height: 34px;
+
+      content: "";
+
+      background: url("../img/bg-zigzag-fill.svg") repeat-x;
+    }
+  }
+}
+
+.caption__wrapper {
   position: relative;
 
   min-height: 176px;
 
   background-color: $seashell;
 
-  @media #{$tablet-and-desktop} {
+  @media #{$tablet} {
+    min-height: 165px;
+
     &::after {
       position: absolute;
       z-index: 50;
@@ -18,26 +44,7 @@
       content: "";
 
       background: url("../img/bg-zigzag-fill.svg");
-    }
-  }
-
-  @media #{$tablet} {
-    min-height: 165px;
-
-    &::after {
-      width: 768px;
-      height: 22px;
-
       background-size: contain;
-    }
-  }
-
-  @media #{$desktop} {
-    min-height: 193px;
-
-    &::after {
-      width: 1150px;
-      height: 34px;
     }
   }
 }
@@ -45,7 +52,6 @@
 .caption__title {
   width: 250px;
   margin: auto;
-
   padding-top: 68px;
 
   text-align: center;

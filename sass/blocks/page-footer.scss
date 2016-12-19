@@ -1,10 +1,5 @@
 .page-footer {
-  display: flex;
-  flex-direction: column;
-
-  background-color: $seashell;
-
-  @media #{$tablet-and-desktop} {
-    flex-direction: row;
+  @media #{$desktop} {
+    background-color: $seashell;
   }
 }

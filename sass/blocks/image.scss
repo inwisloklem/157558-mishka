@@ -1,4 +1,10 @@
 .image {
+  @media #{$desktop} {
+    background-color: $alabaster;
+  }
+}
+
+.image__wrapper {
   position: relative;
   z-index: 10;
 

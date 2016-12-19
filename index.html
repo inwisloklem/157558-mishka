@@ -8,7 +8,7 @@
   </head>
 
   <body>
-    <header>
+    <header class="page-header">
       <h1 class="visually-hidden">HTML Academy: Мишка</h1>
 
       <nav class="menu container">
@@ -72,29 +72,33 @@
     </header>
 
     <main>
-      <div class="image container">
-        <h2 class="image__title">Милые штуки ручной работы для дома</h2>
-      </div>
+      <section class="image">
+        <div class="image__wrapper container">
+          <h2 class="image__title">Милые штуки ручной работы для дома</h2>
+        </div>
+      </section>
 
-      <section class="catalog container">
+      <section class="catalog">
         <h2 class="visually-hidden">Перейти в разделы каталога</h2>
 
-        <div class="catalog__block catalog__block--interior">
-          <a class="catalog__link" href="#">
-            Предметы<br> интерьера
-            <svg class="catalog__icon">
-              <use xlink:href="img/sprite.svg#icon-interior">
-            </svg>
-          </a>
-        </div>
+        <div class="catalog__wrapper container">
+          <div class="catalog__block catalog__block--interior">
+            <a class="catalog__link" href="#">
+              Предметы<br> интерьера
+              <svg class="catalog__icon">
+                <use xlink:href="img/sprite.svg#icon-interior">
+              </svg>
+            </a>
+          </div>
 
-        <div class="catalog__block catalog__block--toy">
-          <a class="catalog__link" href="#">
-            Детские<br> игрушки
-            <svg class="catalog__icon">
-              <use xlink:href="img/sprite.svg#icon-toy">
-            </svg>
-          </a>
+          <div class="catalog__block catalog__block--toy">
+            <a class="catalog__link" href="#">
+              Детские<br> игрушки
+              <svg class="catalog__icon">
+                <use xlink:href="img/sprite.svg#icon-toy">
+              </svg>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -259,50 +263,52 @@
       </section>
     </main>
 
-    <footer class="page-footer container">
-      <section class="social">
-        <h2 class="visually-hidden">Подписывайтесь на нас в соцсетях</h2>
+    <footer class="page-footer">
+      <div class="container container--footer">
+        <section class="social">
+          <h2 class="visually-hidden">Подписывайтесь на нас в соцсетях</h2>
 
-        <a class="social__link social__link--current">
-          <svg class="social__logo-footer">
-            <use xlink:href="img/sprite.svg#logo-footer">
-          </svg>
-        </a>
-
-        <a class="social__item" href="#">
-          Instagram
-          <svg class="social__icon-insta">
-            <use xlink:href="img/sprite.svg#icon-insta">
-          </svg>
-        </a>
-        <a class="social__item" href="#">
-          Facebook
-          <svg class="social__icon-fb">
-            <use xlink:href="img/sprite.svg#icon-fb">
-          </svg>
-        </a>
-        <a class="social__item social__item--last" href="#">
-          Twitter
-          <svg class="social__icon-twitter">
-            <use xlink:href="img/sprite.svg#icon-twitter">
-          </svg>
-        </a>
-      </section>
-
-      <section class="copyright">
-        <h2 class="visually-hidden">Информация о разработчике</h2>
-
-          <a class="copyright__link" href="https://htmlacademy.ru" target="_blank">
-            <span class="copyright__text">
-              Разработано
-              <svg class="copyright__icon-htmlacademy">
-                <use xlink:href="img/sprite.svg#icon-htmlacademy">
-              </svg>
-            </span>
-            HTML Academy
+          <a class="social__link social__link--current">
+            <svg class="social__logo-footer">
+              <use xlink:href="img/sprite.svg#logo-footer">
+            </svg>
           </a>
-        </div>
-      </section>
+
+          <a class="social__item" href="#">
+            Instagram
+            <svg class="social__icon-insta">
+              <use xlink:href="img/sprite.svg#icon-insta">
+            </svg>
+          </a>
+          <a class="social__item" href="#">
+            Facebook
+            <svg class="social__icon-fb">
+              <use xlink:href="img/sprite.svg#icon-fb">
+            </svg>
+          </a>
+          <a class="social__item social__item--last" href="#">
+            Twitter
+            <svg class="social__icon-twitter">
+              <use xlink:href="img/sprite.svg#icon-twitter">
+            </svg>
+          </a>
+        </section>
+
+        <section class="copyright">
+          <h2 class="visually-hidden">Информация о разработчике</h2>
+
+            <a class="copyright__link" href="https://htmlacademy.ru" target="_blank">
+              <span class="copyright__text">
+                Разработано
+                <svg class="copyright__icon-htmlacademy">
+                  <use xlink:href="img/sprite.svg#icon-htmlacademy">
+                </svg>
+              </span>
+              HTML Academy
+            </a>
+          </div>
+        </section>
+      </div>
     </footer>
 
     <section class="modal-cart">
