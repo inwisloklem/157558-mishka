@@ -1,7 +1,6 @@
 .page-separator {
   position: relative;
 
-  width: 320px;
   min-height: 7px;
 
   border: none;
@@ -9,14 +8,12 @@
   background-size: auto 7px;
 
   @media #{$tablet} {
-    width: 768px;
     min-height: 17px;
 
     background-size: auto 17px;
   }
 
   @media #{$desktop} {
-    width: auto;
     min-height: 23px;
 
     background-size: auto 23px;
