@@ -8,14 +8,18 @@
   </head>
 
   <body>
-    <header>
+    <header class="page-header page-header--dark">
       <h1 class="visually-hidden">HTML Academy: Мишка</h1>
 
-      <nav class="menu menu--dark">
+      <nav class="menu menu--dark container">
         <ul class="menu__list">
           <li class="menu__logo">
             <a href="index.html">
-              <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Мишки">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img class="menu__img" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Мишки">
+              </picture>
             </a>
             <span class="menu__toggle">Меню</span>
           </li>
@@ -25,8 +29,8 @@
                 Каталог товаров
               </a>
             </li>
-            <li class="menu__item menu__item--form menu__item--active">
-              <a class="menu__link">
+            <li class="menu__item menu__item--form menu__item--current">
+              <a class="menu__link" href="form.html">
                 Вязание на заказ
               </a>
             </li>
@@ -35,11 +39,17 @@
             <li class="menu__item menu__item--search">
               <a class="menu__link" href="#">
                 Поиск по сайту
+                <svg class="menu__icon-search">
+                  <use xlink:href="img/sprite.svg#icon-search">
+                </svg>
               </a>
             </li>
             <li class="menu__item menu__item--cart">
               <a class="menu__link" href="#">
                 Корзина: пока пуста
+                <svg class="menu__icon-cart">
+                  <use xlink:href="img/sprite.svg#icon-cart">
+                </svg>
               </a>
             </li>
           </div>
@@ -62,11 +72,13 @@
     </header>
 
     <main>
-      <div class="caption">
-        <h2 class="caption__title">Вязание на заказ</h2>
-      </div>
+      <section class="caption">
+        <div class="caption__wrapper container">
+          <h2 class="caption__title">Вязание за заказ</h2>
+        </div>
+      </section>
 
-      <section class="order">
+      <section class="order container">
         <h2 class="visually-hidden">Форма заказа</h2>
 
         <form class="order__form" action="#" method="post">
@@ -148,6 +160,9 @@
             <p class="order__item">
               <label class="visually-hidden" for="order-tel">Телефон:</label>
               <input class="order__input" id="order-tel" type="tel" name="order-tel" placeholder="+7 ХХХ ХХ ХХ*">
+              <svg class="order__icon-phone">
+                <use xlink:href="img/sprite.svg#icon-phone">
+              </svg>
             </p>
           </fieldset>
 
@@ -157,6 +172,9 @@
             <p class="order__item">
               <label class="visually-hidden" for="order-mail">E-mail:</label>
               <input class="order__input" id="order-mail" type="tel" name="order-mail" placeholder="Ваш Email*">
+              <svg class="order__icon-mail">
+                <use xlink:href="img/sprite.svg#icon-mail">
+              </svg>
             </p>
           </fieldset>
 
@@ -179,27 +197,53 @@
     </main>
 
     <footer class="page-footer">
-      <section class="social">
-        <h2 class="visually-hidden">Подписывайтесь на нас в соцсетях</h2>
+      <div class="container container--footer">
+        <section class="social">
+          <h2 class="visually-hidden">Подписывайтесь на нас в соцсетях</h2>
 
-        <a class="social__item social__item--inst" href="#">Instagram</a>
-        <a class="social__item social__item--fb" href="#">Facebook</a>
-        <a class="social__item social__item--twitter" href="#">Twitter</a>
-      </section>
-
-      <section class="copyright">
-        <h2 class="visually-hidden">Информация о разработчике</h2>
-
-        <div class="copyright__text">
-          <a class="copyright__link" href="#">Разработано
-            <span class="copyright__logo">
-              HTML Academy
-            </span>
+          <a href="index.html" class="social__link">
+            <svg class="social__logo-footer">
+              <use xlink:href="img/sprite.svg#logo-footer">
+            </svg>
           </a>
-        </div>
-      </section>
+
+          <a class="social__item" href="#">
+            Instagram
+            <svg class="social__icon-insta">
+              <use xlink:href="img/sprite.svg#icon-insta">
+            </svg>
+          </a>
+          <a class="social__item" href="#">
+            Facebook
+            <svg class="social__icon-fb">
+              <use xlink:href="img/sprite.svg#icon-fb">
+            </svg>
+          </a>
+          <a class="social__item social__item--last" href="#">
+            Twitter
+            <svg class="social__icon-twitter">
+              <use xlink:href="img/sprite.svg#icon-twitter">
+            </svg>
+          </a>
+        </section>
+
+        <section class="copyright">
+          <h2 class="visually-hidden">Информация о разработчике</h2>
+
+            <a class="copyright__link" href="https://htmlacademy.ru" target="_blank">
+              <span class="copyright__text">
+                Разработано
+                <svg class="copyright__icon-htmlacademy">
+                  <use xlink:href="img/sprite.svg#icon-htmlacademy">
+                </svg>
+              </span>
+              HTML Academy
+            </a>
+          </div>
+        </section>
+      </div>
     </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/script.js"></script>
   </body>
 </html>

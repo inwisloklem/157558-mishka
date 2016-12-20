@@ -22,12 +22,34 @@
   margin-top: 35px;
   margin-bottom: 25px;
 
+  position: relative;
+
   @include font(18px, 30px, bold);
+
+  @media #{$tablet-and-desktop} {
+    &::before {
+      position: absolute;
+      top: 50%;
+
+      width: 47px;
+      height: 81px;
+
+      content: "";
+
+      transform: translateY(-50%);
+
+      background: url("../img/icon-flag.svg");
+    }
+  }
 
   @media #{$tablet} {
     margin-top: 61px;
 
     @include font(43px, 50px, bold);
+
+    &::before {
+      right: 0;
+    }
   }
 
   @media #{$desktop} {
@@ -38,6 +60,10 @@
     word-break: break-all;
 
     @include font(53px, 57px, bold);
+
+    &::before {
+      left: -112px;
+    }
   }
 }
 
@@ -113,57 +139,78 @@
   }
 }
 
+.contacts__img {
+  position: relative;
+
+  width: 320px;
+  height: 457px;
+
+  background: $seashell;
+
+  @media #{$tablet} {
+    width: 768px;
+    height: 457px;
+  }
+
+  @media #{$desktop} {
+    right: 0;
+
+    width: 525px;
+    height: 457px;
+  }
+}
+
 .contacts__map {
   position: relative;
+
   right: 30px;
 
   width: 320px;
   height: 457px;
   margin-bottom: 39px;
 
-  background: $seashell url("../img/map-mobile@1x.jpg");
+  &--js {
+    &::after {
+      display: none;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 168px;
+    left: 118px;
+
+    width: 67px;
+    height: 100px;
+
+    content: "";
+
+    background-image: url("../img/icon-map-pin.svg");
+  }
 
   @media #{$tablet} {
     right: 50px;
 
-    box-sizing: border-box;
     width: 768px;
     height: 457px;
-    padding-left: 333px;
-
-    background: $seashell;
     margin-bottom: 55px;
+
+    &::after {
+      top: 168px;
+      left: 342px;
+    }
   }
 
   @media #{$desktop} {
-    right: 0;
-
-    box-sizing: border-box;
     width: 525px;
     height: 457px;
-    padding-left: 333px;
-
-    background: $seashell;
     margin-top: 70px;
     margin-bottom: 105px;
-  }
-}
 
-.contacts__pin {
-  position: absolute;
-  top: 165px;
-  left: 123px;
-
-  width: 67px;
-  height: 100px;
-
-  background-image: url("../img/icon-map-pin.svg");
-
-  @media #{$tablet-and-desktop} {
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
+    &::after {
+      top: 168px;
+      left: 236px;
+    }
   }
 }
 
@@ -187,6 +234,7 @@
   @media #{$desktop} {
     position: absolute;
     bottom: 105px;
+    left: 225px;
 
     margin: 0;
   }

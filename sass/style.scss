@@ -14,10 +14,11 @@
 // Конкретные блоки
 @import "blocks/about.scss";
 @import "blocks/btn.scss";
-@import "blocks/caption";
+@import "blocks/caption.scss";
 @import "blocks/catalog-item.scss";
 @import "blocks/catalog.scss";
 @import "blocks/contacts.scss";
+@import "blocks/container.scss";
 @import "blocks/copyright.scss";
 @import "blocks/image.scss";
 @import "blocks/menu.scss";
@@ -25,6 +26,7 @@
 @import "blocks/modal-overlay.scss";
 @import "blocks/order.scss";
 @import "blocks/page-footer.scss";
+@import "blocks/page-header.scss";
 @import "blocks/page-separator.scss";
 @import "blocks/preview.scss";
 @import "blocks/process.scss";

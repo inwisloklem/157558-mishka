@@ -5,6 +5,7 @@ $font-stack: "Open Sans", Tahoma, sans-serif;
 $tablet: "(min-width: 768px) and (max-width: 1149px)";
 $desktop: "(min-width: 1150px)";
 $tablet-and-desktop: "(min-width: 768px)";
+$high-dpi: "(min-resolution: 144dpi), (min-resolution: 1.5dppx)";
 
 // Таблица используемых цветов http://chir.ag/projects/name-that-color
 
@@ -25,3 +26,4 @@ $silver: #cccccc;
 $tundora: #444444;
 $thunder: #231f20;
 $white: #ffffff;
+$viking: #59d5bc;

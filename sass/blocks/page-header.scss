@@ -1,0 +1,9 @@
+.page-header {
+  @media #{$desktop} {
+    background: linear-gradient(to bottom, $white 87px, $gallery 87px, $gallery 88px, $alabaster 88px, $alabaster);
+
+    &--dark {
+      background: linear-gradient(to bottom, $white 87px, $gallery 87px, $gallery 88px, $seashell 88px, $seashell);
+    }
+  }
+}

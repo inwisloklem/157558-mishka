@@ -4,6 +4,16 @@
   &--dark {
     background: $seashell;
   }
+
+  &--js {
+    padding-top: 79px;
+  }
+
+  @media #{$tablet-and-desktop} {
+    &--js {
+      padding-top: 0;
+    }
+  }
 }
 
 .menu__toggle {
@@ -38,12 +48,23 @@
   display: flex;
   flex-direction: column;
 
+  width: 320px;
   padding: 0;
 
   list-style: none;
 
+  &--js {
+    position: absolute;
+    z-index: 50;
+    top: 0;
+  }
+
   @media #{$tablet-and-desktop} {
+    position: static;
+
     flex-direction: row;
+
+    width: auto;
 
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -63,6 +84,20 @@
 
   @media #{$tablet-and-desktop} {
     padding: 31px 0 23px;
+  }
+
+  @media #{$desktop} {
+    &:hover {
+      color: rgba($black, 0.6);
+
+      .menu__icon-search, .menu__icon-cart {
+        fill: $downy;
+      }
+    }
+
+    &:active {
+      color: rgba($black, 0.3);
+    }
   }
 }
 
@@ -84,33 +119,42 @@
     padding-left: 50px;
 
     justify-content: flex-start;
-
-    img {
-      box-sizing: border-box;
-
-      background-color: $silver;
-    }
   }
 
   @media #{$tablet} {
     width: 320px;
 
     order: -2;
-
-    img {
-      width: 113px;
-      height: 46px;
-      padding-left: 113px;
-    }
   }
 
   @media #{$desktop} {
     width: 250px;
 
-    img {
-      width: 149px;
-      height: 72px;
-      padding-left: 149px;
+    &--current .menu__img:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.menu__img {
+  width: 86px;
+  height: 35px;
+
+  @media #{$tablet} {
+    width: 113px;
+    height: 46px;
+  }
+
+  @media #{$desktop} {
+    width: 149px;
+    height: 72px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }
@@ -132,6 +176,7 @@
       width: 167px;
 
       border-bottom: none;
+      background-color: transparent;
     }
 
     .menu__link {
@@ -187,6 +232,8 @@
 
       border-bottom: none;
 
+      background-color: transparent;
+
       &:last-of-type {
         padding-left: 46px;
       }
@@ -201,18 +248,20 @@
 }
 
 .menu__item {
+  position: relative;
+
   border-bottom: 1px solid $gallery;
 
   &--hidden {
     display: none;
   }
 
+  background-color: $white;
+
   @media #{$tablet-and-desktop} {
     display: block;
 
     &--search {
-      position: relative;
-
       width: 82px;
 
       border: 1px solid $gallery;
@@ -223,22 +272,6 @@
 
     &--search .menu__link {
       font-size: 0;
-
-      &::before {
-        position: absolute;
-        top: 36px;
-        left: 50%;
-
-        width: 18px;
-        height: 18px;
-
-        content: "";
-        transform: translateX(-50%);
-
-        background-color: $silver;
-
-        mask-image: url("../img/icon-search.svg");
-      }
     }
 
     &--cart {
@@ -260,6 +293,10 @@
   }
 
   @media #{$desktop} {
+    &--current .menu__link {
+      color: $black;
+    }
+
     &--cart {
       width: 266px;
     }
@@ -280,8 +317,52 @@
   }
 }
 
-.menu__text {
+.menu__icon-search {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+
+  width: 18px;
+  height: 18px;
+
+  transform: translateY(-50%);
+
+  fill: $silver;
+
   @media #{$tablet-and-desktop} {
+    top: 36px;
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
+}
+
+.menu__icon-cart {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+
+  width: 21px;
+  height: 18px;
+
+  transform: translateY(-50%);
+
+  fill: $silver;
+
+  @media #{$tablet-and-desktop} {
+    top: 34px;
+    left: 30px;
+
+    transform: none;
+  }
+}
+
+.menu__text {
+  display: none;
+
+  @media #{$tablet-and-desktop} {
+    display: block;
+
     width: 334px;
     padding: 16px 0 18px;
     padding-right: 50px;

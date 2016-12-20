@@ -8,13 +8,19 @@
   </head>
 
   <body>
-    <header>
+    <header class="page-header">
       <h1 class="visually-hidden">HTML Academy: Мишка</h1>
 
-      <nav class="menu">
+      <nav class="menu container">
         <ul class="menu__list">
-          <li class="menu__logo">
-            <a><img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Мишки"></a>
+          <li class="menu__logo menu__logo--current">
+            <a>
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img class="menu__img" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Мишки">
+              </picture>
+            </a>
             <span class="menu__toggle">Меню</span>
           </li>
           <div class="menu__block-1">
@@ -33,11 +39,17 @@
             <li class="menu__item menu__item--search">
               <a class="menu__link" href="#">
                 Поиск по сайту
+                <svg class="menu__icon-search">
+                  <use xlink:href="img/sprite.svg#icon-search">
+                </svg>
               </a>
             </li>
             <li class="menu__item menu__item--cart">
               <a class="menu__link" href="#">
                 Корзина: пока пуста
+                <svg class="menu__icon-cart">
+                  <use xlink:href="img/sprite.svg#icon-cart">
+                </svg>
               </a>
             </li>
           </div>
@@ -60,23 +72,37 @@
     </header>
 
     <main>
-      <div class="image">
-        <h2 class="image__title">Милые штуки ручной работы для дома</h2>
-      </div>
+      <section class="image">
+        <div class="image__wrapper container">
+          <h2 class="image__title">Милые штуки ручной работы для дома</h2>
+        </div>
+      </section>
 
       <section class="catalog">
         <h2 class="visually-hidden">Перейти в разделы каталога</h2>
 
-        <div class="catalog__block catalog__block--interior">
-          <a class="catalog__link" href="#">Предметы<br> интерьера</a>
-        </div>
+        <div class="catalog__wrapper container">
+          <div class="catalog__block catalog__block--interior">
+            <a class="catalog__link" href="#">
+              Предметы<br> интерьера
+              <svg class="catalog__icon">
+                <use xlink:href="img/sprite.svg#icon-interior">
+              </svg>
+            </a>
+          </div>
 
-        <div class="catalog__block catalog__block--kids">
-          <a class="catalog__link" href="#">Детские<br> игрушки</a>
+          <div class="catalog__block catalog__block--toy">
+            <a class="catalog__link" href="#">
+              Детские<br> игрушки
+              <svg class="catalog__icon">
+                <use xlink:href="img/sprite.svg#icon-toy">
+              </svg>
+            </a>
+          </div>
         </div>
       </section>
 
-      <section class="preview">
+      <section class="preview container">
         <h2 class="preview__title">Вязаные корзинки
           <span class="preview__subtitle">Товар недели</span>
         </h2>
@@ -107,38 +133,60 @@
         </div>
 
         <figure>
-          <img class="preview__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+            <img class="preview__img" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Вязаные корзинки">
+          </picture>
         </figure>
       </section>
 
       <hr class="page-separator">
 
-      <section class="about">
+      <section class="about container">
         <h2 class="about__title">Коротко о нас:</h2>
 
         <ul class="about__list">
           <li class="about__item about__item--feature-1">
+            <svg class="about__icon-feature-1">
+              <use xlink:href="img/sprite.svg#icon-feature-1">
+            </svg>
             Экологически чистые&nbsp;материалы
           </li>
           <li class="about__item about__item--feature-2">
+            <svg class="about__icon-feature-2">
+              <use xlink:href="img/sprite.svg#icon-feature-2">
+            </svg>
             Скандинавский стиль по&nbsp;российской цене
           </li>
           <li class="about__item about__item--feature-3">
+            <svg class="about__icon-feature-3">
+              <use xlink:href="img/sprite.svg#icon-feature-3">
+            </svg>
             Увеличивает лайки на&nbsp;фотографиях
           </li>
           <li class="about__item about__item--feature-4">
+            <svg class="about__icon-feature-4">
+              <use xlink:href="img/sprite.svg#icon-feature-4">
+            </svg>
             Связано вручную с любовью&nbsp;и&nbsp;умилением
           </li>
           <li class="about__item about__item--feature-5">
+            <svg class="about__icon-feature-5">
+              <use xlink:href="img/sprite.svg#icon-feature-5">
+            </svg>
             Поддержка отечественного производителя
           </li>
           <li class="about__item about__item--feature-6">
+            <svg class="about__icon-feature-6">
+              <use xlink:href="img/sprite.svg#icon-feature-6">
+            </svg>
             Поставляется в подарочной&nbsp;упаковке
           </li>
         </ul>
       </section>
 
-      <section class="review">
+      <section class="review container">
         <h2 class="review__title">Отзывы</h2>
 
         <blockquote class="review__block">
@@ -157,10 +205,16 @@
 
           <div class="review__arrows">
             <button class="review__arrow review__arrow--prev" type="button">
+              <svg class="review__icon-left-arrow">
+                <use xlink:href="img/sprite.svg#icon-left-arrow">
+              </svg>
               Предыдущий отзыв
             </button>
 
             <button class="review__arrow review__arrow--next" type="button">
+              <svg class="review__icon-right-arrow">
+                <use xlink:href="img/sprite.svg#icon-right-arrow">
+              </svg>
               Следующий отзыв
             </button>
           </div>
@@ -171,7 +225,7 @@
 
       <hr class="page-separator">
 
-      <section class="contacts">
+      <section class="contacts container">
         <div class="contacts__wrapper">
           <h2 class="contacts__title">Контакты</h2>
 
@@ -198,34 +252,63 @@
         </div>
 
         <div class="contacts__map">
-          <div class="contacts__pin"></div>
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+            <img class="contacts__img" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="457" alt="Карта">
+          </picture>
         </div>
 
         <a class="btn contacts__btn" href="#">Напишите нам</a>
-
       </section>
     </main>
 
     <footer class="page-footer">
-      <section class="social">
-        <h2 class="visually-hidden">Подписывайтесь на нас в соцсетях</h2>
+      <div class="container container--footer">
+        <section class="social">
+          <h2 class="visually-hidden">Подписывайтесь на нас в соцсетях</h2>
 
-        <a class="social__item social__item--inst" href="#">Instagram</a>
-        <a class="social__item social__item--fb" href="#">Facebook</a>
-        <a class="social__item social__item--twitter" href="#">Twitter</a>
-      </section>
-
-      <section class="copyright">
-        <h2 class="visually-hidden">Информация о разработчике</h2>
-
-        <div class="copyright__text">
-          <a class="copyright__link" href="#">Разработано
-            <span class="copyright__logo">
-              HTML Academy
-            </span>
+          <a class="social__link social__link--current">
+            <svg class="social__logo-footer">
+              <use xlink:href="img/sprite.svg#logo-footer">
+            </svg>
           </a>
-        </div>
-      </section>
+
+          <a class="social__item" href="#">
+            Instagram
+            <svg class="social__icon-insta">
+              <use xlink:href="img/sprite.svg#icon-insta">
+            </svg>
+          </a>
+          <a class="social__item" href="#">
+            Facebook
+            <svg class="social__icon-fb">
+              <use xlink:href="img/sprite.svg#icon-fb">
+            </svg>
+          </a>
+          <a class="social__item social__item--last" href="#">
+            Twitter
+            <svg class="social__icon-twitter">
+              <use xlink:href="img/sprite.svg#icon-twitter">
+            </svg>
+          </a>
+        </section>
+
+        <section class="copyright">
+          <h2 class="visually-hidden">Информация о разработчике</h2>
+
+            <a class="copyright__link" href="https://htmlacademy.ru" target="_blank">
+              <span class="copyright__text">
+                Разработано
+                <svg class="copyright__icon-htmlacademy">
+                  <use xlink:href="img/sprite.svg#icon-htmlacademy">
+                </svg>
+              </span>
+              HTML Academy
+            </a>
+          </div>
+        </section>
+      </div>
     </footer>
 
     <section class="modal-cart">
@@ -251,6 +334,8 @@
       <div class="modal-cart__shadow"></div>
     </section>
 
-    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script src="js/map.js"></script>
   </body>
 </html>

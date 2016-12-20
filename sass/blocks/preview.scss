@@ -71,25 +71,23 @@
   }
 }
 
-.preview__image {
+.preview__img {
+  width: 260px;
+  height: 315px;
   margin-bottom: 26px;
 
   @media #{$tablet} {
-    box-sizing: border-box;
     width: 333px;
     height: 404px;
     margin: 0;
-    padding-left: 333px;
 
     background: $seashell;
   }
 
   @media #{$desktop} {
-    box-sizing: border-box;
     width: 525px;
     height: 636px;
     margin-top: 73px;
-    padding-left: 525px;
 
     background: $seashell;
   }
