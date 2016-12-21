@@ -24,7 +24,7 @@ gulp.task("style", function() {
         "last 2 versions"
       ]}),
       mqpacker({
-        sort: true
+        sort: false
       })
     ]))
     .pipe(gulp.dest("css"))
