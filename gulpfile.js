@@ -15,11 +15,10 @@ var server = require("browser-sync").create();
 var svgmin = require("gulp-svgmin");
 var svgstore = require("gulp-svgstore");
 
-
 gulp.task("style", function() {
   gulp.src("sass/style.scss")
     .pipe(plumber())
-    .pipe(sass())
+    .pipe(sass({outputStyle: "expanded"}))
     .pipe(postcss([
       autoprefixer({browsers: [
         "last 2 versions"
@@ -28,9 +27,11 @@ gulp.task("style", function() {
         sort: true
       })
     ]))
+    .pipe(gulp.dest("css"))
     .pipe(gulp.dest("build/css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
+    .pipe(gulp.dest("css"))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
@@ -49,6 +50,7 @@ gulp.task("symbols", function() {
   .pipe(svgmin())
   .pipe(svgstore())
   .pipe(rename("sprite.svg"))
+  .pipe(gulp.dest("img"))
   .pipe(gulp.dest("build/img"));
 });
 
