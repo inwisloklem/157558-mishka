@@ -10,11 +10,11 @@
     padding: 0 50px;
 
     background: url("../img/review@1x.jpg") no-repeat center left;
-  }
 
-  @media #{$high-dpi} {
-    background: url("../img/review@2x.jpg") no-repeat center left;
-    background-size: 350px 457px;
+    @media #{$high-dpi} {
+      background: url("../img/review@2x.jpg") no-repeat center left;
+      background-size: 350px 457px;
+    }
   }
 
   @media #{$desktop} {

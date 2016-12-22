@@ -109,19 +109,39 @@
 
 .social__link {
   @media #{$desktop} {
-    &:hover .social__logo-footer {
-      fill: $downy;
+    &:hover {
+      .social__logo-footer {
+        fill: $downy;
+      }
+    }
+
+    &:active {
+      .social__logo-footer {
+        fill: rgba($puerto-rico, 0.3);
+      }
+    }
+
+    &--current {
+      &:hover, &:active {
+        .social__logo-footer {
+          fill: $black;
+        }
+      }
     }
   }
 
-  &:active .social__logo-footer {
-    fill: rgba($puerto-rico, 0.3);
-  }
-
-  &--current {
-    &:hover, &:active {
+  @media #{$tablet} {
+    &:active {
       .social__logo-footer {
-        fill: $black;
+        fill: rgba($puerto-rico, 0.3);
+      }
+    }
+
+    &--current {
+      &:active {
+        .social__logo-footer {
+          fill: $black;
+        }
       }
     }
   }
