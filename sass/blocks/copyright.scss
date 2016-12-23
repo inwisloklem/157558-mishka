@@ -29,6 +29,8 @@
   margin-top: 28px;
   padding-right: 56px;
 
+  vertical-align: top;
+
   @include font(19px, 18px, bold);
 
   @media #{$tablet-and-desktop} {

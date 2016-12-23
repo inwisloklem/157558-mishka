@@ -109,6 +109,8 @@
   @media #{$tablet} {
     display: inline-block;
 
+    vertical-align: top;
+
     &:last-of-type {
       width: 250px;
     }
