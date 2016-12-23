@@ -21,7 +21,7 @@
 
   @media #{$tablet} {
     margin-top: 49px;
-    margin-bottom: -7px;
+    margin-bottom: 0;
 
     @include font(43px, 50px, bold);
   }
@@ -47,6 +47,10 @@
     flex-flow: row wrap;
 
     margin-bottom: 25px;
+  }
+
+  @media #{$tablet} {
+    margin-bottom: 16px;
   }
 }
 
@@ -103,6 +107,10 @@
   height: 38px;
 
   fill: $downy;
+
+  @media #{$tablet-and-desktop} {
+    top: 45px;
+  }
 }
 
 .about__icon-feature-2 {
@@ -114,6 +122,10 @@
   height: 27px;
 
   fill: $downy;
+
+  @media #{$tablet-and-desktop} {
+    top: 50px;
+  }
 }
 
 .about__icon-feature-3 {
@@ -125,6 +137,10 @@
   height: 28px;
 
   fill: $downy;
+
+  @media #{$tablet-and-desktop} {
+    top: 56px;
+  }
 }
 
 .about__icon-feature-4 {
@@ -136,6 +152,10 @@
   height: 34px;
 
   fill: $downy;
+
+  @media #{$tablet-and-desktop} {
+    top: 50px;
+  }
 }
 
 .about__icon-feature-5 {
@@ -147,6 +167,10 @@
   height: 23px;
 
   fill: $downy;
+
+  @media #{$tablet-and-desktop} {
+    top: 52px;
+  }
 }
 
 .about__icon-feature-6 {
@@ -158,4 +182,8 @@
   height: 32px;
 
   fill: $downy;
+
+  @media #{$tablet-and-desktop} {
+    top: 52px;
+  }
 }
