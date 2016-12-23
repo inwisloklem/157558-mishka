@@ -6,7 +6,7 @@
   background-color: $seashell;
 
   @media #{$tablet} {
-    width: 251px;
+    width: 265px;
   }
 
   @media #{$desktop} {
@@ -32,7 +32,7 @@
   @include font(19px, 18px, bold);
 
   @media #{$tablet-and-desktop} {
-    margin-top: 64px;
+    margin-top: 56px;
   }
 }
 

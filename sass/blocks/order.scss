@@ -12,8 +12,8 @@
 }
 
 .order__desc {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 25px;
+  margin-bottom: 23px;
 
   color: $tundora;
 
@@ -21,11 +21,13 @@
 
   @media #{$tablet} {
     padding: 0 50px;
+    margin-top: 64px;
+    margin-bottom: 5px;
   }
 
   @media #{$desktop} {
-    margin-top: 124px;
-    margin-bottom: 24px;
+    margin-top: 104px;
+    margin-bottom: 9px;
     padding: 0 225px;
   }
 
@@ -35,7 +37,7 @@
 }
 
 .order__title {
-  margin-bottom: 33px;
+  margin-bottom: 28px;
 
   text-transform: uppercase;
 
@@ -86,7 +88,7 @@
   box-sizing: border-box;
   width: 100%;
   min-height: 50px;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 
   border: none;
   border-bottom: 2px solid $black;
@@ -145,7 +147,8 @@
   box-sizing: border-box;
   width: 100%;
   min-height: 142px;
-  margin-bottom: 19px;
+  margin-top: 4px;
+  margin-bottom: 17px;
   padding: 17px;
 
   border: 2px solid $tundora;
@@ -153,7 +156,13 @@
 
   @include font(17px, 18px);
 
+  @media #{$tablet} {
+    margin-top: 0;
+  }
+
   @media #{$desktop} {
+    margin-top: 0;
+
     &:hover {
       border-color: $downy;
     }
@@ -175,10 +184,32 @@
 .order__checkbox-label, .order__radio-label {
   display: block;
 
-  margin-bottom: 42px;
+  margin-bottom: 30px;
   padding-left: 64px;
 
   @include font(17px, 18px, bold);
+
+  @media #{$tablet} {
+    margin-bottom: 0;
+  }
+}
+
+.order__radio-label {
+  &:last-of-type {
+    margin-bottom: 37px;
+
+    @media #{$tablet} {
+      margin-bottom: 24px;
+    }
+
+    @media #{$desktop} {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.order__checkbox-label {
+  margin-bottom: 44px;
 }
 
 .order__radio-label {
@@ -287,7 +318,7 @@
     padding-left: 82px;
 
     &::before {
-      width: 48px;
+      width: 50px;
       height: 48px;
     }
 
@@ -308,7 +339,7 @@
     display: block;
 
     width: 8px;
-    height: 20px;
+    height: 22px;
 
     content: "";
     transform: rotate(45deg);
@@ -320,22 +351,44 @@
 
   @media #{$tablet-and-desktop} {
     &::after {
-      bottom: 16px;
-      left: 18px;
+      bottom: 14px;
+      left: 20px;
 
-      width: 15px;
+      width: 14px;
       height: 26px;
     }
   }
 }
 
 .order__block {
+  &--tel {
+    margin-top: 10px;
+
+    .order__title {
+      margin-bottom: 5px;
+    }
+  }
+
+  &--mail {
+    .order__title {
+      margin-bottom: 16px;
+    }
+  }
+
   @media #{$tablet} {
-    padding: 50px 50px 24px 225px;
+    padding: 50px 50px 24px 217px;
+
+    &--tel {
+      margin-top: 2px;
+    }
   }
 
   @media #{$desktop} {
     padding: 50px 225px 24px;
+
+    &--tel {
+      margin-top: 0;
+    }
   }
 
   @media #{$tablet-and-desktop} {
@@ -410,7 +463,13 @@
 
   @include font(14px, 16px);
 
+  @media #{$tablet} {
+    margin-top: 12px;
+  }
+
   @media #{$desktop} {
+    margin-top: 10px;
+
     width: 350px;
 
     text-align: right;
@@ -429,6 +488,11 @@
 
     order: -1;
   }
+
+  @media #{$tablet} {
+    margin-top: 2px;
+    margin-bottom: 50px
+  }
 }
 
 .order__item {
@@ -444,6 +508,10 @@
   height: 24px;
 
   fill: $silver;
+
+  @media #{$tablet} {
+    right: 24px;
+  }
 }
 
 .order__icon-mail {
@@ -455,4 +523,8 @@
   height: 32px;
 
   fill: $silver;
+
+  @media #{$tablet} {
+    right: 22px;
+  }
 }

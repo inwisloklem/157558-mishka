@@ -21,6 +21,7 @@
 
   @media #{$tablet} {
     margin-top: 49px;
+    margin-bottom: -7px;
 
     @include font(43px, 50px, bold);
   }
@@ -33,7 +34,7 @@
 }
 
 .about__list {
-  margin-bottom: 51px;
+  margin-bottom: 55px;
   padding: 0;
 
   list-style: none;
@@ -44,6 +45,8 @@
     display: flex;
 
     flex-flow: row wrap;
+
+    margin-bottom: 25px;
   }
 }
 
@@ -61,11 +64,9 @@
   }
 
   @media #{$tablet-and-desktop} {
-    @include font(20px, 24px, bold);
+    padding-top: 105px;
 
-    // Не придумал как лучше задать им такой же порядок, как в макете;
-    // только с помощью order. Возможно надо сделать две обёртки, чтобы
-    // перестраивались в правильном порядке из мобильной в планшетнную и десктопную версию
+    @include font(20px, 24px, bold);
 
     &--feature-1 {
       order: 2;
@@ -95,7 +96,7 @@
 
 .about__icon-feature-1 {
   position: absolute;
-  bottom: 66px;
+  bottom: 58px;
   left: 8px;
 
   width: 32px;
@@ -117,7 +118,7 @@
 
 .about__icon-feature-3 {
   position: absolute;
-  bottom: 66px;
+  bottom: 60px;
   left: 7px;
 
   width: 33px;
@@ -128,7 +129,7 @@
 
 .about__icon-feature-4 {
   position: absolute;
-  bottom: 66px;
+  bottom: 57px;
   left: 7px;
 
   width: 34px;
@@ -139,7 +140,7 @@
 
 .about__icon-feature-5 {
   position: absolute;
-  bottom: 66px;
+  bottom: 67px;
   left: -3px;
 
   width: 54px;
@@ -150,7 +151,7 @@
 
 .about__icon-feature-6 {
   position: absolute;
-  bottom: 66px;
+  bottom: 60px;
   left: 8px;
 
   width: 33px;

@@ -9,10 +9,10 @@
   @media #{$tablet-and-desktop} {
     padding: 0 50px;
 
-    background: url("../img/review@1x.jpg") no-repeat center left;
+    background: url("../img/review@1x.jpg") no-repeat 50px 50%;
 
     @media #{$high-dpi} {
-      background: url("../img/review@2x.jpg") no-repeat center left;
+      background: url("../img/review@2x.jpg") no-repeat 50px 50%;
       background-size: 350px 457px;
     }
   }
@@ -29,17 +29,17 @@
 
   @media #{$tablet} {
     width: 450px;
-    margin-top: 101px;
+    margin-top: 140px;
     margin-bottom: 49px;
 
     @include font(43px, 50px, bold);
   }
 
   @media #{$desktop} {
-    margin-top: 101px;
+    margin-top: 131px;
     margin-bottom: 49px;
 
-    @include font(43px, 50px, bold);
+    @include font(53px, 57px, bold);
   }
 }
 
@@ -72,9 +72,15 @@
 
     @include font(17px, 30px);
   }
+
+  @media #{$desktop} {
+    margin-bottom: 39px;
+  }
 }
 
 .review__name{
+  display: block;
+
   margin-bottom: 3px;
 
   font-style: normal;
@@ -145,7 +151,7 @@
   }
 
   @media #{$tablet-and-desktop} {
-    width: 84px;
+    width: 88px;
     margin: 0;
 
     border: none;
@@ -183,9 +189,13 @@
 
   @media #{$tablet-and-desktop} {
     position: absolute;
-    top: 101px;
+    top: 142px;
     right: 50px;
 
     width: 175px;
+  }
+
+  @media #{$desktop} {
+    top: 140px;
   }
 }

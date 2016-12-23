@@ -5,7 +5,6 @@ var del = require("del");
 var gulp = require("gulp");
 var imagemin = require("gulp-imagemin");
 var minify = require("gulp-csso");
-var mqpacker = require("css-mqpacker");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var rename = require("gulp-rename");
@@ -22,10 +21,7 @@ gulp.task("style", function() {
     .pipe(postcss([
       autoprefixer({browsers: [
         "last 2 versions"
-      ]}),
-      mqpacker({
-        sort: false
-      })
+      ]})
     ]))
     .pipe(gulp.dest("css"))
     .pipe(gulp.dest("build/css"))
@@ -33,6 +29,19 @@ gulp.task("style", function() {
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("css"))
     .pipe(gulp.dest("build/css"))
+    .pipe(server.stream());
+});
+
+gulp.task("style-dev", function() {
+  gulp.src("sass/style.scss")
+    .pipe(plumber())
+    .pipe(sass({outputStyle: 'expanded'}))
+    .pipe(postcss([
+      autoprefixer({browsers: [
+        "last 2 versions"
+      ]})
+    ]))
+    .pipe(gulp.dest("css"))
     .pipe(server.stream());
 });
 
@@ -64,6 +73,19 @@ gulp.task("serve", function() {
   });
 
   gulp.watch("sass/**/*.{scss,sass}", ["style"]);
+  gulp.watch("*.html").on("change", server.reload);
+});
+
+gulp.task("serve-dev", ["style-dev"], function() {
+  server.init({
+    server: ".",
+    notify: false,
+    open: true,
+    cors: true,
+    ui: false
+  });
+
+  gulp.watch("sass/**/*.{scss,sass}", ["style-dev"]);
   gulp.watch("*.html").on("change", server.reload);
 });
 

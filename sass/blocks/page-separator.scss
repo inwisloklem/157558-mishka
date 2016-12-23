@@ -7,13 +7,13 @@
 
   border: none;
   background: $white url("../img/bg-zigzag-line.svg");
-  background-size: auto 7px;
+  background-size: 320px 7px;
 
   @media #{$tablet} {
     width: 768px;
     min-height: 17px;
 
-    background-size: auto 17px;
+    background-size: 768px 17px;
   }
 
   @media #{$desktop} {

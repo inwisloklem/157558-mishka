@@ -11,10 +11,11 @@
   @media #{$desktop} {
     position: relative;
 
-    padding: 0 50px;
+    padding: 0;
     padding-left: 225px;
 
     flex-flow: row wrap;
+    justify-content: flex-start;
   }
 }
 
@@ -43,7 +44,8 @@
   }
 
   @media #{$tablet} {
-    margin-top: 61px;
+    margin-top: 59px;
+    margin-bottom: 47px;
 
     @include font(43px, 50px, bold);
 
@@ -69,14 +71,20 @@
 
 .contacts__table {
   width: 260px;
-  margin-bottom: 28px;
+  margin-bottom: 35px;
 
   color: $tundora;
   border-collapse: collapse;
 
   @include font(15px, 30px);
 
+  @media #{$tablet-and-desktop} {
+    @include font(17px, 30px);
+  }
+
   @media #{$tablet} {
+    margin-bottom: 55px;
+
     width: 668px;
   }
 
@@ -89,6 +97,8 @@
 .contacts__cell {
   width: 150px;
 
+  vertical-align: top;
+
   &--left {
     width: 78px;
     height: 58px;
@@ -97,15 +107,25 @@
   }
 
   @media #{$tablet} {
+    display: inline-block;
+
     &:last-of-type {
-      width: 200px;
+      width: 250px;
+    }
+
+    &--left {
+      width: 68px;
     }
   }
 
-  @media #{$tablet-and-desktop} {
-    display: inline-block;
+  @media #{$desktop} {
+    &--left {
+      width: 78px;
+    }
 
-    vertical-align: top;
+    &:last-of-type {
+      width: 225px;
+    }
   }
 }
 
@@ -116,6 +136,10 @@
     width: 334px;
 
     vertical-align: top;
+  }
+
+  @media #{$desktop} {
+    display: flex;
   }
 }
 
@@ -206,6 +230,7 @@
     height: 457px;
     margin-top: 70px;
     margin-bottom: 105px;
+    right: 0;
 
     &::after {
       top: 168px;

@@ -6,6 +6,8 @@
 
     background: $alabaster;
 
+    min-height: 134px;
+
     &::after {
       position: absolute;
       z-index: 50;
@@ -48,15 +50,13 @@
 
       content: "";
 
-      background: url("../img/bg-zigzag-fill.svg");
+      background: url("../img/bg-zigzag-fill.svg") repeat-x;
       background-size: contain;
     }
   }
 
   @media #{$desktop} {
     bottom: 5px;
-
-    min-height: 124px;
 
     align-items: flex-end;
 
@@ -71,8 +71,6 @@
   position: relative;
   z-index: 15;
 
-  min-height: 103px;
-
   &--interior {
     background-color: $downy;
   }
@@ -84,7 +82,8 @@
   .catalog__link:active {
     color: rgba($white, 0.3);
 
-    .catalog__icon {
+    .catalog__icon-interior,
+    .catalog__icon-toy {
       opacity: 0.3;
     }
   }
@@ -97,7 +96,7 @@
     width: 525px;
 
     &:hover {
-      min-height: 124px;
+      min-height: 134px;
     }
 
     &--interior {
@@ -112,23 +111,38 @@
       }
     }
   }
-
-  @media #{$tablet-and-desktop} {
-    min-height: 119px;
-  }
 }
 
-.catalog__icon {
+.catalog__icon-interior {
   position: absolute;
-  top: 50%;
+  top: 23px;
   right: 36px;
 
   width: 41px;
   height: 62px;
 
-  transform: translateY(-50%);
+  fill: $keppel;
+
+  @media #{$tablet-and-desktop} {
+    top: 30px;
+    right: 36px;
+  }
+}
+
+.catalog__icon-toy {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+
+  width: 60px;
+  height: 61px;
 
   fill: $keppel;
+
+  @media #{$tablet-and-desktop} {
+    top: 30px;
+    right: 34px;
+  }
 }
 
 .catalog__link {
@@ -137,12 +151,20 @@
   display: block;
 
   box-sizing: border-box;
-  min-height: inherit;
-  padding: 30px;
+  min-height: 103px;
+  padding: 27px;
 
   text-decoration: none;
 
   color: $white;
 
   @include font(19px, 24px, bold);
+
+  @media #{$tablet-and-desktop} {
+    min-height: 129px;
+    padding-top: 29px;
+    padding-left: 35px;
+
+    @include font(20px, 30px, bold);
+  }
 }
