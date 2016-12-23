@@ -120,7 +120,7 @@
   }
 
   @media #{$desktop} {
-    height: 478px;
+    min-height: 478px;
     margin-top: 231px;
     margin-bottom: 55px;
 
@@ -146,6 +146,7 @@
   }
 
   @media #{$desktop} {
+
     margin-top: -18px;
     margin-bottom: 48px;
   }
