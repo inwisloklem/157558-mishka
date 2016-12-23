@@ -12,8 +12,8 @@
       <h1 class="visually-hidden">HTML Academy: Мишка</h1>
 
       <nav class="menu menu--dark container">
-        <ul class="menu__list">
-          <li class="menu__logo">
+        <div class="menu__list">
+          <div class="menu__logo">
             <a href="index.html">
               <picture>
                 <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
@@ -22,52 +22,52 @@
               </picture>
             </a>
             <span class="menu__toggle">Меню</span>
-          </li>
+          </div>
           <div class="menu__block-1">
-            <li class="menu__item menu__item--catalog menu__item--current">
+            <div class="menu__item menu__item--catalog menu__item--current">
               <a class="menu__link" href="catalog.html">
                 Каталог товаров
               </a>
-            </li>
-            <li class="menu__item menu__item--form">
+            </div>
+            <div class="menu__item menu__item--form">
               <a class="menu__link" href="form.html">
                 Вязание на заказ
               </a>
-            </li>
+            </div>
           </div>
           <div class="menu__block-2">
-            <li class="menu__item menu__item--search">
+            <div class="menu__item menu__item--search">
               <a class="menu__link" href="#">
                 Поиск по сайту
                 <svg class="menu__icon-search">
-                  <use xlink:href="img/sprite.svg#icon-search">
+                  <use xlink:href="img/sprite.svg#icon-search"></use>
                 </svg>
               </a>
-            </li>
-            <li class="menu__item menu__item--cart">
+            </div>
+            <div class="menu__item menu__item--cart">
               <a class="menu__link" href="#">
                 Корзина: пока пуста
                 <svg class="menu__icon-cart">
-                  <use xlink:href="img/sprite.svg#icon-cart">
+                  <use xlink:href="img/sprite.svg#icon-cart"></use>
                 </svg>
               </a>
-            </li>
+            </div>
           </div>
           <div class="menu__block-3">
-            <li class="menu__item">
+            <div class="menu__item">
               <a class="menu__link" href="#">
                 Новые поступления
               </a>
-            </li>
-            <li class="menu__item">
+            </div>
+            <div class="menu__item">
               <a class="menu__link" href="#">
                 Распродажа
               </a>
-            </li>
+            </div>
           </div>
 
           <div class="menu__text">Бесплатная доставка по России</div>
-        </ul>
+        </div>
       </nav>
     </header>
 
@@ -96,7 +96,7 @@
               <div class="catalog-item__price">
                 <b>1 200 руб.</b>
                 <svg class="catalog-item__icon-cart">
-                  <use xlink:href="img/sprite.svg#icon-cart">
+                  <use xlink:href="img/sprite.svg#icon-cart"></use>
                 </svg>
               </div>
             </div>
@@ -120,7 +120,7 @@
               <div class="catalog-item__price">
                 <b>690 руб.</b>
                 <svg class="catalog-item__icon-cart">
-                  <use xlink:href="img/sprite.svg#icon-cart">
+                  <use xlink:href="img/sprite.svg#icon-cart"></use>
                 </svg>
               </div>
             </div>
@@ -144,7 +144,7 @@
               <div class="catalog-item__price">
                 <b>1 500 руб.</b>
                 <svg class="catalog-item__icon-cart">
-                  <use xlink:href="img/sprite.svg#icon-cart">
+                  <use xlink:href="img/sprite.svg#icon-cart"></use>
                 </svg>
               </div>
             </div>
@@ -155,7 +155,7 @@
       <section class="process container">
         <h2 class="process__title">
           <svg class="process__icon-video">
-            <use xlink:href="img/sprite.svg#icon-video">
+            <use xlink:href="img/sprite.svg#icon-video"></use>
           </svg>
           Процесс производства
         </h2>
@@ -188,26 +188,26 @@
 
           <a href="index.html" class="social__link">
             <svg class="social__logo-footer">
-              <use xlink:href="img/sprite.svg#logo-footer">
+              <use xlink:href="img/sprite.svg#logo-footer"></use>
             </svg>
           </a>
 
           <a class="social__item" href="#">
             Instagram
             <svg class="social__icon-insta">
-              <use xlink:href="img/sprite.svg#icon-insta">
+              <use xlink:href="img/sprite.svg#icon-insta"></use>
             </svg>
           </a>
           <a class="social__item" href="#">
             Facebook
             <svg class="social__icon-fb">
-              <use xlink:href="img/sprite.svg#icon-fb">
+              <use xlink:href="img/sprite.svg#icon-fb"></use>
             </svg>
           </a>
           <a class="social__item social__item--last" href="#">
             Twitter
             <svg class="social__icon-twitter">
-              <use xlink:href="img/sprite.svg#icon-twitter">
+              <use xlink:href="img/sprite.svg#icon-twitter"></use>
             </svg>
           </a>
         </section>
@@ -215,16 +215,15 @@
         <section class="copyright">
           <h2 class="visually-hidden">Информация о разработчике</h2>
 
-            <a class="copyright__link" href="https://htmlacademy.ru" target="_blank">
-              <span class="copyright__text">
-                Разработано
-                <svg class="copyright__icon-htmlacademy">
-                  <use xlink:href="img/sprite.svg#icon-htmlacademy">
-                </svg>
-              </span>
-              HTML Academy
-            </a>
-          </div>
+          <a class="copyright__link" href="https://htmlacademy.ru" target="_blank">
+            <span class="copyright__text">
+              Разработано
+              <svg class="copyright__icon-htmlacademy">
+                <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+              </svg>
+            </span>
+            HTML Academy
+          </a>
         </section>
       </div>
     </footer>
@@ -245,6 +244,7 @@
 
             <input class="modal-cart__checkbox visually-hidden" id="modal-cart-l" name="modal-cart-size" value="l" type="radio">
             <label class="modal-cart__label modal-cart__label--last" for="modal-cart-l">L</label>
+          </fieldset>
 
           <button class="btn btn--fill modal-cart__btn" type="submit">Добавить</button>
         </form>
