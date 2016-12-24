@@ -60,6 +60,9 @@
   @media #{$desktop} {
     cursor: pointer;
 
+    top: calc(50% - 30px);
+    left: calc(50% + 9px);
+
     &:hover {
       transform: translate(-50%, -50%) scale(1.2);
     }
@@ -155,7 +158,7 @@
 
 .process__desc {
   margin-top: -5px;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 
   color: $tundora;
 
@@ -184,6 +187,6 @@
   }
 
   @media #{$desktop} {
-      margin-bottom: 106px;
+      margin-bottom: 57px;
   }
 }
