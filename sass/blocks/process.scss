@@ -55,13 +55,16 @@
   content: "";
   transform: translate(-50%, -50%);
 
+  border: none;
   background: url("../img/icon-play.svg");
 
-  @media #{$desktop} {
-    cursor: pointer;
+  font-size: 0;
 
+  @media #{$desktop} {
     top: calc(50% - 30px);
     left: calc(50% + 9px);
+
+    cursor: pointer;
 
     &:hover {
       transform: translate(-50%, -50%) scale(1.2);
