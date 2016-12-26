@@ -28,6 +28,9 @@
   cursor: pointer;
   transform: translateY(-50%);
 
+  border: none;
+  outline: none;
+  background: none;
   background-image: url("../img/icon-menu-open.svg");
 
   font-size: 0;
@@ -94,9 +97,13 @@
         fill: $downy;
       }
     }
+  }
 
-    &:active {
-      color: rgba($black, 0.3);
+  &:active {
+    color: rgba($black, 0.3);
+
+    .menu__icon-search, .menu__icon-cart {
+      fill: rgba($downy, 0.3);
     }
   }
 }

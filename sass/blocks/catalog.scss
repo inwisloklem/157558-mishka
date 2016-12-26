@@ -54,17 +54,6 @@
       background-size: contain;
     }
   }
-
-  @media #{$desktop} {
-    bottom: 5px;
-
-    align-items: flex-end;
-
-    &::after {
-      width: 1150px;
-      height: 34px;
-    }
-  }
 }
 
 .catalog__block {
@@ -96,7 +85,7 @@
     width: 525px;
 
     &:hover {
-      min-height: 134px;
+      transform: translateY(-5px);
     }
 
     &--interior {
@@ -153,6 +142,7 @@
   box-sizing: border-box;
   min-height: 103px;
   padding: 27px;
+  padding-right: 50px;
 
   text-decoration: none;
 

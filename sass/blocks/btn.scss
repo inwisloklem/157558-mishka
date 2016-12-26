@@ -12,6 +12,7 @@
 
   color: $tundora;
   border: 2px solid $tundora;
+  outline: none;
   background-color: transparent;
 
   @include font(17px, 16px, bold);
@@ -27,5 +28,9 @@
       color: $white;
       background-color: $tundora;
     }
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
   }
 }

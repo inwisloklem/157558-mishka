@@ -64,7 +64,7 @@
                 <img class="menu__img" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Мишки">
               </picture>
             </a>
-            <span class="menu__toggle">Меню</span>
+            <button class="menu__toggle" type="button">Меню</button>
           </div>
           <ul class="menu__block-1">
             <li class="menu__item menu__item--catalog">
@@ -130,8 +130,8 @@
             Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
           </p>
 
-          <fieldset class="order__block">
-            <legend class="order__title">Тип</legend>
+          <div class="order__block order__block--radio">
+            <div class="order__title">Тип</div>
 
             <p class="order__item">
               <input class="order__radio visually-hidden" id="order-interior" type="radio" name="order-type" value="interior" checked>
@@ -142,44 +142,46 @@
               <input class="order__radio visually-hidden" id="order-kids" type="radio" name="order-type" value="kids">
               <label class="order__radio-label" for="order-kids">Детская игрушка</label>
             </p>
-          </fieldset>
+          </div>
 
-          <fieldset class="order__block order__block--highlight order__block--colors">
-            <legend class="order__title">Цвет</legend>
+          <div class="order__block order__block--highlight order__block--colors">
+            <div class="order__title">Цвет</div>
 
-            <p class="order__item">
-              <input class="order__checkbox visually-hidden" id="order-white" type="checkbox" name="order-color[]" value="white" checked>
-              <label class="order__checkbox-label" for="order-white">Белый</label>
-            </p>
+            <div class="order__inner">
+              <p class="order__item">
+                <input class="order__checkbox visually-hidden" id="order-white" type="checkbox" name="order-color[]" value="white" checked>
+                <label class="order__checkbox-label" for="order-white">Белый</label>
+              </p>
 
-            <p class="order__item">
-              <input class="order__checkbox visually-hidden" id="order-gray" type="checkbox" name="order-color[]" value="gray" checked>
-              <label class="order__checkbox-label" for="order-gray">Серый</label>
-            </p>
+              <p class="order__item">
+                <input class="order__checkbox visually-hidden" id="order-gray" type="checkbox" name="order-color[]" value="gray" checked>
+                <label class="order__checkbox-label" for="order-gray">Серый</label>
+              </p>
 
-            <p class="order__item">
-              <input class="order__checkbox visually-hidden" id="order-tiffany" type="checkbox" name="order-color[]" value="tiffany">
-              <label class="order__checkbox-label" for="order-tiffany">«Тиффани»</label>
-            </p>
+              <p class="order__item">
+                <input class="order__checkbox visually-hidden" id="order-tiffany" type="checkbox" name="order-color[]" value="tiffany">
+                <label class="order__checkbox-label" for="order-tiffany">«Тиффани»</label>
+              </p>
 
-            <p class="order__item">
-              <input class="order__checkbox visually-hidden" id="order-black" type="checkbox" name="order-color[]" value="black">
-              <label class="order__checkbox-label" for="order-black">Черный</label>
-            </p>
+              <p class="order__item">
+                <input class="order__checkbox visually-hidden" id="order-black" type="checkbox" name="order-color[]" value="black">
+                <label class="order__checkbox-label" for="order-black">Черный</label>
+              </p>
 
-            <p class="order__item">
-              <input class="order__checkbox visually-hidden" id="order-pink" type="checkbox" name="order-color[]" value="pink">
-              <label class="order__checkbox-label" for="order-pink">Розовый</label>
-            </p>
+              <p class="order__item">
+                <input class="order__checkbox visually-hidden" id="order-pink" type="checkbox" name="order-color[]" value="pink">
+                <label class="order__checkbox-label" for="order-pink">Розовый</label>
+              </p>
 
-            <p class="order__item">
-              <input class="order__checkbox visually-hidden" id="order-orange" type="checkbox" name="order-color[]" value="orange">
-              <label class="order__checkbox-label" for="order-orange">Оранжевый</label>
-            </p>
-          </fieldset>
+              <p class="order__item">
+                <input class="order__checkbox visually-hidden" id="order-orange" type="checkbox" name="order-color[]" value="orange">
+                <label class="order__checkbox-label" for="order-orange">Оранжевый</label>
+              </p>
+            </div>
+          </div>
 
-          <fieldset class="order__block order__block--name">
-            <legend class="order__title">ФИО</legend>
+          <div class="order__block order__block--name">
+            <div class="order__title">ФИО</div>
 
             <p class="order__item">
               <label class="order__subtitle" for="order-name">Имя:</label>
@@ -195,10 +197,10 @@
               <label class="order__subtitle" for="order-patronymic">Отчество:</label>
               <input class="order__input" id="order-patronymic" type="text" name="order__patronymic" placeholder="Отчество, если желаете">
             </p>
-          </fieldset>
+          </div>
 
-          <fieldset class="order__block order__block--tel order__block--highlight">
-            <legend class="order__title">Тел</legend>
+          <div class="order__block order__block--tel order__block--highlight">
+            <div class="order__title">Тел</div>
 
             <p class="order__item">
               <label class="visually-hidden" for="order-tel">Телефон:</label>
@@ -207,10 +209,10 @@
                 <use xlink:href="#icon-phone"></use>
               </svg>
             </p>
-          </fieldset>
+          </div>
 
-          <fieldset class="order__block order__block--mail order__block--highlight">
-            <legend class="order__title">E-mail</legend>
+          <div class="order__block order__block--mail order__block--highlight">
+            <div class="order__title">E-mail</div>
 
             <p class="order__item">
               <label class="visually-hidden" for="order-mail">E-mail:</label>
@@ -219,16 +221,14 @@
                 <use xlink:href="#icon-mail"></use>
               </svg>
             </p>
-          </fieldset>
+          </div>
 
-          <fieldset class="order__block">
-            <legend class="order__title">Доп</legend>
+          <div class="order__block order__block--more">
+            <div class="order__title">Доп</div>
 
-            <p class="order__item">
-              <label class="visually-hidden" for="order-text">Дополнительно:</label>
-              <textarea class="order__text" id="order-text" name="order-text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-            </p>
-          </fieldset>
+            <label class="visually-hidden" for="order-text">Дополнительно:</label>
+            <textarea class="order__text" id="order-text" name="order-text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          </div>
 
           <div class="order__wrapper">
             <p class="order__note">*Поля обязательны для заполнения</p>

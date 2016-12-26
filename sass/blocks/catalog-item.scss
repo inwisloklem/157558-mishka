@@ -145,12 +145,15 @@
 }
 
 .catalog-item__price {
-  position: relative;
+  display: flex;
+  flex-direction: row;
 
   margin-top: auto;
   padding: 24px 0;
 
   border-top: 1px solid $gallery;
+
+  justify-content: space-between;
 
   @include font(15px, 24px, bold);
 
@@ -170,9 +173,6 @@
 }
 
 .catalog-item__icon-cart {
-  position: absolute;
-  right: 0;
-
   width: 21px;
   height: 18px;
 
