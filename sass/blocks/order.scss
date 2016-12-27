@@ -23,28 +23,28 @@
     justify-content: space-around;
 
     .order__title {
-      margin-top: 8px;
-      margin-bottom: 10px;
+      margin-top: 12px;
+      margin-bottom: 5px;
     }
   }
 
   &--tel {
     .order__title {
       margin-top: 22px;
-      margin-bottom: 5px;
+      margin-bottom: 3px;
     }
   }
 
   &--mail {
     .order__title {
-      margin-top: 32px;
-      margin-bottom: 5px;
+      margin-top: 33px;
+      margin-bottom: 3px;
     }
   }
 
   &--more {
     .order__title {
-      margin-top: 33px;
+      margin-top: 32px;
       margin-bottom: 24px;
     }
   }
@@ -128,12 +128,22 @@
       }
     }
 
+    &--mail {
+      .order__title {
+        bottom: 76px;
+      }
+    }
+
     &--colors {
       height: 228px;
     }
 
     &--more {
       height: 236px;
+
+      .order__title {
+        margin-top: -10px;
+      }
     }
   }
 }
@@ -168,6 +178,7 @@
 
   @media #{$desktop} {
     width: 875px;
+
     justify-content: flex-start;
   }
 }
@@ -263,6 +274,7 @@
 
 .order__note {
   margin-bottom: 31px;
+  margin-left: -12px;
 
   @include font(14px, 16px);
 
@@ -330,7 +342,7 @@
 .order__icon-phone {
   position: absolute;
   right: 8px;
-  bottom: 14px;
+  bottom: 16px;
 
   width: 25px;
   height: 24px;
@@ -341,6 +353,11 @@
     top: 25px;
     right: 24px;
     bottom: auto;
+  }
+
+  @media #{$desktop} {
+    top: 23px;
+    right: 7px;
   }
 }
 
@@ -358,6 +375,11 @@
     top: -16px;
     right: 20px;
     bottom: auto;
+  }
+
+  @media #{$desktop} {
+    top: -16px;
+    right: 3px;
   }
 }
 
@@ -487,6 +509,7 @@
 
   @media #{$desktop} {
     width: 700px;
+    padding-top: 12px;
 
     &:hover {
       border-color: $downy;

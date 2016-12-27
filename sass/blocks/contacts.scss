@@ -11,16 +11,12 @@
   @media #{$desktop} {
     position: relative;
 
-    height: 516px;
-
     padding: 0;
     padding-left: 225px;
+    padding-right: 50px;
 
-    outline: 1px solid red;
-
-    flex-flow: column wrap;
-    justify-content: flex-end;
-    align-content: space-between;
+    flex-flow: row wrap;
+    justify-content: space-between;
   }
 }
 
@@ -55,13 +51,13 @@
     @include font(43px, 50px, bold);
 
     &::before {
-      right: 0;
+      right: 2px;
     }
   }
 
   @media #{$desktop} {
     width: 350px;
-    margin-top: 140px;
+    margin-top: 141px;
     margin-bottom: 47px;
 
     word-break: break-all;
@@ -258,13 +254,16 @@
 .contacts__btn {
   margin-bottom: 39px;
 
+  order: 2;
+
   @media #{$tablet} {
     margin: auto;
     margin-bottom: 57px;
   }
 
   @media #{$desktop} {
-    margin: 0;
+    margin-top: -52px;
+    margin-bottom: 105px;
   }
 
   @media #{$tablet-and-desktop} {

@@ -120,7 +120,7 @@
               </a>
             </li>
             <li class="menu__item menu__item--cart">
-              <a class="menu__link" href="#">
+              <a class="menu__link" href="cart.html">
                 Корзина: пока пуста
                 <svg class="menu__icon-cart" width="21" height="18">
                   <use xlink:href="#icon-cart"></use>
@@ -178,9 +178,10 @@
       </section>
 
       <section class="preview container">
-        <h2 class="preview__title">Вязаные корзинки
-          <span class="preview__subtitle">Товар недели</span>
-        </h2>
+        <div class="preview__headers">
+          <h2 class="preview__title">Вязаные корзинки</h2>
+          <div class="preview__subtitle">Товар недели</div>
+        </div>
 
         <div class="preview__wrapper">
           <p class="preview__block">
@@ -201,19 +202,20 @@
               <td class="preview__cell">15 см</td>
             </tr>
           </table>
-
-          <div class="preview__price">Цена: 990 руб.</div>
-
-          <a class="btn preview__btn" href="#">Заказать</a>
         </div>
 
-        <figure>
+        <figure class="preview__image">
           <picture>
             <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
             <img class="preview__img" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Вязаные корзинки">
           </picture>
         </figure>
+
+        <div class="preview__controls">
+          <div class="preview__price">Цена: 990 руб.</div>
+          <a class="btn preview__btn" href="make-order.html">Заказать</a>
+        </div>
       </section>
 
       <hr class="page-separator">
@@ -297,7 +299,7 @@
           </div>
         </div>
 
-        <a class="btn review__btn" href="#">Написать</a>
+        <a class="btn review__btn" href="review.html">Написать</a>
       </section>
 
       <hr class="page-separator">
@@ -351,24 +353,26 @@
             </svg>
           </a>
 
-          <a class="social__item" href="#">
-            Instagram
-            <svg class="social__icon-insta" width="22" height="21">
-              <use xlink:href="#icon-insta"></use>
-            </svg>
-          </a>
-          <a class="social__item" href="#">
-            Facebook
-            <svg class="social__icon-fb" width="15" height="28">
-              <use xlink:href="#icon-fb"></use>
-            </svg>
-          </a>
-          <a class="social__item social__item--last" href="#">
-            Twitter
-            <svg class="social__icon-twitter" width="23" height="20">
-              <use xlink:href="#icon-twitter"></use>
-            </svg>
-          </a>
+          <div class="social__block">
+            <a class="social__item" href="#">
+              Instagram
+              <svg class="social__icon-insta" width="22" height="21">
+                <use xlink:href="#icon-insta"></use>
+              </svg>
+            </a>
+            <a class="social__item" href="#">
+              Facebook
+              <svg class="social__icon-fb" width="15" height="28">
+                <use xlink:href="#icon-fb"></use>
+              </svg>
+            </a>
+            <a class="social__item social__item--last" href="#">
+              Twitter
+              <svg class="social__icon-twitter" width="23" height="20">
+                <use xlink:href="#icon-twitter"></use>
+              </svg>
+            </a>
+          </div>
         </section>
 
         <section class="copyright">

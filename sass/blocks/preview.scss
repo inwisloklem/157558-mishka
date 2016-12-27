@@ -14,20 +14,17 @@
   }
 
   @media #{$desktop} {
-    padding-left: 225px;
+    justify-content: flex-start;
   }
 }
 
 .preview__title {
   margin-top: 27px;
-  margin-bottom: 17px;
+  margin-bottom: 7px;
 
   @include font(25px, 30px, bold);
 
   @media #{$tablet} {
-    position: relative;
-
-    width: 100%;
     margin-top: 36px;
     margin-bottom: 56px;
 
@@ -35,17 +32,15 @@
   }
 
   @media #{$desktop} {
-    position: absolute;
-
-    width: 875px;
-    margin-top: 107px;
+    margin: 0;
+    margin-left: 50px;
 
     @include font(53px, 57px, bold);
   }
 }
 
 .preview__subtitle {
-  margin-bottom: 5px;
+  margin-bottom: 24px;
 
   text-transform: uppercase;
 
@@ -54,38 +49,60 @@
   @include font(17px, 16px, bold);
 
   @media #{$tablet-and-desktop} {
-    position: absolute;
-    top: 50%;
-
     width: 75px;
 
-    transform: translateY(-50%);
     text-align: center;
   }
 
   @media #{$tablet} {
-    top: 12px;
-    right: 25px;
-
-    transform: none;
+    margin-bottom: 16px;
+    margin-right: 24px;
   }
 
   @media #{$desktop} {
-    left: -130px;
+    margin-bottom: -16px;
+    margin-left: 45px;
+    order: -1;
+  }
+}
+
+.preview__headers {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  @media #{$tablet-and-desktop} {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media #{$desktop} {
+    margin-top: -60px;
+    position: relative;
+    top: 165px;
+
+    justify-content: flex-start;
+  }
+}
+
+.preview__image {
+  margin-bottom: 23px;
+
+  @media #{$desktop} {
+    margin: 0;
+    margin-left: 57px;
   }
 }
 
 .preview__img {
   width: 260px;
   height: 315px;
-  margin-bottom: 26px;
-
-  position: absolute;
-  bottom: 135px;
 
   @media #{$tablet} {
-    position: static;
-
     width: 333px;
     height: 404px;
     margin: 0;
@@ -94,8 +111,6 @@
   }
 
   @media #{$desktop} {
-    position: static;
-
     width: 525px;
     height: 636px;
     margin-top: 55px;
@@ -105,26 +120,19 @@
 }
 
 .preview__wrapper {
-  @media #{$tablet} {
-    min-height: 404px;
-    margin-bottom: 52px;
-  }
-
   @media #{$tablet-and-desktop} {
     display: flex;
     flex-direction: column;
 
     width: 292px;
 
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   @media #{$desktop} {
-    min-height: 478px;
     margin-top: 231px;
     margin-bottom: 55px;
-
-    justify-content: flex-start;
+    margin-left: 175px;
   }
 }
 
@@ -142,11 +150,10 @@
   }
 
   @media #{$tablet} {
-    margin-bottom: 30px;
+    margin-bottom: 38px;
   }
 
   @media #{$desktop} {
-
     margin-top: -18px;
     margin-bottom: 48px;
   }
@@ -161,17 +168,8 @@
 
   @include font(15px, 20px);
 
-
   @media #{$tablet-and-desktop} {
     width: 100%;
-  }
-
-  @media #{$tablet} {
-    margin-bottom: 50px;
-  }
-
-  @media #{$desktop} {
-    margin-bottom: 108px;
   }
 }
 
@@ -188,18 +186,32 @@
   }
 }
 
-.preview__price {
-  padding-top: 336px;
+.preview__controls {
+  @media #{$tablet-and-desktop} {
+    margin-top: -134px;
+    margin-bottom: 52px;
+  }
 
+  @media #{$desktop} {
+    position: relative;
+
+    margin-top: -112px;
+    margin-bottom: 74px;
+    margin-left: 175px;
+  }
+}
+
+.preview__price {
   text-align: center;
 
   color: $tundora;
 
   @include font(17px, 24px, bold);
 
-  margin-bottom: 28px;
+  margin-bottom: 26px;
 
   @media #{$tablet-and-desktop} {
+    margin-bottom: 34px;
     padding-top: 0;
 
     @include font(20px, 24px, bold);
@@ -214,6 +226,7 @@
   margin-bottom: 35px;
 
   @media #{$tablet-and-desktop} {
-    margin: 0;
+    margin-bottom: 0;
+    width: 290px;
   }
 }

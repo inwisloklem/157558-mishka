@@ -30,6 +30,10 @@
   }
 
   @media #{$tablet-and-desktop} {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
     min-height: 143px;
     padding-left: 50px;
 
@@ -41,22 +45,22 @@
   }
 }
 
+.social__block {
+  margin-top: 23px;
+  margin-left: auto;
+
+  @media #{$tablet-and-desktop} {
+    margin-top: 57px;
+  }
+}
+
 .social__item {
-  display: inline-block;
-
-  margin-top: 24px;
   margin-right: 41px;
-
-  vertical-align: middle;
 
   font-size: 0;
 
   &--last {
     margin-right: 0;
-  }
-
-  @media #{$tablet-and-desktop} {
-    margin-top: 57px;
   }
 
   @media #{$desktop} {
@@ -97,8 +101,6 @@
   display: none;
 
   @media #{$tablet-and-desktop} {
-    position: absolute;
-
     display: block;
 
     width: 102px;

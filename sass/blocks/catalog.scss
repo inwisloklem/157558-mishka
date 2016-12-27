@@ -6,8 +6,6 @@
 
     background: $alabaster;
 
-    min-height: 134px;
-
     &::after {
       position: absolute;
       z-index: 50;
@@ -151,10 +149,14 @@
   @include font(19px, 24px, bold);
 
   @media #{$tablet-and-desktop} {
-    min-height: 129px;
+    min-height: 135px;
     padding-top: 29px;
     padding-left: 35px;
 
     @include font(20px, 30px, bold);
+  }
+
+  @media #{$tablet} {
+    min-height: 130px;
   }
 }
