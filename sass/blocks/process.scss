@@ -146,7 +146,6 @@
     padding-right: 56px;
     padding-left: 79px;
     margin-top: -306px;
-
     border-top: none;
 
     order: 2;
@@ -170,7 +169,7 @@
   @media #{$tablet} {
     order: -1;
 
-    width: 554px;
+    width: 523px;
 
     border-bottom: none;
 
@@ -181,10 +180,9 @@
   @media #{$desktop} {
     box-sizing: border-box;
     width: 367px;
-    height: 150px;
     padding-top: 96px;
     padding-right: 100px;
-    padding-bottom: 0;
+    padding-bottom: 310px;
     padding-left: 77px;
 
     border-bottom: none;
